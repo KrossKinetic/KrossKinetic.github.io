@@ -1,6 +1,6 @@
 @font-face {
     font-family: Font;
-    src: url(css\fonts\font.otf);
+    src: url('css\fonts\font.otf');
 }
 
 .primary
