@@ -13,7 +13,7 @@
 {
     height: 50vh;
     width: 100%;
-    background: url('stock.jpg');/*here,stock is placeholder for picture of my own face...didnt include it here as this is an assignment*/
+    background: url('\KrossKinetic.github.io\images\stock.jpg');/*here,stock is placeholder for picture of my own face...didnt include it here as this is an assignment*/
     background-repeat: no-repeat;
     background-size: cover;
 }
