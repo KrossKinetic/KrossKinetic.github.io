@@ -1,0 +1,52 @@
+@font-face {
+    font-family: Font;
+    src: url(font.otf);
+}
+
+.primary
+{
+    background-color: #28282B;
+    font-family: "Font";
+}
+
+.rightside
+{
+    height: 50vh;
+    width: 100%;
+    background: url('stock.jpg');/*here,stock is placeholder for picture of my own face...didnt include it here as this is an assignment*/
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.leftside
+{
+    height: 50vh;
+    width: 100%;
+    background: #28282B;
+}
+
+#indextext1,#indextext
+    {
+        color: white;
+        font-size: normal;
+    }
+
+#indeximg
+{
+    clip-path: circle();
+    height: 90%;
+    width: 90%;
+    object-fit: cover;
+}
+
+@media screen and (min-width:780px)
+{
+    .leftside,.rightside
+    {
+        height:100vh;
+    }
+    #indextext1
+    {
+        font-size:95%;
+    }
+}
