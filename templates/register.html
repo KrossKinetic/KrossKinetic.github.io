@@ -1,0 +1,163 @@
+{% extends "layout.html" %}
+
+{% block css %}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+{% endblock %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block script %}
+<script>
+    function form1next(){
+        document.getElementById("form1").style.opacity = "0";
+        setTimeout(function temp1(){
+            document.getElementById("form1").style.display = "none";
+            document.getElementById("form2").style.display = "";
+        },500)
+        setTimeout(function temp2(){      
+            document.getElementById("form2").style.opacity = "1";
+        },505)
+    }
+
+    function form2next(){
+        document.getElementById("form2").style.opacity = "0";
+        setTimeout(function temp1(){
+            document.getElementById("form2").style.display = "none";
+            document.getElementById("form3").style.display = "";
+        },500)
+        setTimeout(function temp2(){      
+            document.getElementById("form3").style.opacity = "1";
+        },505)
+    }
+
+    function form2pre(){
+        document.getElementById("form2").style.opacity = "0";
+        setTimeout(function temp1(){
+            document.getElementById("form2").style.display = "none";
+            document.getElementById("form1").style.display = "";
+        },500)
+        setTimeout(function temp2(){      
+            document.getElementById("form1").style.opacity = "1";
+        },505)
+    }
+
+    function form3pre(){
+        document.getElementById("form3").style.opacity = "0";
+        setTimeout(function temp1(){
+            document.getElementById("form3").style.display = "none";
+            document.getElementById("form2").style.display = "";
+        },500)
+        setTimeout(function temp2(){      
+            document.getElementById("form2").style.opacity = "1";
+        },505)
+    }
+</script>
+{% endblock %}
+
+{% block main %}
+<div class="container  trans">
+    <br>
+    <div class="row justify-content-evenly">
+        <div class="col-md-4 align-self-center">
+            <div class="card" style="margin-bottom:40px; background-color:rgba(255,255,255,0.6);">
+                <div class="card-body">
+                    <form action="/register" method="post">
+                        <div id="form1" style="opacity:1;">
+                            <div class="alert alert-primary" role="alert">
+                                Fill the following information
+                            </div>
+                            <div class="input-group mb-3">
+                                <input autocomplete="off" class="form-control" id="name" name="name" placeholder="Type Name" type="text">
+                            </div>
+                            <div class="row">
+                                <div class="col-7">
+                                    <div class="input-group mb-3">
+                                        <label class="input-group-text" for="gender">Gender</label>
+                                        <select class="form-select" id="gender" name="gender">
+                                            <option selected value="0">Choose...</option>
+                                            <option value="1">Male</option>
+                                            <option value="2">Female</option>
+                                            <option value="3">Others</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <div class="input-group mb-3">
+                                        <input autocomplete="off" class="form-control" id="dob" name="dob" placeholder="DD/MM/YYYY" type="text">
+                                    </div>
+                                </div>
+                            </div>         
+                            <div class="input-group mb-3">
+                                <input autocomplete="off" class="form-control" id="phone" name="phone" placeholder="Type Phone Number" type="text">
+                            </div>
+                            <hr>
+                            <center><button class="btn btn-dark" onclick="form1next();" type="button">Next</button></center>
+                        </div>
+                        <div id="form2" style="display:none;opacity:0;"> 
+                            <div class="alert alert-primary" role="alert">
+                                Now, enter your address
+                            </div> 
+                            <div class="input-group mb-3" >
+                                <label class="input-group-text" for="state">State</label>
+                                <select class="form-select" id="state" name="state">
+                                    <option selected style="margin:5px;" value="1000">Choose...</option>
+                                    {% for i in range(36) %}
+                                    <option value="{{ i }}">{{ states[i] }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="input-group mb-3">
+                                <input autocomplete="off" class="form-control" id="city" name="city" placeholder="Enter City" type="text">
+                            </div>
+                            <div class="input-group mb-3">
+                                <input autocomplete="off" class="form-control" id="address" name="address" placeholder="Enter remaining address" type="text">
+                            </div>
+                            <hr>
+                            <div class="container">
+                                <div class="row justify-content-around">
+                                    <div class="col-4">
+                                        <button class="btn btn-dark" onclick="form2pre();" type="button">Previous</button>
+                                    </div>
+                                    <div class="col-4">
+                                        <button class="btn btn-dark" onclick="form2next();" type="button">Next</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="form3" style="display:none;opacity:0;">
+                            <div class="alert alert-primary" role="alert">
+                                Finally, enter your email and set-up a password. Make sure the password is alphanumeric and is at least 10 characters long. 
+                            </div>
+                            <div class="input-group mb-3">
+                                <input autocomplete="off" class="form-control" id="email" name="email" placeholder="Type Email" type="text">
+                            </div>
+                            <div class="input-group mb-3">
+                                <input autocomplete="off" class="form-control" id="password" name="password" placeholder="Type Password" type="password">
+                            </div>
+                            <div class="input-group mb-3">
+                                <input autocomplete="off" class="form-control" id="confirmation" name="confirmation" placeholder="Retype Password" type="password">
+                            </div>
+                            <hr>
+                            <div class="container">
+                                <div class="row justify-content-around">
+                                    <div class="col-4">
+                                        <button class="btn btn-dark" onclick="form3pre();" type="button">Previous</button>
+                                    </div>
+                                    <div class="col-4">
+                                        <button class="btn btn-dark" type="submit">Register</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 align-self-end">
+            <img src="static\kangCoup.png">
+        </div>   
+    </div>
+</div>
+{% endblock %}
