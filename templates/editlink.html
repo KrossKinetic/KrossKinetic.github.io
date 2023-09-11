@@ -1,0 +1,229 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Edit link
+{% endblock %}
+
+{% block script %}
+<script>
+  function searchRenode(){
+      var input, ren;
+      input = document.getElementById("search4").value.toUpperCase();
+      ren = document.getElementsByClassName("renodes");
+
+      for (let i = 0; i < ren.length; i++)
+      {
+        if (ren[i].id.toUpperCase().includes(input)){
+          ren[i].style.display = "block";
+        }
+        else
+        {
+          ren[i].style.display = "none";
+        }
+      }
+  }
+
+  function searchicon(){
+      var input, image;
+      input = document.getElementById("search").value.toUpperCase();
+      images = document.getElementsByClassName("icons1");
+
+      for (let i = 0; i < images.length; i++)
+      {
+        if (images[i].id.toUpperCase().includes(input)){
+          images[i].style.display = "block";
+        }
+        else
+        {
+          images[i].style.display = "none";
+        }
+      }
+  }
+
+  function searchlink(){
+      var input, l;
+      input = document.getElementById("search3").value.toUpperCase();
+      l = document.getElementsByClassName("links1");
+
+      for (let i = 0; i < l.length; i++)
+      {
+        if (l[i].id.toUpperCase().includes(input)){
+          l[i].style.display = "block";
+        }
+        else
+        {
+          l[i].style.display = "none";
+        }
+      }
+  }
+
+  function resize()
+            {
+                coll = document.getElementsByClassName("collapse");
+                let width = window.innerWidth;
+                if (width < 780)
+                {
+                    for (let i = 0; i < coll.length; i++){
+                        coll[i].style.width = "100%";
+                    }
+                }
+                else
+                {
+                    for (let i = 0; i < coll.length; i++){
+                        coll[i].style.width = "90%";
+                    }
+                }
+            }
+
+            function resizeCard()
+            {
+                var coll = document.getElementsByClassName("card3");
+                let width = window.innerWidth;
+                for (let i = 0; i < coll.length; i++){
+
+                    if (width < 780)
+                    {
+                    coll[i].style.width = "100%";
+                    }
+                    else
+                    {
+                    coll[i].style.width = "60%";
+                    }
+
+                }
+            }
+
+            window.addEventListener("resize",resizeCard);
+            window.addEventListener("load",resizeCard);
+
+            window.addEventListener("resize",resize);
+            window.addEventListener("load",resize);
+</script>
+{% endblock %}
+
+{% block main %}
+<div class="d-flex justify-content-center">
+<div class="card card3" id="card3"><div class="card-body">
+<form action="/editlink" method="post">
+    <div class="mb-3">
+      <p>
+        <a class="btn btn1" data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">
+          Select Links to edit
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+            <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
+          </svg>
+        </a>
+      </p>
+      <div class="mb-3 d-flex justify-content-center">
+      <div class="collapse" id="collapseExample1">
+        <div class="card card2 card-body">
+          <input autocomplete="off" onkeyup="searchlink();" class="search1 form-control mx-auto w-auto" id="search3" name="search" placeholder="Search for Links" type="text"><hr>
+          <div class="flex-row d-flex flex-wrap justify-content-center">
+          {% if links %}
+          {% for link in links %}
+              <div class="links1 mb-2" id="{{ link["name"] }}">
+                  <div class="d-flex justify-content-left form-check form-switch">
+                    <div>
+                      <input type="radio" class="btn-check" name="links" id="/{{ link["name"] }}" autocomplete="off" value="{{ link["name"] }}">
+                      <label class="btn btn-outline-danger" for="/{{ link["name"] }}">{{ link["name"] }}</label>
+                    </div>
+                  </div>
+              </div>
+          {% endfor %}
+          {% else %}
+          <div class="alert alert-danger" role="alert">
+            No links found! Head to the guide section from the navigation bar to see how to create one!
+          </div>
+          {% endif %}
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="mb-3">
+      <div class="mb-2 d-flex justify-content-center">
+      <div class="alert alert-danger" role="alert">
+        If you dont want to change an entry, leave it blank/unselected.
+      </div>
+    </div>
+        <input class="search1 form-control mx-auto w-auto" id="newname" name="newname" placeholder="Enter the new name" type="text">
+      </div>
+    <div class="mb-3">
+        <p>
+            <a class="btn btn1" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+              Select New Icon
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
+              </svg>
+            </a>
+          </p>
+          <div class="mb-3 d-flex justify-content-center">
+          <div class="collapse" id="collapseExample">
+            <div class="card card2 card-body">
+              <input autocomplete="off" onkeyup="searchicon();" class="search1 form-control mx-auto w-auto" id="search" name="search" placeholder="Search for Icon" type="text"><hr>
+              <div class="flex-row d-flex flex-wrap justify-content-center">
+              {% for icon in icons %}
+                <div class="my-2 mx-1 icons1" id=".{{icon}}">
+                  <input type="radio" class="btn-check" name="options-outlined" value="{{icon}}" id="{{icon}}" autocomplete="off">
+                  <label class="btn btn-outline-danger" for="{{icon}}"><img class="single-img" loading="lazy" role="img" src="/static/icons/{{icon}}"></label>
+                </div>
+              {% endfor %}
+              </div>
+            </div>
+            </div>
+          </div>
+    </div>
+    <div class="mb-3">
+      <div>
+        <p>
+          <a class="btn btn1" data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
+            Select ReNode to add it to
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+              <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
+            </svg>
+          </a>
+        </p>
+        <div class="mb-3 d-flex justify-content-center">
+        <div class="collapse" id="collapseExample2">
+          <div class="card card2 card-body">
+              <input autocomplete="off" onkeyup="searchRenode()" class="search1 form-control mx-auto w-auto" id="search4" name="search-renode" placeholder="Search for ReNodes" type="text"><hr>
+            <div class="flex-row d-flex flex-wrap justify-content-center">
+              <div class="renodes m-2" id="0">
+                <div class="d-flex justify-content-around">
+                    <div>
+                      <input type="radio" class="btn-check" name="renodes" id="\norenode" autocomplete="off" value="0">
+                      <label class="btn btn-outline-danger" for="\norenode">No ReNode</label>
+                    </div>
+                </div>
+            </div>
+            {% if renode %}
+            {% for ren in renode %}
+                <div class="renodes m-2" id="{{ ren["name"] }}">
+                    <div class="d-flex justify-content-around">
+                        <div>
+                          <input type="radio" class="btn-check" name="renodes" id="\{{ ren["id"] }}" autocomplete="off" value="{{ ren["id"] }}">
+                          <label class="btn btn-outline-danger" for="\{{ ren["id"] }}">{{ ren["name"] }}</label>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            {% else %}
+            <div class="alert alert-danger" role="alert">
+              No ReNodes found! Head to the guide section from the navigation bar to see how to create one!
+            </div>
+            {% endif %}
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <hr>
+    <div>
+      <button class="btn btn1" type="submit">Save</button>
+    </div><br>
+</form>
+</div></div></div>
+{% endblock %}

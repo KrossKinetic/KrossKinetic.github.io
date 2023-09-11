@@ -1,0 +1,188 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block script %}
+<script>
+  function search1(){
+      var input, image;
+      input = document.getElementById("search").value.toUpperCase();
+      links = document.getElementsByClassName("card2");
+
+      for (let i = 0; i < links.length; i++)
+      {
+        if (links[i].id.toUpperCase().includes(input)){
+            links[i].style.display = "block";
+        }
+        else
+        {
+            links[i].style.display = "none";
+        }
+      }
+  }
+
+  function search2(){
+        var input, image, temp1, temp2;
+        input = document.getElementById("search").value.toUpperCase();
+        links = document.getElementsByClassName("card1");
+        state = document.getElementById("btn-outline-dark");
+        for (let i = 0; i < links.length; i++)
+        {
+            if (state.getAttribute("onclick") === "sunset();"){
+                temp1 = links[i].parentElement.parentElement.parentElement.parentElement.id;
+                temp2 = ".".concat(temp1)
+                document.getElementById(temp2).style.backgroundColor = "white";
+            }
+            else if (state.getAttribute("onclick") === "sunrise();"){
+                temp1 = links[i].parentElement.parentElement.parentElement.parentElement.id;
+                temp2 = ".".concat(temp1)
+                document.getElementById(temp2).style.backgroundColor = "#404040";
+            }
+
+        }
+
+        for (let i = 0; i < links.length; i++)
+        {
+            if (links[i].id.toUpperCase().includes(input) && input !== '' ){
+                temp1 = links[i].parentElement.parentElement.parentElement.parentElement.id;
+                temp2 = ".".concat(temp1)
+                document.getElementById(temp2).style.backgroundColor = "#F08080";
+
+            }
+        }
+  }
+
+  function resize()
+            {
+                let width = window.innerWidth;
+                if (width < 780)
+                {
+                    document.getElementById("accordionRenodes").style.width = "100%";
+                }
+                else
+                {
+                    document.getElementById("accordionRenodes").style.width = "80%";
+                }
+            }
+
+            function resizeCard()
+            {
+                var coll = document.getElementsByClassName("card3");
+                let width = window.innerWidth;
+                for (let i = 0; i < coll.length; i++){
+
+                    if (width < 780)
+                    {
+                    coll[i].style.width = "100%";
+                    }
+                    else
+                    {
+                    coll[i].style.width = "80%";
+                    }
+
+                }
+            }
+
+            window.addEventListener("resize",resizeCard);
+            window.addEventListener("load",resizeCard);
+
+            window.addEventListener("resize",resize);
+            window.addEventListener("load",resize);
+</script>
+{% endblock %}
+
+
+{% block main %}
+<div class="row g-1 justify-content-center">
+    <div>
+        <input autocomplete="off" onkeyup="search1();search2();" class="my-3 search1 form-control mx-auto w-auto" id="search" name="search" placeholder="Search for links" type="text"><br>
+    </div>
+    <div class="card card3 " id="card3"><div class="card-body">
+    <div class="g-0 row justify-content-center">
+        <div class="accordion my-1" id="accordionRenodes">
+            {% if renodes %}
+            {% for ren in renodes %}
+            <div class="accordion-item" id=".{{ ren["name"] }}">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed text" id="..{{ ren["name"] }}" type="button" data-bs-toggle="collapse" data-bs-target="#accordtarget{{ ren["id"] }}" aria-expanded="false" aria-controls="accordtarget{{ ren["id"] }}">
+                  {{ ren["name"] }} links
+                </button>
+              </h2>
+              <div id="accordtarget{{ ren["id"] }}" class="accordion-collapse collapse" aria-labelledby="headingOne">
+                <div class="accordion-body">
+                    <div class="d-flex justify-content-center col">
+                        <form method="post" action="/deleterenode">
+                            <button type="submit" class="m-1 btn btn1" value="{{ ren["id"] }}" name="rename">Delete ReNode</button>
+                        </form>
+                    </div>
+                    <div class="d-flex flex-row flex-wrap justify-content-around align-items-center">
+                        {% for link in links %}
+                            {% if link["node"] == ren["id"] %}
+                            <div class="card1 card2 card m-3" id="{{ link["name"] }}" style="width: 18rem;">
+                            <div class="d-flex row justify-content-center align-items-center">
+                            <div class="col-5">
+                                <img class="card-img-top" loading="lazy" role="img" style="height: 60px; width: 60px;" src="{{ link["icon"] }}">
+                            </div>
+                            <div class="col-7">
+                                <div class="card-body">
+                                    <h5 class="card-title text">{{ link["name"] }}</h5>
+                                        <a href="{{ link["link"] }}"  target="_blank" class="btn btn1">Go to website</a>
+                                        <form method="post" action="/deletelink">
+                                            <button type="submit" class="m-2 btn btn1" value="{{ link["name"] }}" name="name">Delete Link</button>
+                                        </form>
+                                </div>
+                            </div>
+                            </div>
+                            </div>
+                            {% endif %}
+                        {% endfor %}
+                        </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+            {% else %}
+            <div class="mb-1 d-flex justify-content-center"><div class="alert alert-danger" role="alert">
+                No ReNodes found! Head to the guide section from the navigation bar to see how to create one!
+              </div></div>
+            {% endif %}
+        </div>
+        </div>
+        </div>
+        </div>
+
+        <div class="card card3" id="card3"><div class="card-body">
+        <div class="d-flex flex-row flex-wrap justify-content-around align-items-center">
+        {% if links %}
+        {% for link in links %}
+            {% if link["node"] == 0 %}
+            <div class="card2 card m-3" id="{{ link["name"] }}" style="width: 20.5rem;">
+            <div class="d-flex row justify-content-center align-items-center">
+            <div class="col-5">
+                <img class="card-img-top" role="img" style="height: 90px; width: 90px;" src="{{ link["icon"] }}">
+            </div>
+            <div class="col-7">
+                <div class="card-body">
+                    <h5 class="card-title text">{{ link["name"] }}</h5>
+                        <a href="{{ link["link"] }}" target="_blank" class="btn btn1">Go to website</a>
+                        <form method="post" action="/deletelink">
+                            <button type="submit" class="m-2 btn btn1" value="{{ link["name"] }}" name="name">Delete Link</button>
+                        </form>
+                </div>
+            </div>
+            </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+        {% else %}
+        <div class="mb-1 d-flex justify-content-center"><div class="alert alert-danger" role="alert">
+            No links found! Head to the guide section from the navigation bar to see how to create one!
+          </div></div>
+        {% endif %}
+        </div>
+    </div>
+    </div>
+</div>
+{% endblock %}
