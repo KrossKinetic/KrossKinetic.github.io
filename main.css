@@ -2,6 +2,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  font-family: 'MyFontOk';
 }
 
 .background {
@@ -32,4 +33,11 @@ body {
 
 .area{
   background-image: linear-gradient(to right, rgb(55, 49, 70) , rgb(37, 61, 55));;   
+}
+
+@font-face {
+  font-family: 'MyFontOk';
+  src: url('images/text.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
