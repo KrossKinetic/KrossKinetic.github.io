@@ -33,3 +33,7 @@ body{
 .flip{
     transform: rotate(180deg);
 }
+
+.btn-sm{
+    margin:2px
+}

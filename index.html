@@ -15,6 +15,11 @@
         <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
         <script defer src="https://pyscript.net/latest/pyscript.js"></script> -->
   <!-- JavaScript -->
+  <script>
+    function del_alert(){
+      document.getElementById('alert_mess').style.display = 'None';
+    }
+  </script>
 </head>
 
 <body>
@@ -163,6 +168,19 @@
               <div class="card-header">
                 <h3>Skills</h3>
               </div>
+              <br>
+              <div class="alert alert-primary" role="alert" id="alert_mess">
+                <div class="container text-center">
+                  <div class="row">
+                    <div class="col-10">
+                      Click on each individual skill I have mentioned to see the project I worked on using that skill.
+                    </div>
+                    <div class="col-2">
+                        <button type="button" onclick="del_alert()" class="btn btn-outline-info">X</button>
+                    </div>
+                </div>
+                </div>
+              </div>
               <div class="row">
                 <div class="col">
                   <div class="card-body">
@@ -171,7 +189,13 @@
                         Programming Languages
                       </div>
                       <div class="card-body">
-                        <p>Python, JavaScript, PyScript, React.JS, CSS, HTML, Jinja, Flask, Django, C, Markdown, AOSP development, MySQL, SQLite3.</p>
+                        <button type="button" class="btn btn-info btn-sm">Python</button><button type="button" class="btn btn-info btn-sm">JavaScript</button>
+                        <button type="button" class="btn btn-info btn-sm">PyScript</button><button type="button" class="btn btn-info btn-sm">React.JS</button>
+                        <button type="button" class="btn btn-info btn-sm" >CSS</button><button type="button" class="btn btn-info btn-sm">HTML</button>
+                        <button type="button" class="btn btn-info btn-sm">Jinja</button><button type="button" class="btn btn-info btn-sm">Flask</button>
+                        <button type="button" class="btn btn-info btn-sm">C</button><button type="button" class="btn btn-info btn-sm">Markdown</button>
+                        <button type="button" class="btn btn-info btn-sm">AOSP development</button>
+                        <button type="button" class="btn btn-info btn-sm">MySQL</button><button type="button" class="btn btn-info btn-sm">SQLite3</button>
                       </div>
                     </div>
                   </div>
@@ -183,15 +207,16 @@
                         Tools
                       </div>
                       <div class="card-body">
-                        <p>Visual Studio Code, Docker, Git, Linux, Heroku, Vercel, Bootstrap Framework, Google Workspace, Microsoft Office</p>
+                        <button type="button" class="btn btn-info btn-sm">Visual Studio Code</button><button type="button" class="btn btn-info btn-sm">Docker</button>
+                        <button type="button" class="btn btn-info btn-sm">Git</button><button type="button" class="btn btn-info btn-sm">Linux</button>
+                        <button type="button" class="btn btn-info btn-sm" >Heroku</button><button type="button" class="btn btn-info btn-sm">Vercel</button>
+                        <button type="button" class="btn btn-info btn-sm">Bootstrap Framework</button><button type="button" class="btn btn-info btn-sm">Google Workspace</button>
+                        <button type="button" class="btn btn-info btn-sm">Microsoft Office</button>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>    
-              <div class="container">
-                <button type="button" class="btn btn-outline-info">Download Resume</button>
-              </div>
               <br>
             </div>
           </div>
