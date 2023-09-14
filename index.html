@@ -1,166 +1,207 @@
 <html>
-    <head>
-        <title>Main</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-        
-        <link rel="stylesheet" href="css/background.css">    
-        <link rel="stylesheet" href="css/main.css">    
-        <!-- PyScript Dependencies
+
+<head>
+  <title>Main</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/background.css">
+  <link rel="stylesheet" href="css/main.css">
+  <!-- PyScript Dependencies
         <script src="//unpkg.com/element-plus"></script>
         <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
         <script defer src="https://pyscript.net/latest/pyscript.js"></script> -->
-        <!-- JavaScript -->
-    </head>
-    <body>
-            <div class="container-fluid g-0">
-                <div class="container-fixed nav1">
-                  <div class="container text-center" >
-                    <div class="row justify-content-center">
-                      <div class="col">
-                        <div class="btn-group card-shadow" style="margin-top:20px;" role="group" aria-label="navbar">
-                          <button type="button" class="btn btn-primary" onclick="introduction()">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
-                              <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
-                            </svg>
-                            <center>Introduction</center>
-                          </button>
-                          <button type="button" class="btn btn-primary" onclick="education()">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
-                              <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
-                            </svg>
-                            <center>Education</center>
-                          </button>
-                          <button type="button" class="btn btn-primary" onclick="skills()">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lightbulb" viewBox="0 0 16 16">
-                              <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1z"/>
-                            </svg>
-                            <center>Skills</center>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pc-display" viewBox="0 0 16 16">
-                              <path d="M8 1a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V1Zm1 13.5a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0Zm2 0a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0ZM9.5 1a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5ZM9 3.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1h-5a.5.5 0 0 0-.5.5ZM1.5 2A1.5 1.5 0 0 0 0 3.5v7A1.5 1.5 0 0 0 1.5 12H6v2h-.5a.5.5 0 0 0 0 1H7v-4H1.5a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5H7V2H1.5Z"/>
-                            </svg>
-                            <center>Work Experience</center>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-terminal" viewBox="0 0 16 16">
-                              <path d="M6 9a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3A.5.5 0 0 1 6 9zM3.854 4.146a.5.5 0 1 0-.708.708L4.793 6.5 3.146 8.146a.5.5 0 1 0 .708.708l2-2a.5.5 0 0 0 0-.708l-2-2z"/>
-                              <path d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h12z"/>
-                            </svg>
-                            <center>Projects</center>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>     
+  <!-- JavaScript -->
+</head>
 
-              <div class="container-fluid g-0">
-                <section id="introduction" class="spacer layer">
-                  <div class="container-fluid ">
-                    <div class="container">
-                      <div class="row align-items-center" id="introduction">
-                        <div class="col-md-5">
-                            <img class="img-fluid img-intro" src="images/vet.jpg" >
-                        </div>
-                        <div class="col-md-7">
-                            <div class="row">
-                                <div class="col">
-                                    <div class="container-fluid" style="margin: 10px;">
-                                        <div class="card card-shadow blur" data-bs-theme="dark">
-                                            <div class="card-header">
-                                                <h3>Who Am I ?</h3>
-                                            </div>
-                                            <div class="card-body">
-                                                <p id="para-intro"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia odit ab tempora eveniet quas ratione dignissimos suscipit nam nisi libero aspernatur, maxime ex qui facere neque at ipsa reprehenderit aperiam?</p>
-                                                
-                                            </div>
-                                            <div class="container">
-                                                <button type="button" class="btn btn-outline-info">Download Resume</button>
-                                            </div>
-                                            <br> 
-                                        </div>
-                                    </div>
-                                </div>     
-                            </div>
-                        </div>    
-                      </div>
-                    </div>
-                  </div>
-                </section>
+<body>
+  <div class="container-fluid g-0 nav1">
+    <div class="container-fixed blur sticky-top">
+      <div class="container text-center">
+        <div class="row justify-content-center">
+          <div class="col">
+            <div class="btn-group card-shadow" style="margin-top:20px;margin-bottom: 25px;" role="group"
+              aria-label="navbar">
+              <button type="button" class="btn btn-primary" href="#introduction">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                </svg>
+                <center>Introduction</center>
+              </button>
+              <button type="button" class="btn btn-primary" href="#education">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+                </svg>
+                <center>Education</center>
+              </button>
+              <button type="button" class="btn btn-primary" onclick="skills()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-lightbulb" viewBox="0 0 16 16">
+                  <path
+                    d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1z" />
+                </svg>
+                <center>Skills</center>
+              </button>
+              <button type="button" class="btn btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-pc-display" viewBox="0 0 16 16">
+                  <path
+                    d="M8 1a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V1Zm1 13.5a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0Zm2 0a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0ZM9.5 1a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5ZM9 3.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1h-5a.5.5 0 0 0-.5.5ZM1.5 2A1.5 1.5 0 0 0 0 3.5v7A1.5 1.5 0 0 0 1.5 12H6v2h-.5a.5.5 0 0 0 0 1H7v-4H1.5a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5H7V2H1.5Z" />
+                </svg>
+                <center>Work Experience</center>
+              </button>
+              <button type="button" class="btn btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-terminal" viewBox="0 0 16 16">
+                  <path
+                    d="M6 9a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3A.5.5 0 0 1 6 9zM3.854 4.146a.5.5 0 1 0-.708.708L4.793 6.5 3.146 8.146a.5.5 0 1 0 .708.708l2-2a.5.5 0 0 0 0-.708l-2-2z" />
+                  <path
+                    d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h12z" />
+                </svg>
+                <center>Projects</center>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-                <section id="skills" class="spacer layer_2">
-                  <div class="container">
-                    <div class="row">
-                      <div class="card card-shadow blur" data-bs-theme="dark">
+    <div class="container-fluid g-0">
+      <section class="spacer layer">
+        <div class="container-fluid ">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-md-5">
+                <img class="img-fluid img-intro" src="images/vet.jpg">
+              </div>
+              <div class="col-md-7">
+                <div class="row">
+                  <div class="col">
+                    <div class="container-fluid" style="margin: 10px;">
+                      <div class="card card-shadow blur" data-bs-theme="dark" id="introduction">
                         <div class="card-header">
-                            <h3>Education</h3>
+                          <h3>Who Am I ?</h3>
                         </div>
                         <div class="card-body">
-                            <div class="row">
-                              <div class="col">
-                                <div class="card">
-                                  <div class="card-header">
-                                    Stony Brook University, <i>Stony Brook, NY, USA</i>
-                                  </div>
-                                  <div class="card-body">
-                                    <p class="card-text">Bachelor of Science in Computer Science</p>
-                                    <p class="card-text">Honors: University Scholars</p>
-                                    <p class="card-text">Awards: YouAreWelcomeHere Scholarship, worth $54,600.</p>
-                                    <div class="container">
-                                      <button type="button" class="btn btn-outline-info">Enrollment Verification</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="col">
-                                <div class="card">
-                                  <div class="card-header">
-                                    Study Hall School, <i>Lucknow, India</i>
-                                  </div>
-                                  <div class="card-body">
-                                    <p class="card-text">Subjects: Physics, Chemistry, Math, Computer Science, English</p>
-                                    <p class="card-text">Grade: 94.3% </p>
-                                    <p class="card-text">Awards: Academic Excellence in Physics</p>
-                                    <div class="container">
-                                      <button type="button" class="btn btn-outline-info">Class 12th CBSE Board Marksheet</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            
-                        </div>
-                        <br> 
-                    </div>
-                    </div>
-                  </div>
-                </section>
-                
-                <section id="skills" class="spacer layer_3">
-                  <div class="container">
-                    <div class="row">
-                      <div class="card card-shadow blur" data-bs-theme="dark">
-                        <div class="card-header">
-                            <h3>Who Am I ?</h3>
-                        </div>
-                        <div class="card-body">
-                            <p id="para-intro"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia odit ab tempora eveniet quas ratione dignissimos suscipit nam nisi libero aspernatur, maxime ex qui facere neque at ipsa reprehenderit aperiam?</p>
-                            
+                          <p id="para-intro"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia odit ab
+                            tempora eveniet quas ratione dignissimos suscipit nam nisi libero aspernatur, maxime ex qui
+                            facere neque at ipsa reprehenderit aperiam?</p>
+
                         </div>
                         <div class="container">
-                            <button type="button" class="btn btn-outline-info">Download Resume</button>
+                          <button type="button" class="btn btn-outline-info">Download Resume</button>
                         </div>
-                        <br> 
-                    </div>
+                        <br>
+                      </div>
                     </div>
                   </div>
-                </section>
+                </div>
               </div>
+            </div>
           </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    </body>
+        </div>
+      </section>
+
+      <section id="education" class="spacer layer_2">
+        <div class="container">
+          <div class="row">
+            <div class="card card-shadow blur" data-bs-theme="dark">
+              <div class="card-header">
+                <h3>Education</h3>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <div class="card" style="margin:10px">
+                      <div class="card-header">
+                        Stony Brook University, <i>Stony Brook, NY, USA</i>
+                      </div>
+                      <div class="card-body">
+                        <p class="card-text">Bachelor of Science in Computer Science</p>
+                        <p class="card-text">Honors: University Scholars</p>
+                        <p class="card-text">Awards: YouAreWelcomeHere Scholarship, worth $54,600.</p>
+                        <div class="container">
+                          <button type="button" class="btn btn-outline-info">Enrollment Verification</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card" style="margin:10px">
+                      <div class="card-header">
+                        Study Hall School, <i>Lucknow, India</i>
+                      </div>
+                      <div class="card-body">
+                        <p class="card-text">Subjects: Physics, Chemistry, Math, Computer Science, English</p>
+                        <p class="card-text">Grade: 94.3% </p>
+                        <p class="card-text">Awards: Academic Excellence in Physics</p>
+                        <div class="container">
+                          <button type="button" class="btn btn-outline-info">Class 12th CBSE Board Marksheet</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <br>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="spacer layer_3">
+        <div class="container">
+          <div class="row">
+            <div class="card card-shadow blur" data-bs-theme="dark">
+              <div class="card-header">
+                <h3>Skills</h3>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="card-body">
+                    <div class="card" style="margin:10px">
+                      <div class="card-header">
+                        Programming Languages
+                      </div>
+                      <div class="card-body">
+                        <p>Python, JavaScript, PyScript, React.JS, CSS, HTML, Jinja, Flask, Django, C, Markdown, AOSP development, MySQL, SQLite3.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>    
+                <div class="col">
+                  <div class="card-body">
+                    <div class="card" style="margin:10px">
+                      <div class="card-header">
+                        Tools
+                      </div>
+                      <div class="card-body">
+                        <p>Visual Studio Code, Docker, Git, Linux, Heroku, Vercel, Bootstrap Framework, Google Workspace, Microsoft Office</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>    
+              <div class="container">
+                <button type="button" class="btn btn-outline-info">Download Resume</button>
+              </div>
+              <br>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
