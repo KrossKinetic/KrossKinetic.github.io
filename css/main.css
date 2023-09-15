@@ -21,6 +21,10 @@ section {
   padding: 100px 20vw;
 }
 
+.modal{
+  background-color: blur(5);
+}
+
 .intro {
   position: absolute;
   top: 50%;
