@@ -9,27 +9,6 @@
   <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>    
   <link rel="stylesheet" href="css/background.css">
   <link rel="stylesheet" href="css/main.css">
-  <!-- PyScript Dependencies
-        <script src="//unpkg.com/element-plus"></script>
-        <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-        <script defer src="https://pyscript.net/latest/pyscript.js"></script> -->
-  <!-- JavaScript -->
-  <script>
-    function del_alert(){
-      document.getElementById('alert_mess').style.display = 'None';
-    }
-
-    function set_cookie(){
-      Cookies.set('del_alert',1,{ expires: 30})
-    }
-
-    window.onload = function(){
-      var cookie = Cookies.get('del_alert');
-      if (cookie == 1 ){
-        document.getElementById('alert_mess').style.display = 'None'
-      }
-    }
-  </script>
 </head>
 
 <body>
@@ -118,11 +97,11 @@
       <section id="education" class="spacer layer_2">
         <div class="container">
           <div class="row">
-            <div class="card card-shadow blur" data-bs-theme="dark">
+            <div class="card card-shadow blur" style="opacity:0" id="edu" data-bs-theme="dark">
               <div class="card-header">
                 <h3>Education</h3>
               </div>
-              <div class="card-body">
+              <div class="card-body" id="edu_1">
                 <div class="row">
                   <div class="col">
                     <div class="card" style="margin:10px">
@@ -165,7 +144,7 @@
       <section id="projects" class="spacer layer_3">
         <div class="container">
           <div class="row">
-            <div class="card card-shadow blur" data-bs-theme="dark">
+            <div class="card card-shadow blur" id="pro" style="opacity:0" data-bs-theme="dark">
               <div class="card-header">
                 <h3>Projects and Skills</h3>
               </div>
@@ -173,7 +152,7 @@
               <div class="alert alert-primary" role="alert" id="alert_mess">
                 <div class="container text-center">
                   <div class="row">
-                    <div class="col-10">
+                    <div class="col-10" id="pro1">
                       Click on each individual Project to see the details and the skills I used for the project.
                     </div>
                     <div class="col-2">
@@ -421,11 +400,11 @@
       <section id="work" class="spacer layer_4">
         <div class="container">
           <div class="row">
-            <div class="card card-shadow blur" data-bs-theme="dark">
+            <div class="card card-shadow blur" style="opacity:0" id="work1" data-bs-theme="dark">
               <div class="card-header">
                 <h3>Work Experience</h3>
               </div>
-              <div class="card-body">
+              <div class="card-body" id="work2">
                 <div class="row">
                   <div class="col">
                     <div class="card" style="margin:10px">
@@ -454,7 +433,6 @@
                         <p class="card-text">Helped developers to fix the bug by creating system logs.</p>
                         <div class="container">
                           <a type="button" target="_blank" style="margin:10px" href="https://www.ubisoft.com/en-us/" class="btn btn-outline-info">Ubisoft Website</a>
-                          <button type="button" style="margin:10px" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#ubi">Sample Images</button>
                         </div>
                       </div>
                     </div>
@@ -475,32 +453,93 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                
+                <div id="carouselExampleFade" data-bs-theme="light" class="carousel slide carousel-fade">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="./images/omni1.png" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="./images/omni2.png" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="./images/omni3.png" class="d-block w-100">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
-
-        <div class="modal fade modal-lg" data-bs-theme="dark" id="ubi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Images</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-
-              </div>
-            </div>
-          </div>
-        </div>
-
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
 </body>
+<script>
+  function del_alert(){
+    document.getElementById('alert_mess').style.display = 'None';
+  }
+
+  function set_cookie(){
+    Cookies.set('del_alert',1,{ expires: 30})
+  }
+
+  window.onload = function(){
+    var cookie = Cookies.get('del_alert');
+    if (cookie == 1 ){
+      document.getElementById('alert_mess').style.display = 'None'
+    }
+  }
+
+  const observer1 = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const square = document.getElementById('edu');
+      if (entry.isIntersecting) {
+        square.classList.add('start_animation');
+      return;
+      }
+  
+      square.classList.remove('start_animation');
+    });
+  });
+  observer1.observe(document.getElementById('edu_1'));
+
+  const observer2 = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const square = document.getElementById('pro');
+      if (entry.isIntersecting) {
+        square.classList.add('start_animation');
+      return;
+      }
+
+      square.classList.remove('start_animation');
+    });
+  });
+  observer2.observe(document.getElementById('pro1'));
+
+  const observer3 = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const square = document.getElementById('work1');
+      if (entry.isIntersecting) {
+        square.classList.add('start_animation');
+      return;
+      }
+  
+      square.classList.remove('start_animation');
+    });
+  });
+  observer3.observe(document.getElementById('work2'));
+
+</script>
 <footer class="mb-3 small text-center text-muted">
   A hobby project by <b>Anshumaan ( Manas ) Singh</b>.
 </footer>
