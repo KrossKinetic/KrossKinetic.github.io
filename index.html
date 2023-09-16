@@ -10,9 +10,8 @@
   <link rel="stylesheet" href="css/background.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
-
-<body>
-  <div class="container-fluid g-0 nav1">
+<body class="container-fluid g-0">
+  <div class="nav1">
     <div class="container-fixed blur sticky-top">
       <div class="container text-center">
         <div class="row justify-content-center">
@@ -57,34 +56,30 @@
         </div>
       </div>
     </div>
-
-    <div class="container-fluid g-0">
-      <section class="spacer layer"  id="introduction">
-        <div class="container-fluid ">
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col-md-5">
-                <img class="img-fluid img-intro" src="images/vet.jpg">
-              </div>
-              <div class="col-md-7">
-                <div class="row">
-                  <div class="col">
-                    <div class="container-fluid" style="margin: 10px;">
-                      <div class="card card-shadow blur" data-bs-theme="dark">
-                        <div class="card-header">
-                          <h3>Who Am I ?</h3>
-                        </div>
-                        <div class="card-body">
-                          <p id="para-intro"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia odit ab
-                            tempora eveniet quas ratione dignissimos suscipit nam nisi libero aspernatur, maxime ex qui
-                            facere neque at ipsa reprehenderit aperiam?</p>
-
-                        </div>
-                        <div class="container">
-                          <button type="button" class="btn btn-outline-info">Download Resume</button>
-                        </div>
-                        <br>
+    <div class="container-fluid">
+      <section class="spacer layer" style="padding: 80px; padding-right:150px; padding-left:150px" id="introduction">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col-lg-4">
+              <img class="img-fluid img-intro" src="images/vet.jpg">
+            </div>
+            <div class="col-lg-8">
+              <div class="row">
+                <div class="col">
+                  <div class="container-fluid">
+                    <div class="card card-shadow blur" style="width:100%" data-bs-theme="dark">
+                      <div class="card-header">
+                        <h3>Who Am I ?</h3>
                       </div>
+                      <div class="card-body" style="font-size:14px">
+                        <p id="para-intro"> Hello! I am Manas, an international student from India currently pursuing an undergraduate degree at Stony Brook University, NY. I have a deep passion for Computer Science. Throughout my academic career, I have used my computer science and programming skills to solve various problems I encountered. When I was taking an online astronomy course, I used my programming skills to build a program that could effectively calculate the radii of binary stars by plotting two simultaneous equations and looking where they intersect.  </p>           
+                          <p>I also worked as an intern at Omniscience Corporation ( Details mentioned below ). I am part of the Cybersecurity Club, Computer Science Club, Astronomy Club, and Robotics Club. Throughout the semester, I’ll be working on various projects ranging from building an All-Terrain Robot, to designing and building programs to help out the astronomy club with their endeavors to chart the stars.</p>                          
+                         <p>I am actively involved in volunteer work, like visiting the US Veterans Home in Long Island, to help people who are part of the community, understand  the challenges they are facing, and solve them. I am also interested in research work. One of my upcoming research projects on whether De-extinction of Woolly Mammoths is a great idea or a bad one. I am always looking for internships at companies who will help me use my untapped potential for coming up with new innovative ideas to solve problems.</p> 
+                      </div>
+                      <div class="container">
+                        <button type="button" class="btn btn-outline-info">Download Resume</button>
+                      </div>
+                      <br>
                     </div>
                   </div>
                 </div>
@@ -93,8 +88,7 @@
           </div>
         </div>
       </section>
-
-      <section id="education" class="spacer layer_2">
+      <section class="spacer layer_2">
         <div class="container">
           <div class="row">
             <div class="card card-shadow blur" style="opacity:0" id="edu" data-bs-theme="dark">
@@ -140,7 +134,6 @@
           </div>
         </div>
       </section>
-
       <section id="projects" class="spacer layer_3">
         <div class="container">
           <div class="row">
@@ -179,7 +172,6 @@
           </div>
         </div>
       </section>
-
       <div id="modal_cards">
         <div class="modal fade modal-lg" data-bs-theme="dark" id="relinked" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered ">
@@ -209,7 +201,6 @@
             </div>
           </div>
         </div>
-
         <div class="modal fade modal-lg" data-bs-theme="dark" id="centerium" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -218,13 +209,14 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <p>>Developed a comprehensive Examination Center Tracking Database System, named "Centerium," aimed at optimizing and streamlining the management of examination centers across India for both competitive and board examinations</p>
+                <p>Developed a comprehensive Examination Center Tracking Database System, named "Centerium," aimed at optimizing and streamlining the management of examination centers across India for both competitive and board examinations</p>
                 <h4>Programming Languages and Tools</h4>
                 <hr>
                 <p>The languages I used: Python, MySQL, NumPy</p>
                 <p>The tools I used: Visual Studio Code, Git </p>
               </div>
               <div class="modal-footer">
+                <a type="button" target="_blank" style="margin:10px" href="https://www.ubisoft.com/en-us/" class="btn btn-outline-primary">Download Project Portfolio</a>
                 <a target="_blank" type="button" href="https://github.com/KrossKinetic/Centerium" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
                 <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
               </svg></a>
@@ -232,7 +224,6 @@
             </div>
           </div>
         </div>
-
         <div class="modal fade modal-lg" data-bs-theme="dark" id="sobel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -257,7 +248,6 @@
             </div>
           </div>
         </div>
-
         <div class="modal fade modal-lg" data-bs-theme="dark" id="afk" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -280,7 +270,6 @@
             </div>
           </div>
         </div>
-
         <div class="modal fade modal-lg" data-bs-theme="dark" id="blur" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -303,7 +292,6 @@
             </div>
           </div>
         </div>
-
         <div class="modal fade modal-lg" data-bs-theme="dark" id="baw" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -326,7 +314,6 @@
             </div>
           </div>
         </div>
-
         <div class="modal fade modal-lg" data-bs-theme="dark" id="vol" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -349,7 +336,6 @@
             </div>
           </div>
         </div>
-
         <div class="modal fade modal-lg" data-bs-theme="dark" id="read" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -372,7 +358,6 @@
             </div>
           </div>
         </div>
-
         <div class="modal fade modal-lg" data-bs-theme="dark" id="cc" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -396,7 +381,6 @@
           </div>
         </div>
       </div>
-
       <section id="work" class="spacer layer_4">
         <div class="container">
           <div class="row">
@@ -444,7 +428,6 @@
           </div>
         </div>
       </section>
-
         <div class="modal fade modal-lg" data-bs-theme="dark" id="omni" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
