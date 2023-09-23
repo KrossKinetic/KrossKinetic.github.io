@@ -9,6 +9,22 @@
   <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>    
   <link rel="stylesheet" href="css/background.css">
   <link rel="stylesheet" href="css/main.css">
+  <script>
+    function del_alert(){
+      document.getElementById('alert_mess').style.display = 'None';
+    }
+  
+    function set_cookie(){
+      Cookies.set('del_alert',1,{ expires: 30})
+    }
+  
+    window.onload = function(){
+      var cookie = Cookies.get('del_alert');
+      if (cookie == 1 ){
+        document.getElementById('alert_mess').style.display = 'None'
+      }
+    }
+  </script>
 </head>
 <body class="container-fluid g-0">
   <div class="nav1">
@@ -142,10 +158,10 @@
                 <h3>Projects and Skills</h3>
               </div>
               <br>
-              <div class="alert alert-primary" role="alert">
+              <div class="alert alert-primary" role="alert" id="alert_mess">
                 <div class="container text-center">
                   <div class="row">
-                    <div class="col-10" id="alert_mess" >
+                    <div class="col-10" id="pro1">
                       Click on each individual Project to see the details and the skills I used for the project.
                     </div>
                     <div class="col-2">
@@ -468,20 +484,6 @@
     crossorigin="anonymous"></script>
 </body>
 <script>
-  function del_alert(){
-    document.getElementById('alert_mess').style.display = 'None';
-  }
-
-  function set_cookie(){
-    Cookies.set('del_alert',1,{ expires: 30})
-  }
-
-  window.onload = function(){
-    var cookie = Cookies.get('del_alert');
-    if (cookie == 1 ){
-      document.getElementById('alert_mess').style.display = 'None'
-    }
-  }
 
   const observer1 = new IntersectionObserver(entries => {
     entries.forEach(entry => {
