@@ -12,6 +12,7 @@
   <script>
     function del_alert(){
       document.getElementById('alert_mess').style.display = 'None';
+      document.getElementById('pro').classList.add('start_animation');
     }
   
     function set_cookie(){
@@ -22,6 +23,7 @@
       var cookie = Cookies.get('del_alert');
       if (cookie == 1 ){
         document.getElementById('alert_mess').style.display = 'None'
+        document.getElementById('pro').classList.add('start_animation');
       }
     }
   </script>
@@ -484,7 +486,6 @@
     crossorigin="anonymous"></script>
 </body>
 <script>
-
   const observer1 = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       const square = document.getElementById('edu');
