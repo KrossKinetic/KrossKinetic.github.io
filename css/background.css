@@ -20,6 +20,15 @@
     
 }
 
+.spacer_diff_2{
+    aspect-ratio: 960/1200;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+
 .layer{
     background-image: url('./layered-waves-haikei.svg');
 }
@@ -38,6 +47,10 @@
 
 .layer_5{
     background-image: url('./layered-waves-haikei_5.svg');
+}
+
+.layer_6{
+    background-image: url('./blob.svg');
 }
 
 body{
