@@ -139,11 +139,11 @@
                         <p id="para-intro"> Hello! I am Manas, an international student from India currently pursuing a Computer Science undergraduate degree at Stony 
                           Brook University, NY. I love to code, read books, play video games and Pool in my free time. I have a deep passion for Computer Science. Throughout my academic career, I have used my computer 
                           science and programming skills to solve various problems I encountered. </p>
-                        <p>
-                          I am also an avid writer and researcher. I have written a 13 page research paper on the resurrection of the wooly mammoths, its consequences and the benefits as part of my Writing Class at Stony Brook University.
-                          I have also written a 9 Page Personal Belonging Essay, that goes into the details about being an immigrant and trying to find your place in a foreign country.
+                        <p id="para-intro">
+                          I am also an avid writer and researcher. I have written a 13 page peer rivewed research paper called 'Colossal Return of the Wooly Mammoths' on the resurrection of the wooly mammoths, its consequences and the benefits as part of my Writing Class at Stony Brook University.
+                          I have also written a 9 Page Personal Belonging Essay called 'Beyond The Walls' that goes into the details about being an immigrant and trying to find your place in a foreign country. Both the essays can be found in the projects section below.
                         </p>
-                        <p>
+                        <p id="para-intro">
                           I am also a photographer. I like taking pictures of landscapes, sceneries and the stars. Some of my samples can be found below or by clicking the icon on the quick menu above. You can also follow me on Instagram where I share some of the pictures I took.
                         </p>
                       </div>
@@ -228,6 +228,8 @@
               </div>
               <div class="row">
                 <div class="col">
+                    <button type="button" style="margin:5px" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#colossal">Colossal Return of the Wooly Mammoth</button>
+                    <button type="button" style="margin:5px" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#walls">Beyond The Walls</button>
                     <button type="button" style="margin:5px" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#relinked">ReLinked: WebApp</button>
                     <button type="button" style="margin:5px" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#centerium" exampleModal>Centerium: Database</button>
                     <button type="button" style="margin:5px" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#sobel" exampleModal>Sobel Operator Edge Detection</button>
@@ -244,6 +246,66 @@
         </div>
       </section>
       <div id="modal_cards">
+        <div class="modal fade modal-lg" data-bs-theme="dark" id="colossal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered ">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Colossal Return of the Wooly Mammoths</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div>
+                  <center><img class="img-fluid img-mammoth" src="images/mammoth.jpeg"></center>
+                </div>
+                <p>The is my Peer Reviewed Research Argument Essay, in which I argue that wooly mammoths, 
+                  a species that went extinct over 4000 years ago, should be brought back to life. I talked about different 
+                  consequences of bringing them back, good and the bad, and why the good outweighs the bad. I've addressed 
+                  my essay to four scientists and other scientists who are similarly skeptical of this project: Love Dalén, 
+                  professor of evolutionary genetics at the Swedish Museum of Natural History, Joseph Frederickson, a vertebrate 
+                  paleontologist and director of the Weis Earth Science Museum in Menasha, Paul Knoepfler, a professor at UC Davis 
+                  School of Medicine in Cell Biology and Human Anatomy, Matthew Cobb, a professor of zoology at the University of Manchester, 
+                  Steve Brusatte, an American paleontologist and evolutionary biologist who specializes in the anatomy and evolution of dinosaurs. 
+                  I picked these scientists because they have criticized the Colossal for resurrection of the mammoths and argue against bringing back the 
+                  wooly mammoths. They believe it is better to save the current species rather than bringing the old back. Through peer reviewed research 
+                  and other relevant sources, I have attempted to persuade these scientists to support resurrection of the wooly mammoths, instead of going against it. 
+                  I talked about how we have enough capital and resources to save the current species and bring them back.</p>
+                <h4>Skills I learnt</h4>
+                <hr>
+                <p>Research Skills, MLA Citation Skills, Long Essay Writing Skills, Peer-Review skills</p>
+              </div>
+              <div class="modal-footer">
+                <a target="_blank" href="./pdfs/Colossal Return of The Wooly Mammoth.pdf" type="button" class="btn btn-primary">View Essay</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade modal-lg" data-bs-theme="dark" id="walls" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered ">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Beyond The Walls</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div>
+                  <center><img class="img-fluid img-mammoth" src="images/india-us-flag.jpg"></center>
+                </div>
+                <p>This is my second essay. It is a personal narrative about my own sense of belonging at Stony Brook University. 
+                  I focus on my experiences of spending eighteen years of my life in India, and how I felt like I never belonged there. 
+                  I realized how I have more in common with the people here in United States than people back in India. My life here at 
+                  Stony Brook University is filled with people who are just like me. I constructed a narrative with telling details to co
+                  nvey that people shouldn't limit themselves by their own country's imaginary walls, and try to see outside these walls, 
+                  because they might find a place they feel like they belong to, like I did.</p>
+                <h4>Skills I learnt</h4>
+                <hr>
+                <p> Long Essay Writing Skills, Peer-Review Skills, Writing Narrative Driven Essays with telling details</p>
+              </div>
+              <div class="modal-footer">
+                <a target="_blank" href="./pdfs/Beyond The Walls.pdf" type="button" class="btn btn-primary">View Essay</a>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="modal fade modal-xl" data-bs-theme="dark" id="relinked" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered ">
             <div class="modal-content">
