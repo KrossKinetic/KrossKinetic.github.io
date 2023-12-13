@@ -14,11 +14,6 @@
       document.getElementById('alert_mess').style.display = 'None';
       document.getElementById('pro').classList.add('start_animation');
     }
-  
-    function set_cookie(){
-      Cookies.set('del_alert',1,{ expires: 30})
-    }
-  
     window.onload = function(){
       var cookie = Cookies.get('del_alert');
       if (cookie == 1 ){
@@ -219,10 +214,6 @@
                     <div class="col" id="pro1">
                       Click on each individual Project to see the details and the skills I used for the project.
                     </div>
-                    <!-- <div class="col-2">
-                        <button type="button" onclick="del_alert();set_cookie();" class="btn btn-outline-info">X</button>
-                    </div> -->
-                    
                 </div>
                 </div>
               </div>
