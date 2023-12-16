@@ -4,7 +4,7 @@
 
 .spacer{
     aspect-ratio: 960/540;
-    width: 100%;
+    width: 102%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -13,7 +13,7 @@
 
 .spacer_diff{
     aspect-ratio: 960/800;
-    width: 100%;
+    width: 102%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -22,7 +22,7 @@
 
 .spacer_diff_2{
     aspect-ratio: 960/1200;
-    width: 100%;
+    width: 102%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

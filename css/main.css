@@ -20,8 +20,9 @@ section {
   padding-top: 40px 20vw;
 }
 
-.modal{
-  background-color: blur(5);
+.modal-backdrop {
+  backdrop-filter: blur(50px);
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .intro {
