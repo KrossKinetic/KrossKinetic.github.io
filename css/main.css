@@ -1,9 +1,7 @@
-html, body {
-  margin: 0;
-  padding: 0;
+* {
   font-family: 'MyFontOk';
-}
-
+ }
+ 
 .background {
   position: absolute;
   display: block;
@@ -22,7 +20,7 @@ section {
 
 .modal-backdrop {
   backdrop-filter: blur(50px);
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 1, 0.5);
 }
 
 .intro {
