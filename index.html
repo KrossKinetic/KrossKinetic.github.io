@@ -1,872 +1,429 @@
 <!DOCTYPE html>
-<head>
-  <title>Main</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>    
-  <link rel="stylesheet" href="css/background.css">
-  <link rel="stylesheet" href="css/main.css">
-</head>
-<body class="container-fluid g-0">
-    <div class="nav1">
-      <div class="container-fluid sticky-top text-center blur">
-          <div class="row justify-content-center">
-            <div class="col-6">
-              <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                <div class="btn-group card-shadow me-3" style="margin-top:20px;margin-bottom: 25px;" role="group"
-                  aria-label="navbar">
-                  <a type="button" class="btn btn-primary" href="#introduction">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                      <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-                    </svg>
-                    <center>Introduction</center>
-                  </a>
-                  <a type="button" class="btn btn-primary" href="#education">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book"
-                      viewBox="0 0 16 16">
-                      <path
-                        d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
-                    </svg>
-                    <center>Education</center>
-                  </a>
-                  <a type="button" class="btn btn-primary" href="#projects">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                      class="bi bi-terminal" viewBox="0 0 16 16">
-                      <path
-                        d="M6 9a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3A.5.5 0 0 1 6 9zM3.854 4.146a.5.5 0 1 0-.708.708L4.793 6.5 3.146 8.146a.5.5 0 1 0 .708.708l2-2a.5.5 0 0 0 0-.708l-2-2z" />
-                      <path
-                        d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h12z" />
-                    </svg>
-                    <center>Projects</center>
-                  </a>
-                  <a type="button" class="btn btn-primary" href="#work">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                      class="bi bi-pc-display" viewBox="0 0 16 16">
-                      <path
-                        d="M8 1a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V1Zm1 13.5a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0Zm2 0a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0ZM9.5 1a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5ZM9 3.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1h-5a.5.5 0 0 0-.5.5ZM1.5 2A1.5 1.5 0 0 0 0 3.5v7A1.5 1.5 0 0 0 1.5 12H6v2h-.5a.5.5 0 0 0 0 1H7v-4H1.5a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5H7V2H1.5Z" />
-                    </svg>
-                    <center>Work Experience</center>
-                  </a> 
-                  <a type="button" class="btn btn-primary" href="#volun">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-raised-hand" viewBox="0 0 16 16">
-                      <path d="M6 6.207v9.043a.75.75 0 0 0 1.5 0V10.5a.5.5 0 0 1 1 0v4.75a.75.75 0 0 0 1.5 0v-8.5a.25.25 0 1 1 .5 0v2.5a.75.75 0 0 0 1.5 0V6.5a3 3 0 0 0-3-3H6.236a.998.998 0 0 1-.447-.106l-.33-.165A.83.83 0 0 1 5 2.488V.75a.75.75 0 0 0-1.5 0v2.083c0 .715.404 1.37 1.044 1.689L5.5 5c.32.32.5.754.5 1.207Z"/>
-                      <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"/>
-                    </svg>
-                    <center>Volunteer Work</center>
-                  </a>
-                  <a type="button" class="btn btn-primary" href="#photo">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera" viewBox="0 0 16 16">
-                      <path d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4z"/>
-                      <path d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5m0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7M3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"/>
-                    </svg>
-                    <center>Photography</center>
+<html lang="en">
+  <head>
+    <title>Main</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" initial-scale="1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="main.css" rel="stylesheet">
+    <link href="timeline.css" rel="stylesheet">
+  </head>
+  <body>
+    <!--HERO PAGE-->
+    <div style="padding-left: 10%; padding-right: 10%;" class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-md" style="padding-top: 8%;">
+          <img src="headshot.jpg" class="rounded-img mx-auto d-block img-fluid" alt="headshot image">
+        </div>
+        <div class="col-md" style="padding-top: 8%;">
+          <h2><b>Anshumaan (or Manas) Singh</b></h2>
+          <h2 class="solid_blue">Researcher & Software Engineer</h2>
+          <hr>
+          <h4>Passionate about building innovative solutions using <span class="grad_p">Artificial Intelligence</span>, <span class="grad_p">Machine Learning</span> and software engineering principles.</h4>
+          <h4>Motivated by <span style="color:rgb(255, 72, 72)">Star Wars</span>, I hope to create C3PO <img src="Robot Emoji Icon.png" style="height: 30px; width: 30px; transform: translateY(-3px);" alt="Robot Emoji Logo"> one day.</h4>
+          <h4>Check out some of my socials below!</h4>
+          <div class="card" style="margin-top: 5%;">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm">
+                  <a type="button" href="mailto:anshumaanvsingh@gmail.com" target="_blank" class="btn">
+                    <img src="gmail.png" style="height: 40px; width: 40px;" alt="Email Logo"> | Email
                   </a>
                 </div>
-                <div class="col-1">
-                  <div class="btn-group card-shadow" style="margin-top:20px;margin-bottom: 25px;" role="group"
-                    aria-label="navbar">
-                    <a type="button" class="btn btn-primary" href="https://www.instagram.com/krosskinetic/">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
-                      </svg>
-                      <center>Instagram</center>
-                    </a>
-                    <a type="button" class="btn btn-primary" href="mailto:anshumaanvsingh@gmail.com">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
-                        <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"/>
-                        <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
-                      </svg>
-                      <center>Email</center>
-                    </a>
-                  </div>
+                <div class="col-sm">
+                  <a type="button" href="https://github.com/KrossKinetic" target="_blank" class="btn">
+                    <img src="github-mark.png" style="height: 40px; width: 40px;" alt="GitHub Logo"> | GitHub
+                  </a>
+                </div>
+                <div class="col-sm">
+                  <a type="button" href="https://scholar.google.com/citations?user=YYUAX-EAAAAJ&hl=en" target="_blank" class="btn">
+                    <img src="Google_Scholar_logo.png" style="height: 40px; width: 40px;" alt="Google Scholar Logo"> | Google Scholar
+                  </a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm">
+                  <a type="button" href="https://huggingface.co/KrossKinetic" target="_blank" class="btn">
+                    <img src="hf-logo.png" style="height: 40px; width: 40px;" alt="HuggingFace Logo">| HuggingFace 
+                  </a>
+                </div>
+                <div class="col-sm">
+                  <a type="button" href="https://www.instagram.com/krosskinetic/" target="_blank" class="btn">
+                    <img src="Instagram_Glyph_Gradient.png" style="height: 40px; width: 40px;" alt="Instagram Logo"> | Instagram
+                  </a>
+                </div>
+                <div class="col-sm">
+                  <a type="button" href="https://www.linkedin.com/in/anshumaan-singh-4a9750286/" target="_blank" class="btn">
+                    <img src="LI-In-Bug.png" style="height: 38px; width: 40px;" alt="LinkedIn Logo"> | LinkedIn
+                  </a>
                 </div>
               </div>
             </div>
           </div>
+          <br>
+          <a class="button btn-primary" href="Anshumaan Singh Resume.pdf" target="_blank" class="btn">
+            <h4>Download Resume</h4>
+          </a>
+        </div>
       </div>
-      <div class="container-fluid">
-        <section class="spacer layer" style="padding: 80px; padding-right:150px; padding-left:150px" id="introduction">
-          <div class="container-fluid" id="intro_invis_2" style="opacity:0">
-            <div class="row align-items-center">
-              <div class="col-lg-4"  id="intro_invis_1">
-              
-                <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                  <div class="carousel-inner">
-                    <div class="carousel-item">
-                      <img class="img-fluid img-intro" src="images/intro.jpg">
-                    </div>
-                    <div class="carousel-item">
-                      <img class="img-fluid img-intro" src="images/intro1.jpg">
-                    </div>
-                    <div class="carousel-item active">
-                      <img class="img-fluid img-intro" src="images/intro2.jpg">
-                    </div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="col-lg-8">
-                <div class="row">
-                  <div class="col">
-                    <div class="container-fluid">
-                      <div class="card card-shadow blur" style="width:100%" data-bs-theme="dark">
-                        <div class="card-header">
-                          <h3>Who Am I ?</h3>
-                        </div>
-                        <div class="card-body" style="font-size:14px">
-                          <p id="para-intro"> Hello! I am Manas, an international student from India currently pursuing a Computer Science undergraduate degree at Stony 
-                            Brook University, NY. I love to code, read books, play video games and sail in my free time. AI and Machine Learning have always facinated me. The idea that machines can think and learn the way we do 
-                          has always piqued my interest. </p>
-                          <p id="para-intro">
-                            If you wanna learn more about the things I like doing, academically and non-academically, feel free to scroll down to see what I am upto these days!
-                          </p>
-                        </div>
-                        <div class="container">
-                          <a type="button" target="_blank" href="./pdfs/Manas Singh Resume.pdf" class="btn btn-outline-info">Resume</a>
-                        </div>
-                        <br>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+    </div>
+
+    <!--ABOUT ME PAGE-->
+    <div style="padding-left: 10%; padding-right: 10%; padding-top: 10%;" class="container-fluid">
+      <h2><b>About Me</b></h2><hr>
+      <div class="row">
+        <div class="col-lg">
+          <div class="card card-bio">
+            <div class="card-body">
+              <h4><b><img src="emoticon-2120024_960_720.webp" style="height: 60px; width: 60px; transform: translateY(-3px);" alt="PI Logo"> | Personal Introduction</b></h4>
+              <hr>
+              <p class="p_size">I'm a highly motivated Computer Science student studying at Stony Brook University specializing in <span class="grad_p">Machine Learning</span> and  <span class="grad_p">Artificial Intelligence</span>. I enjoy challenging myself with problems that others might find frustrating. I have always been inquisitive and want to work on the latest cutting edge technology or research project. If you think these values are critical for your organization, feel free to reach out to me.</p>
             </div>
           </div>
-        </section>
-        <section class="spacer layer_2">
-          <div class="container" id="education">
-            <div class="row">
-              <div class="card card-shadow blur" style="opacity:0" id="edu" data-bs-theme="dark">
-                <div class="card-header">
-                  <h3>Education</h3>
-                </div>
-                <div class="card-body" id="edu_1">
-                  <div class="row">
-                    <div class="col">
-                      <div class="card" style="margin:10px">
-                        <div class="card-header">
-                          Stony Brook University, <i>Stony Brook, NY, USA</i>
-                        </div>
-                        <div class="card-body">
-                          <p class="card-text">Bachelor of Science in Computer Science</p>
-                          <p class="card-text">CGPA: 4.0</p>
-                          <p class="card-text">Honors: University Scholars, University Scholars Undergraduate Fellowship</p>
-                          <p class="card-text">Awards: YouAreWelcomeHere and Global Excellence Scholarship worth $ 53,980 for 4 years.</p>
-                          <div class="container">
-                            <a type="button" href="./pdfs/SSR_TSRPT.pdf" class="btn btn-outline-info">Unofficial Transcript</a>
-                            <a type="button" target="_blank" style="margin-left: 15px;" href="https://www.youarewelcomehereusa.org/2023-scholars" class="btn btn-outline-info">YouAreWelcomeHere Scholarship</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <br>
-              </div>
+          <div class="card card-bio">
+            <div class="card-body">
+              <h4><b><img src="artist-palette-removebg-preview.png" style="height:55px; width:55px; transform: translateY(-3px);" alt="Hobbies Logo"> | Hobbies</b></h4>
+              <hr>
+              <p class="p_size">• Photography: I love taking photographs of landscape, nature and the nightsky. Check out some of the pictures I have taken on my Instagram!</p>
+              <p class="p_size">• Sailing: I recently started sailing with the Stony Brook University's Sailing Club and I am a huge fan now. I absolutely love sailing!</p>
+              <p class="p_size">• Sketching: I recently bought a new iPad Air and I have been learning how to sketch on it. So far... I'd say for someone who has never touched a sketch pen before, I am doing pretty decent.</p>
+              <p class="p_size">• Video Games: When I am not taking photographs and editing them, not sailing or sketching then I am probably playing video games. It is one of my favourite indoor passtimes.</p>
+            </div> 
+          </div>
+        </div>
+        <div class="col-lg">
+          <div class="card card-bio">
+            <div class="card-body">
+              <h4><b><img src="SBU vert_2clr_rgb_300ppi.png" style="height: 60px; width: 72px; transform: translateY(-3px);" alt="SBU Logo"> | Education</b></h4>
+              <hr>
+              <p class="p_size">• Degree: BSc Computer Science, Specializing in <span class="grad_p">AI</span> and <span class="grad_p">ML</span></p>
+              <p class="p_size">• University: Stony Brook University, New York, USA</p>
+              <p class="p_size">• CGPA: 3.97</p>
+              <p class="p_size">• Honors: University Scholars</p>
+              <p class="p_size">• Awards: Dean's List (August 2023 - December 2024), YouAreWelcomeHere and Global Excellence Scholarship.</p>
+              <p class="p_size">• Relevant Coursework:  CSE 114: Introduction to Object-Oriented Programming, CSE214: Data Structures, CSE215:
+                Foundations of Computer Science, AMS210: Applied Linear Algebra, AMS310: Probability and Statistics, AMS161: Calculus II</p>
+              <p class="p_size">• Certifications (DeepLearning.AI): PreTraining LLMs by Upstage and Specialization in Machine Learning Course by Stanford.Certifications (DeepLearning.AI): PreTraining LLMs by Upstage and Specialization in Machine Learning Course by Stanford.</p>
             </div>
           </div>
-        </section>
-        <section id="projects" class="spacer layer_3">
-          <div class="container"  id="pro1">
-            <div class="row">
-              <div class="card card-shadow blur" id="pro" style="opacity:0" data-bs-theme="dark">
-                <div class="card-header">
-                  <h3>Projects and Skills</h3>
-                </div>
-                <br>
-                <div class="alert alert-primary" role="alert" id="alert_mess">
-                  <div class="container text-center">
-                    <div class="row">
-                      <div class="col">
-                        Click on each individual Project to see the details and the skills I used for the project. Click on the arrows to swipe through
-                         different project categories, ranging from computer science to other miscellaneous projects.
-                      </div>
-                  </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col">
-                    <div id="carouselProjects" class="carousel slide">
-                      <div class="carousel-inner">
-                        <div class="carousel-item">
-                          <center>
-                          <div class="card" style="width: 75%;">
-                            <div class="card-body">
-                              <h5 class="card-title"> Research Projects </h5>
-                              <button type="button" style="margin:5px" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#colossal">Colossal Return of the Wooly Mammoth</button>
-                              <button type="button" style="margin:5px" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#walls">Beyond The Walls</button>
-                            </div>
-                          </div>
-                          </center>
-                        </div>
-                        <div class="carousel-item  active">
-                          <center>
-                            <div class="card" style="width: 75%;">
-                              <div class="card-body">
-                                <h5 class="card-title"> AI and Machine Learning Projects</h5>
-                                <button type="button" style="margin:5px" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#center">Windows CenterStage</button>
-                              </div>
-                            </div>
-                            </center>
-                        </div>
-                        <div class="carousel-item">
-                          <center>
-                            <div class="card" style="width: 75%;">
-                              <div class="card-body">
-                                <h5 class="card-title"> Python and C Algorithm Projects</h5>
-                                <button type="button" style="margin:5px" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#centerium" exampleModal>Centerium: Database</button>
-                                <button type="button" style="margin:5px" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#sobel" exampleModal>Sobel Operator Edge Detection</button>
-                                <button type="button" style="margin:5px" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#blur" exampleModal>Box Blur Image</button>
-                                <button type="button" style="margin:5px" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#baw" exampleModal>Black and White Filter</button>
-                                <button type="button" style="margin:5px" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#vol" exampleModal>Modify Volume</button>
-                                <button type="button" style="margin:5px" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#read" exampleModal>Readability</button>
-                                <button type="button" style="margin:5px" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#cc" exampleModal>Credit Card Verifier</button>
-                              </div>
-                            </div>
-                            </center>
-                        </div>
-                        <div class="carousel-item">
-                          <center>
-                            <div class="card" style="width: 75%;">
-                              <div class="card-body">
-                                <h5 class="card-title"> Web Development Projects</h5>
-                                <button type="button" style="margin:5px" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#relinked">ReLinked: WebApp</button>
-                                <button type="button" style="margin:5px" class="btn btn-info" data-bs-toggle="modal" data-bs-target="">ePortfolio Website</button>
-                              </div>
-                            </div>
-                            </center>
-                        </div>
-                        <div class="carousel-item">
-                          <center>
-                            <div class="card" style="width: 75%;">
-                              <div class="card-body">
-                                <h5 class="card-title"> Android Development Projects</h5>
-                                <button type="button" style="margin:5px" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#watch">WearOS MaterialPlenty WatchFace</button>
-                              </div>
-                            </div>
-                            </center>
-                        </div>
-                      </div>
-                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjects" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                      </button>
-                      <button class="carousel-control-next" type="button" data-bs-target="#carouselProjects" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                      </button>
-                    </div>
-                  </div>    
-                </div>    
-                <br>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="work" class="spacer_diff layer_4">
-          <div class="container">
-            <div class="row">
-              <div class="card card-shadow blur" style="opacity:0" id="work1" data-bs-theme="dark">
-                <div class="card-header">
-                  <h3>Work Experience</h3>
-                </div>
-                <div class="card-body" id="work2">
-                  <div class="row">
-                    <div class="col">
-                      <div class="card" style="margin:10px">
-                        <div class="card-header">
-                          SBU iGEM 2024 Synthetic Biology Research <br> Stony Brook, New York |  Dry Lab Researcher & Wiki Team Leader |  January 2024 - Present
-                        </div>
-                        <div class="card-body">
-                          <p class="card-text">1. Performed computational biology & developed miRNA-Detector Bacteria system for Human Non-Hodgkin's B-Cell Lymphoma. </p>
-                          <p class="card-text">2. Applied Molecular Dynamic Simulations using GROMACS, CHARMM36, AlphaFold3 and AutoDock to assess the binding of AGO2
-                            and miRNA-326, simulating interactions between 100,000+ atoms to improve the system. </p>
-                          <p class="card-text">3. Programmeda Retrieval Augmented Generation Q&A chatbot using LangChain and HuggingFace, reducing hallucination
-                            through a knowledge-grounded approach. </p>
-                          <p class="card-text">4. Spearheaded the wiki development by coordinating a multidisciplinary team to create a wiki with 12,000 lines of code using
-                            HTML, CSS, JavaScript. Authored a GROMACS tutorial on our wiki to aid future researchers in conducting simulations. </p>
-                          <p class="card-text">5. Awarded a Gold Medal at iGEM 2024 Giant Jamboree in Paris for exceptional research work.</p>
-                          <p class="card-text">6. Providing mentorship and guidance as a Teaching Assistant to the next year's Stony Brook iGEM Team, sharing experiences and
-                            lessons learned to foster a supportive and growth-oriented environment </p>
-                          <div class="container">       
-                            <a type="button" target="_blank" style="margin:10px" href="https://news.stonybrook.edu/newsroom/press-release/general/stony-brook-university-brings-home-gold-medal-at-the-igem-competition/" class="btn btn-outline-info">Stony Brook News Publication</a>
-                            <a type="button" target="_blank" style="margin:10px" href="https://2024.igem.wiki/stony-brook/index.html" class="btn btn-outline-info">iGEM 2024 Website</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card" style="margin:10px">
-                        <div class="card-header">
-                          Auxiliary Service Corporation (or FSA) at Stony Brook University <br> Stony Brook, NY | IT Assistant Intern | January 2024 - July 2024
-                        </div>
-                        <div class="card-body">
-                          <p class="card-text">1. Developed andmaintained databases using MySQL and Google Sheets, automated processes by building Google AppScript
-                            algorithms like Binary Sort and Search, improving automation and work efficiency.</p>
-                          <p class="card-text">2. Inventoried, performed maintenance and resolved issues in over 400 systems across the university campus. </p>
-                          <p class="card-text">3. Installed and configured computer hardware & software, including Windows and Linux operating systems, in 40+ systems.</p>
-                          <div class="container">
-                            <a type="button" target="_blank" style="margin:10px" href="https://www.stonybrook.edu/commcms/fsa/" class="btn btn-outline-info">FSA Website</a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card" style="margin:10px">
-                        <div class="card-header">
-                          Omniscience Corporation <br> Palo Alto, California | Web Developer |  April 2023 - June 2023
-                        </div>
-                        <div class="card-body">
-                          <p class="card-text">1. Created alife insurance flask web app with 3000+ lines of code using HTML, CSS, JavaScript, Jinja and Bootstrap Library.</p>
-                          <p class="card-text">2. Developed aSQLdatabase to store insurance user data, showcasing problem-solving skills in data architecture.</p>
-                          <p class="card-text">3. Containerized the application using Docker for seamless deployment & collaboration via a consistent technical environment.</p>
-                          <div class="container">       
-                            <a type="button" target="_blank" style="margin:10px" href="https://omniscience.com/" class="btn btn-outline-info">Omniscience Website</a>
-                            <button type="button" style="margin:10px" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#omni">Sample Images</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <br>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="volun" class="spacer layer_5">
-          <div class="container">
-            <div class="row">
-              <div class="card card-shadow blur" style="opacity:0" id="volun1" data-bs-theme="dark">
-                <div class="card-header">
-                  <h3>Volunteer Work</h3>
-                </div>
-                <div class="card-body" id="volun2">
-                  <div class="row">
-                    <div class="col">
-                      <div class="card" style="margin:10px">
-                        <div class="card-header">
-                          SBU Community Day: US Veterans Long Island Home <i>2023</i>
-                        </div>
-                        <div class="card-body">
-                          <p class="card-text">1. Engaged as a volunteer and offered companionship to US Veterans through conversations and attentive listening, brightening their day with shared stories of their experiences.</p>
-                          <p class="card-text">2. Contributed to the decoration by strategically placing US Flags around the facility and adding patriotic symbols to the pavement. These creative efforts were met with enthusiasm and appreciation from the veterans.</p>
-                          <div class="container">       
-                            <button type="button" style="margin:10px" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#volun_2">More Images</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card" style="margin:10px">
-                        <div class="card-header">
-                          Vidyasthali School, India <i>August 2019</i>
-                        </div>
-                        <div class="card-body">
-                          <p class="card-text">1. Educated students at this very rural school run by the Study Hall Education Foundation about domestic abuse and how to speak up.</p>
-                          <p class="card-text">2. Conducted various team building games, recognizing abuse and raising their voices against it.</p>
-                          <p class="card-text">3. Spread awareness about other topics like personal hygiene with the help of the play.</p>
-                          <div class="container">
-                            <a type="button" target="_blank" style="margin:10px" href="https://www.studyhallfoundation.org/mission-vision.php" class="btn btn-outline-info">SHEF Website</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <br>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="photo" class="spacer_diff_2 layer_6">
-          <div class="container">
-              <div class="alert alert-primary" role="alert" id="alert_mess" style="margin: 15px;">
-                <div class="container text-center">
-                  <div class="row" >
-                    <div class="col" id="pro1">
-                      Here are some of the recent pictures I took. If you wanna see more, head on over to my instagram page linked on the Menu bar above!
-                    </div>
-                  </div>
-                </div>
-            </div>
-            <div class="row" style="margin: 15px;">
-              <div class="col">
-                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CyXWAcRMOcf/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/CyXWAcRMOcf/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/CyXWAcRMOcf/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Manas Singh (@krosskinetic)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>          
-              </div>
-              <div class="col">
-                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CxM0NvZMcOg/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/CxM0NvZMcOg/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/CxM0NvZMcOg/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Manas Singh (@krosskinetic)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
-              </div>
-            </div>
-          <div class="row" style="margin: 15px;">
-            <div class="col">
-              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CV-OxIeAtt7/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/CV-OxIeAtt7/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/CV-OxIeAtt7/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Manas Singh (@krosskinetic)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
-            </div>
-            <div class="col">
-              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CYqqSOOFOEg/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/CYqqSOOFOEg/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/CYqqSOOFOEg/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Manas Singh (@krosskinetic)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
+          <div class="card card-bio">
+            <div class="card-body">
+              <h4><b><img src="0f323612ce814629c56059bb73d7a908.png" style="height: 50px; width: 50px; transform: translateY(-3px);" alt="Skills Logo"> | Skills</b></h4>
+              <hr>
+              <p class="p_size">• Programming Languages: Python, Java, HTML, CSS, JavaScript, MySQL.</p>
+              <p class="p_size">• General Programming Concepts: Machine Learning, AI, Data Structures, Object Oriented Programming, Algorithms, Web Development.</p>
+              <p class="p_size">• Machine Learning and AI Programming Concepts: </p>
             </div>
           </div>
         </div>
-        </section>
-        <section>
-          <div class="modal fade modal-lg" data-bs-theme="dark" id="omni" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Images</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <div id="carouselExampleFade" data-bs-theme="light" class="carousel slide carousel-fade">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="./images/omni1.png" class="d-block w-100">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="./images/omni2.png" class="d-block w-100">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="./images/omni3.png" class="d-block w-100">
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev btn-primary " type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal fade modal-lg" data-bs-theme="dark" id="volun_2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel2">Images</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <div id="carouselExampleFade2" data-bs-theme="light" class="carousel slide carousel-fade">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="./images/vet.jpg" class="d-block w-100">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="./images/volun.jpg" class="d-block w-100">
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev btn-primary " type="button" data-bs-target="#carouselExampleFade2" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade2" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
       </div>
     </div>
-        <div id="modal_cards">
-          <div class="modal fade modal-lg" data-bs-theme="dark" id="colossal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered ">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Colossal Return of the Wooly Mammoths</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <div>
-                    <center><img class="img-fluid img-mammoth" src="images/mammoth.jpeg"></center>
-                  </div>
-                  <p>The is my Peer Reviewed Research Argument Essay, in which I argue that wooly mammoths, 
-                    a species that went extinct over 4000 years ago, should be brought back to life. I talked about different 
-                    consequences of bringing them back, good and the bad, and why the good outweighs the bad. I've addressed 
-                    my essay to four scientists and other scientists who are similarly skeptical of this project: Love Dalén, 
-                    professor of evolutionary genetics at the Swedish Museum of Natural History, Joseph Frederickson, a vertebrate 
-                    paleontologist and director of the Weis Earth Science Museum in Menasha, Paul Knoepfler, a professor at UC Davis 
-                    School of Medicine in Cell Biology and Human Anatomy, Matthew Cobb, a professor of zoology at the University of Manchester, 
-                    Steve Brusatte, an American paleontologist and evolutionary biologist who specializes in the anatomy and evolution of dinosaurs. 
-                    I picked these scientists because they have criticized the Colossal for resurrection of the mammoths and argue against bringing back the 
-                    wooly mammoths. They believe it is better to save the current species rather than bringing the old back. Through peer reviewed research 
-                    and other relevant sources, I have attempted to persuade these scientists to support resurrection of the wooly mammoths, instead of going against it. 
-                    I talked about how we have enough capital and resources to save the current species and bring them back.</p>
-                  <h4>Skills I learnt</h4>
-                  <hr>
-                  <p>Research Skills, MLA Citation Skills, Long Essay Writing Skills, Peer-Review skills</p>
-                </div>
-                <div class="modal-footer">
-                  <a target="_blank" href="./pdfs/Colossal Return of The Wooly Mammoth.pdf" type="button" class="btn btn-primary">View Essay</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal fade modal-lg" data-bs-theme="dark" id="walls" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered ">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Beyond The Walls</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <div>
-                    <center><img class="img-fluid img-mammoth" src="images/india-us-flag.jpg"></center>
-                  </div>
-                  <p>This is my second essay. It is a personal narrative about my own sense of belonging at Stony Brook University. 
-                    I focus on my experiences of spending eighteen years of my life in India, and how I felt like I never belonged there. 
-                    I realized how I have more in common with the people here in United States than people back in India. My life here at 
-                    Stony Brook University is filled with people who are just like me. I constructed a narrative with telling details to co
-                    nvey that people shouldn't limit themselves by their own country's imaginary walls, and try to see outside these walls, 
-                    because they might find a place they feel like they belong to, like I did.</p>
-                  <h4>Skills I learnt</h4>
-                  <hr>
-                  <p> Long Essay Writing Skills, Peer-Review Skills, Writing Narrative Driven Essays with telling details</p>
-                </div>
-                <div class="modal-footer">
-                  <a target="_blank" href="./pdfs/Beyond The Walls.pdf" type="button" class="btn btn-primary">View Essay</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal fade modal-xl" data-bs-theme="dark" id="relinked" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered ">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">ReLinked</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <div>
-                    <center><img class="img-fluid img-relink" src="css/relinked.png"></center>
-                  </div>
-                  <p>ReLinked is a simple flask based application which allows the user to save important webpages.
-                    You have the ability to name those links, search through the links as well as create link collections ( called ReNodes ) 
-                    which allows the user to group links together for easier access. You can also choose an icon to display next to your saved link from 
-                    1816 available icon choices! Lastly, the webpage has an entire darkmode which can be toggled from the navigation bar. 
-                    Your dark/light mode preference is stored on-device using cookies so that you don't have to worry about re-enabling it. 
-                   There is also a guide section in the webpage which guides the user on how to use the application.</p>
-                  <h4>Programming Languages and Tools</h4>
-                  <hr>
-                  <p>The languages I used: Python, HTML, CSS, Flask, Jinja, Markdown, MySQL</p>
-                  <p>The tools I used: Visual Studio Code, Git, Heroku, Bootstrap </p>
-                </div>
-                <div class="modal-footer">
-                  <a target="_blank" href="https://github.com/KrossKinetic/ReLinked-Open-Source" type="button" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                  </svg>
-                </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal fade modal-lg" data-bs-theme="dark" id="centerium" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Centerium</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <p>Developed a comprehensive Examination Center Tracking Database System, named "Centerium," aimed at optimizing and streamlining the management of examination centers across India for both competitive and board examinations</p>
-                  <h4>Programming Languages and Tools</h4>
-                  <hr>
-                  <p>The languages I used: Python, MySQL, NumPy</p>
-                  <p>The tools I used: Visual Studio Code, Git </p>
-                </div>
-                <div class="modal-footer">
-                  <a type="button" target="_blank" style="margin:10px" href="./pdfs/Centerium.pdf" class="btn btn-outline-primary">Download Project Portfolio</a>
-                  <a target="_blank" type="button" href="https://github.com/KrossKinetic/Centerium" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                </svg></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal fade modal-lg" data-bs-theme="dark" id="sobel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Sobel Operator Edge Detection</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <p>This simple program performs sobel operator edge detection on an image. The Sobel operator, 
-                    sometimes called the Sobel-Feldman operator or Sobel filter, is used in image processing and computer vision, 
-                    particularly within edge detection algorithms where it creates an image emphasising edges.</p>
-                    <h4>Programming Languages and Tools</h4>
-                    <hr>
-                    <p>The languages I used: Python, imageio, NumPy</p>
-                    <p>The tools I used: Visual Studio Code, Git </p>
-                </div>
-                <div class="modal-footer">
-                  <a target="_blank" href="https://github.com/KrossKinetic/Sobel-Operator-edge-detection" type="button" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-              </svg></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal fade modal-lg" data-bs-theme="dark" id="afk" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Minecraft Afk fishing</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <p>Here is a program I built that can be used together a particular Minecraft Fishing build to automate the whole process and afk fish with ease.</p>
-                  <h4>Programming Languages and Tools</h4>
-                  <hr>
-                  <p>The languages I used: Python</p>
-                  <p>The tools I used: Visual Studio Code, Git </p>
-                </div>
-                <div class="modal-footer">
-                  <a target="_blank" type="button" href="https://github.com/KrossKinetic/Minecraft_AFK_Fishing" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                </svg></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal fade modal-lg" data-bs-theme="dark" id="blur" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Box Blur Image</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <p>This program simply applies box blur to an image. Works best with images of size less than 800x800 pixels.</p>
-                  <h4>Programming Languages and Tools</h4>
-                  <hr>
-                  <p>The languages I used: Python, imageio, PIL,NumPy </p>
-                  <p>The tools I used: Visual Studio Code, Git </p>
-                </div>
-                <div class="modal-footer">
-                  <a target="_blank" type="button" href="https://github.com/KrossKinetic/Box-blur-image" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-              </svg></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal fade modal-lg" data-bs-theme="dark" id="baw" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Black and White Filter</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <p>This program simply applies a black and white filter to any image by averaging out RGB values of each pixel.</p>
-                  <h4>Programming Languages and Tools</h4>
-                  <hr>
-                  <p>The languages I used: Python, imageio, PIL,NumPy </p>
-                  <p>The tools I used: Visual Studio Code, Git </p>
-                </div>
-                <div class="modal-footer">
-                  <a target="_blank" type="button" href="https://github.com/KrossKinetic/Black-white-filter" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-              </svg></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal fade modal-lg" data-bs-theme="dark" id="vol" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Modify Volume</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <p>A simple C program that allows users to increase or decrease the audio of .wav format.</p>
-                  <h4>Programming Languages and Tools</h4>
-                  <hr>
-                  <p>The languages I used: C </p>
-                  <p>The tools I used: Visual Studio Code, Git </p>
-                </div>
-                <div class="modal-footer">
-                  <a target="_blank" type="button" href="https://github.com/KrossKinetic/modify-volume-wav" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                </svg></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal fade modal-lg" data-bs-theme="dark" id="read" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Readability</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <p>A simple program that finds out the grade of a person from their english sentence formation capabilities.</p>
-                  <h4>Programming Languages and Tools</h4>
-                  <hr>
-                  <p>The languages I used: C </p>
-                  <p>The tools I used: Visual Studio Code, Git </p>
-                </div>
-                <div class="modal-footer">
-                  <a target="_blank" type="button" href="https://github.com/KrossKinetic/Readability" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                </svg></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal fade modal-lg" data-bs-theme="dark" id="cc" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Credit Card Verifier</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <p>A simple C program that checks the validity of a card.</p>
-                  <h4>Programming Languages and Tools</h4>
-                  <hr>
-                  <p>The languages I used: C </p>
-                  <p>The tools I used: Visual Studio Code, Git </p>
-                </div>
-                <div class="modal-footer">
-                  <a target="_blank" type="button" href="https://github.com/KrossKinetic/Credit-card-verifier" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                </svg></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal fade modal-lg" data-bs-theme="dark" id="watch" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">WearOS MaterialPlenty WatchFace</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <div>
-                    <center><img class="img-fluid img-mammoth" style="border-radius: 100%;" src="images/watch.png"></center>
-                  </div>
-                  <p>A simple watch face design for WearOS Android Smartwatches based on the Material UI guidelines by Google.</p>
-                  <p>To install the watchface, simply click on the download button below and install the app. After installing, you will find the watchface in your Watch Manager app (For Pixel Watch it is the Watch app). You can also head on to my github page by clicking the github icon below and follow the instructions there. </p>
-                  <h4>Skills</h4>
-                  <hr>
-                  <p>Samsung Watch Face Studio, Designing UI</p>
-                </div>
-                <div class="modal-footer">
-                  <a type="button" target="_blank" style="margin:10px" href="./pdfs/com.watchfacestudio.pixelmaterialplenty.apk" class="btn btn-outline-primary">Download Apk</a>
-                  <a target="_blank" type="button" href="https://github.com/KrossKinetic/Credit-card-verifier" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                </svg></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal fade modal-lg" data-bs-theme="dark" id="center" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Windows CenterStage</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <p>1. Trained a Facial Recognition Model using TensorFlow Image Pipeline on 6000+ images in Python. </p>
-                  <p>2. Used the Machine Learning Model to track the user's face in real time using OpenCV. </p>
-                  <p>3. Built a 500+ line Python program to crop into user's face and keep it centered in camera (Like the iPad CenterStage). </p>
-                  <h4>Programming Languages and Tools</h4>
-                  <hr>
-                  <p>The languages I used: Python, TensorFlow, OpenCV, Labelme, Matplotlib, Albumentations </p>
-                  <p>The tools I used: Visual Studio Code, Git, Jupyter Notebook </p>
-                </div>
-                <div class="modal-footer">
-                  <a target="_blank" type="button" href="https://github.com/KrossKinetic/WindowsCenterStage" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                </svg></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>   
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-    crossorigin="anonymous"></script>
-</body>
-<script>
-  const observer1 = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      const square = document.getElementById('edu');
-      if (entry.isIntersecting) {
-        square.classList.add('start_animation');
-      return;
-      }
-  
-      square.classList.remove('start_animation');
-    });
-  });
-  observer1.observe(document.getElementById('edu_1'));
 
-  const observer2 = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      const square = document.getElementById('pro');
-      if (entry.isIntersecting) {
-        square.classList.add('start_animation');
-      return;
-      }
+    <!--WORK EXP PAGE-->
+    <div style="padding-left: 10%; padding-right: 10%; padding-top: 10%;" class="container-fluid container-timeline">
+      <h2><b>Work Experience</b></h2><hr>
+        <div class="wrapper">
+          <button type="button" class="btn btn-primary" onclick="showInternshipElements()">Show SWE Internships</button>
+          <button type="button" class="btn btn-primary" onclick="showResearchElements()">Show Research</button>
+          <button type="button" class="btn btn-primary" onclick="showJobElements()">Show Jobs</button>
+          <button type="button" class="btn btn-primary" onclick="showAllElements()">Show All</button>
+          <ul class="sessions">
+            <li id="Research" class="show">
+              <h6><b>November 2024 - Present</b></h6><hr>
+              <p>
+                <b>
+                  Humanity Unleashed (Humun.org) | Remote <br>
+                  Pretraining, Data Collection, & Rapid Response Team <br>
+                </b>
+                • Performing Data Collection and Pre-training as part of the team. <br>
+                • Teaming up with researchers from around the world and developing methodologies for value elicitation using LLMs, enabling aggregation of individual values to inform bipartisan policy recommendations. <br>
+                • Fine-tuning open-source LLMs with public policy datasets and time series data to improve policy outcome prediction and analysis with a goal of collecting at least 10 TBs of data. <br>
+                • Designing an interactive policy modeling interface for policymakers and the public to examine historical data, predict impacts, suggest policies, and customize outputs based on individual and group values.
+              </p>
+            </li>
+            <li id="Research" class="show">
+              <h6><b>January 2024 - Present</b></h6><hr>
+              <p>
+                <b>
+                SBU iGEM 2024 Synthetic Biology Research | Stony Brook, NY <br>
+                Computational Researcher & Wiki Team Leader <br>
+                </b>
+                • Performed computational biology & developed miRNA-Detector Bacteria system for Human Non-Hodgkin's B-Cell Lymphoma. <br>
+                • ProgrammedaRetrieval Augmented Generation Q&A chatbot using LangChain and HuggingFace, reducing hallucination
+                through a knowledge-grounded approach. <br>
+                • Spearheaded the wiki development by coordinating a multidisciplinary team to create a wiki with 12,000 lines of code using
+                HTML, CSS, JavaScript. Authored a GROMACS tutorial on our wiki to aid future researchers in conducting simulations. <br>
+                • Applied Molecular Dynamic Simulations using GROMACS, CHARMM36, AlphaFold3 and AutoDock to assess the binding of AGO2
+                and miRNA-326, simulating interactions between 100,000+ atoms to improve the system. <br>
+                • Awarded a Gold Medal at iGEM 2024 Giant Jamboree in Paris for exceptional research work. <br>
+                • Currently acting as a Teacher Assistant / Mentor for next year's iGEM team.
+              </p>
+            </li>
+            <li id="Job" class="show">
+              <h6><b>January 2024 - July 2024</b></h6><hr>
+              <p>
+                <b>
+                  Faculty Student Association at Stony Brook University | Stony Brook, NY <br>
+                  IT Assistant<br>
+                </b>
+                • Developed andmaintained databases using MySQL and Google Sheets, automated processes by building Google AppScript algorithms like Binary Sort and Search, improving automation and work efficiency. <br>
+                • Inventoried, performed maintenance and resolved issues in over 400 systems across the university campus. <br>
+                • Installed and configured computer hardware & software, including Windows and Linux operating systems, in 40+ systems.
+              </p>
+            </li>
+            <li id="Internship" class="show">
+              <h6><b>April 2023 - June 2023</b></h6><hr>
+              <p>
+                <b>
+                  Omniscience Corporation | Palo Alto, California, United States (Remote) <br>
+                  WebDeveloper Intern <br>
+                </b>
+                • Created a life insurance flask web app with 3000+ lines of code using HTML, CSS, JavaScript, Jinja and Bootstrap Library.<br>
+                • Developed a SQL database to store insurance user data, showcasing problem-solving skills in data architecture.<br>
+                • Containerized the application using Docker for seamless deployment & collaboration via a consistent technical environment.
+              </p>
+            </li>
+          </ul>
+        </div>
+    </div>
 
-      square.classList.remove('start_animation');
-    });
-  });
-  observer2.observe(document.getElementById('pro1'));
+    <!--PROJECTS-->
+    <div style="padding-left: 10%; padding-right: 10%; padding-top: 10%;" class="container-fluid container-timeline">
+      <h2><b>Projects</b></h2><hr>
+      <div class="row">
+        <div class="col-md">
+          <div class="card card-bio">
+            <div class="card-body">
+              <h5><b>Text Similarity Check</b></h5><hr>
+              <p>TextSimilarityCheck is a simple program written in Java for comparing text files and checking if they were written by the same author (by using cosine similarity).</p>
+              <a type="button" href="https://github.com/KrossKinetic/TextSimilarityCheck" target="_blank" class="btn-primary">GitHub Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="card card-bio">
+            <div class="card-body">
+              <h5><b>Social Media Graph</b></h5><hr>
+              <p>SocialMediaGraph is a simple program written in Java for simulating a social media network between people (with followers and followings) using graphs.</p>
+              <a type="button" href="https://github.com/KrossKinetic/SocialMediaGraph" target="_blank" class="btn-primary">GitHub Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="card card-bio">
+            <div class="card-body">
+              <h5><b>Food Pyramid</b></h5><hr>
+              <p>FoodPyramid is a simple program written in Java for simulating a Food Pyramid / Food Chain.</p>
+              <a type="button" href="https://github.com/KrossKinetic/FoodPyramid" target="_blank" class="btn-primary">GitHub Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md">
+          <div class="card card-bio">
+            <div class="card-body">
+              <h5><b>Playfair Encryption</b></h5><hr>
+              <p>PlayfairEncryption is a simple program written in Java for encrypting and decrypting any text using playfair encryption.</p>
+              <a type="button" href="https://github.com/KrossKinetic/PlayfairEncryption" target="_blank" class="btn-primary">GitHub Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="card card-bio">
+            <div class="card-body">
+              <h5><b>C Program Tracer</b></h5><hr>
+              <p>CProgramTracer is a simple program written in Java for keeping tracks of different C blocks (A block is {...}) and the variables initialized / updated inside them.</p>
+              <a type="button" href="https://github.com/KrossKinetic/CProgramTracer" target="_blank" class="btn-primary">GitHub Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="card card-bio">
+            <div class="card-body">
+              <h5><b>Hiring System Simulator</b></h5><hr>
+              <p>HiringSystemSimulator is a simple program written in Java for simulating a complete hiring system manager for job applicants.</p>
+              <a type="button" href="https://github.com/KrossKinetic/HiringSystemSimulator" target="_blank" class="btn-primary">GitHub Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md">
+          <div class="card card-bio">
+            <div class="card-body">
+              <h5><b>Windows CenterStage</b></h5><hr>
+              <p>A simple python program using TensorFlow image recognition pipeline and a custom trained model to emulate iPad's CenterStage on windows.</p>
+              <a type="button" href="https://github.com/KrossKinetic/WindowsCenterStage" target="_blank" class="btn-primary">GitHub Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="card card-bio">
+            <div class="card-body">
+              <h5><b>ReLinked-Open-Source</b></h5><hr>
+              <p>ReLinked is a simple flask based application which allows the user to save important webpages.</p>
+              <a type="button" href="https://github.com/KrossKinetic/ReLinked-Open-Source" target="_blank" class="btn-primary">GitHub Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="card card-bio">
+            <div class="card-body">
+              <h5><b>Readability</b></h5><hr>
+              <p>A simple program that finds out the grade of a person from his/her english sentence formation capabilities.</p>
+              <a type="button" href="https://github.com/KrossKinetic/Readability" target="_blank" class="btn-primary">GitHub Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md">
+          <div class="card card-bio">
+            <div class="card-body">
+              <h5><b>Minecraft AFK Fisher</b></h5><hr>
+              <p>Here is a program I built that can be used together a particular Minecraft Fishing build to automate the whole process and afk fish with ease.</p>
+              <a type="button" href="https://github.com/KrossKinetic/Minecraft_AFK_Fishing" target="_blank" class="btn-primary">GitHub Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="card card-bio">
+            <div class="card-body">
+              <h5><b>Modify Volume Wav</b></h5><hr>
+              <p>A simple C program that allows users to increase or decrease the audio of .wav format.</p>
+              <a type="button" href="https://github.com/KrossKinetic/modify-volume-wav" target="_blank" class="btn-primary">GitHub Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="card card-bio">
+            <div class="card-body">
+              <h5><b>Credit Card Verifier</b></h5><hr>
+              <p>A simple C program that checks the validity of a card.</p>
+              <a type="button" href="https://github.com/KrossKinetic/Credit-card-verifier" target="_blank" class="btn-primary">GitHub Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md">
+          <div class="card card-bio">
+            <div class="card-body">
+              <h5><b>Box Blur Image</b></h5><hr>
+              <p>This program simply applies box blur to an image. Works best with images of size less than 800x800 pixels.</p>
+              <a type="button" href="https://github.com/KrossKinetic/Box-blur-image" target="_blank" class="btn-primary">GitHub Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="card card-bio">
+            <div class="card-body">
+              <h5><b>Black White Filter</b></h5><hr>
+              <p>This program simply applies a black and white filter to any image by averaging out RGB values of each pixel.</p>
+              <a type="button" href="https://github.com/KrossKinetic/Black-white-filter" target="_blank" class="btn-primary">GitHub Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="card card-bio">
+            <div class="card-body">
+              <h5><b>Sobel Operator Eedge Detection</b></h5><hr>
+              <p>This simple program performs sobel operator edge detection (Algorithm to find edges of objects in an image) on an image.</p>
+              <a type="button" href="https://github.com/KrossKinetic/Sobel-Operator-edge-detection" target="_blank" class="btn-primary">GitHub Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  const observer3 = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      const square = document.getElementById('work1');
-      if (entry.isIntersecting) {
-        square.classList.add('start_animation');
-      return;
-      }
-  
-      square.classList.remove('start_animation');
-    });
-  });
-  observer3.observe(document.getElementById('work2'));
+    <!-- Recent Updates -->
+    <div style="padding-left: 10%; padding-right: 10%; padding-top: 10%;" class="container-fluid container-timeline">
+      <h2><b>Recent Updates</b></h2><i>(Last Updated: 4:55 PM December 12th, 2024)</i><hr>
+      <!--Updates Here-->
+      <div class="card updates">
+        <div class="card-body">
+          <h5> <span class="solid_blue">December 12th, 2024</span>: Overhauled my portfolio website and added a lot of new projects and work experiences.</h5>
+        </div>
+      </div>
+    </div>
 
-  const observer4 = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      const square = document.getElementById('intro_invis_2');
-      if (entry.isIntersecting) {
-        square.classList.add('start_animation');
-      return;
-      }
-  
-      square.classList.remove('start_animation');
-    });
-  });
-  observer4.observe(document.getElementById('intro_invis_1'));
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+  <footer class="text-center">
+    <p>Made with &#10084; by Manas</p>
+  </footer>
+  <script>
+    function showResearchElements() {
+      const researchElements = document.querySelectorAll('#Research');
+      const internshipElements = document.querySelectorAll('#Internship');
+      const jobElements = document.querySelectorAll('#Job');
 
-  const observer5 = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      const square = document.getElementById('volun1');
-      if (entry.isIntersecting) {
-        square.classList.add('start_animation');
-      return;
-      }
-  
-      square.classList.remove('start_animation');
-    });
-  });
-  observer5.observe(document.getElementById('volun2'));
-</script>
+      researchElements.forEach(element => {
+        element.classList.replace('hide', 'show');
+      });
+
+      internshipElements.forEach(element => {
+        element.classList.replace('show', 'hide');
+      });
+
+      jobElements.forEach(element => {
+        element.classList.replace('show', 'hide');
+      });
+    }
+
+    function showJobElements() {
+      const researchElements = document.querySelectorAll('#Research');
+      const internshipElements = document.querySelectorAll('#Internship');
+      const jobElements = document.querySelectorAll('#Job');
+
+      researchElements.forEach(element => {
+        element.classList.replace('show', 'hide');
+      });
+
+      internshipElements.forEach(element => {
+        element.classList.replace('show', 'hide');
+      });
+
+      jobElements.forEach(element => {
+        element.classList.replace('hide', 'show');
+      });
+    }
+
+    function showInternshipElements() {
+      const researchElements = document.querySelectorAll('#Research');
+      const internshipElements = document.querySelectorAll('#Internship');
+      const jobElements = document.querySelectorAll('#Job');
+
+      researchElements.forEach(element => {
+        element.classList.replace('show', 'hide');
+      });
+
+      internshipElements.forEach(element => {
+        element.classList.replace('hide', 'show');
+      });
+
+      jobElements.forEach(element => {
+        element.classList.replace('show', 'hide');
+      });
+    }
+
+    function showAllElements() {
+      const researchElements = document.querySelectorAll('#Research');
+      const internshipElements = document.querySelectorAll('#Internship');
+      const jobElements = document.querySelectorAll('#Job');
+
+      researchElements.forEach(element => {
+        element.classList.replace('hide', 'show');
+      });
+
+      internshipElements.forEach(element => {
+        element.classList.replace('hide', 'show');
+      });
+
+      jobElements.forEach(element => {
+        element.classList.replace('hide', 'show');
+      });
+    }
+  </script>
 </html>

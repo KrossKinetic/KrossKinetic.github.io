@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'SF';  /*  Your custom font name */
+    src: url('font.otf');
+    font-weight: normal; /* Set default weight */
+    font-style: normal; /* Set default style */
+    font-display: swap; /*  Optional: Improves perceived performance */
+}
+
+
+* {
+    font-family: 'SF'; /* Use 'gatte' if available, fallback if not */
+}
+
+.rounded-img{
+    border-radius: 30px;
+    border: solid;
+    border-width: 3px;
+}
+
+.btn{
+    margin: 1%;
+}
+
+.card-bio{
+    margin: 5%;
+}
+
+.updates{
+    margin: 0;
+}
+
+.card{
+    background-color: #f3fcff
+}
+
+.solid_blue{
+    color: #4796E3;
+}
+
+.grad_p {
+    background: linear-gradient(to left,#CA6673, #4796E3);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.p_size{
+    font-size: 1.2em;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
