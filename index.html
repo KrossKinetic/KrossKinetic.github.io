@@ -139,9 +139,9 @@
                 in code-related problem domains. This ongoing research (started Feb 2025) is further supported by the SUNY SOAR Funding awarded by State 
                 University of New York (June 2025 - July 2025) for continued investigation and development during the summer.<br><br>
 
-                • Developed a Python script to programmatically download a 100,000-sample dataset, balanced across specified languages (e.g., Python, C, C++, based on input parameters), from the public bigcode/StackV2 S3 repository. <br>
+                • Architected a unified knowledge-distillation pipeline, seamlessly querying commercial APIs (GPT-4o, Claude 3.5) and local open-source models via vLLM to create synthetic training data for fine-tuning smaller models like CodeLlama. <br>
+                • Fine-tuning open-source models like CodeLlama7b and Qwen-2.5-7B on a curated 160,000-sample dataset to enhance its reasoning and code generation capabilities for domain-specific tasks. <br>
                 • Adapted the REPLUG LSR framework for a code-based RAG baseline by implementing a Python driver script for execution and replacing its API dependency with a local vLLM server, reducing direct inference costs by over 99%. <br>
-                • Developed a unified Python client to benchmark and query commercial APIs (GPT-4o, Claude 3.5) and local models with vLLM, implementing SQLite3 caching to eliminate over 85% of redundant API calls during testing. <br>
               </p>
             </li>
             <li id="Research" class="show">
