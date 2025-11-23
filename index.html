@@ -1,560 +1,723 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Main</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width" initial-scale="1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="main.css" rel="stylesheet">
-    <link href="timeline.css" rel="stylesheet">
-  </head>
-  <body>
-    <!--HERO PAGE-->
-    <div style="padding-left: 10%; padding-right: 10%;" class="container-fluid">
-      <div class="row align-items-center">
-        <div class="col-md" style="padding-top: 8%;">
-          <img src="headshot.jpg" class="rounded-img mx-auto d-block img-fluid" alt="headshot image">
-        </div>
-        <div class="col-md" style="padding-top: 8%;">
-          <h2><b>Anshumaan (or Manas) Singh</b></h2>
-          <h2 class="solid_blue">Researcher & Software Engineer</h2>
-          <hr>
-          <h4>Passionate about building innovative solutions using <span class="grad_p">Artificial Intelligence</span>, <span class="grad_p">Machine Learning</span> and software engineering principles.</h4>
-          <h4>Motivated by <span style="color:rgb(255, 72, 72)">Star Wars</span>, I hope to create C3PO <img src="Robot Emoji Icon.png" style="height: 30px; width: 30px; transform: translateY(-3px);" alt="Robot Emoji Logo"> one day.</h4>
-          <h4>Check out some of my socials below!</h4>
-          <div class="card" style="margin-top: 5%;">
-            <div class="card-body">
-              <div class="row">
-                <div class="col-sm">
-                  <a type="button" href="mailto:anshumaanvsingh@gmail.com" target="_blank" class="btn">
-                    <img src="gmail.png" style="height: 40px; width: 40px;" alt="Email Logo"> | Email
-                  </a>
-                </div>
-                <div class="col-sm">
-                  <a type="button" href="https://github.com/KrossKinetic" target="_blank" class="btn">
-                    <img src="github-mark.png" style="height: 40px; width: 40px;" alt="GitHub Logo"> | GitHub
-                  </a>
-                </div>
-                <div class="col-sm">
-                  <a type="button" href="https://scholar.google.com/citations?user=YYUAX-EAAAAJ&hl=en" target="_blank" class="btn">
-                    <img src="Google_Scholar_logo.png" style="height: 40px; width: 40px;" alt="Google Scholar Logo"> | Google Scholar
-                  </a>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm">
-                  <a type="button" href="https://huggingface.co/KrossKinetic" target="_blank" class="btn">
-                    <img src="hf-logo.png" style="height: 40px; width: 40px;" alt="HuggingFace Logo">| HuggingFace 
-                  </a>
-                </div>
-                <div class="col-sm">
-                  <a type="button" href="https://www.instagram.com/krosskinetic/" target="_blank" class="btn">
-                    <img src="Instagram_Glyph_Gradient.png" style="height: 40px; width: 40px;" alt="Instagram Logo"> | Instagram
-                  </a>
-                </div>
-                <div class="col-sm">
-                  <a type="button" href="https://www.linkedin.com/in/anshumaan-singh-4a9750286/" target="_blank" class="btn">
-                    <img src="LI-In-Bug.png" style="height: 38px; width: 40px;" alt="LinkedIn Logo"> | LinkedIn
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <br>
-          <a class="button btn-primary" href="Anshumaan Singh Resume.pdf" target="_blank" class="btn">
-            <h4>Download Resume</h4>
-          </a>
-        </div>
+
+<head>
+  <title>Main</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width" initial-scale="1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="main.css" rel="stylesheet">
+  <link href="timeline.css" rel="stylesheet">
+</head>
+
+<body>
+  <button id="theme-toggle" onclick="toggleTheme()">🌙</button>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">&lt;Manas/&gt;</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
       </div>
     </div>
+  </nav>
 
-    <!--ABOUT ME PAGE-->
-    <div style="padding-left: 10%; padding-right: 10%; padding-top: 10%;" class="container-fluid">
-      <h2><b>About Me</b></h2><hr>
-      <div class="row">
-        <div class="col-lg">
-          <div class="card card-bio">
-            <div class="card-body">
-              <h4><b><img src="emoticon-2120024_960_720.webp" style="height: 60px; width: 60px; transform: translateY(-3px);" alt="PI Logo"> | Personal Introduction</b></h4>
-              <hr>
-              <p class="p_size">I am a Computer Science Honors student at Stony Brook University with a deep passion for <span class="grad_p">Artificial Intelligence</span> and <span class="grad_p">Machine Learning</span>. I am fascinated by the potential of LLMs and have hands-on experience in this area through my research on Retrieval Augmented Generation (RAG) for code-related problem domains. I am actively seeking Software Engineering or Machine Learning internship opportunities where I can apply my skills in Python, TensorFlow, and full-stack development to solve real-world problems. I'm always open to connecting with fellow students, researchers, and industry professionals. Recently, I have also started learning Jetpack Compose for Android to use some of my full-stack skills towards app development and providing meaningful, cutting-edge apps in the hands of the millions of Android users. Let's connect!</p>
+  <!--HERO PAGE-->
+  <div class="hero-section d-flex align-items-center justify-content-center text-center">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="hero-content">
+            <img src="headshot.jpg" class="rounded-img mb-4" alt="headshot image"
+              style="width: 180px; height: 180px; object-fit: cover;">
+            <h1 class="display-4 fw-bold mb-2">Anshumaan Singh</h1>
+            <h3 class="grad_p mb-4">Researcher & Software Engineer</h3>
+            <p class="lead mb-4 text-muted-custom">Building innovative solutions with <span
+                class="text-highlight">AI</span>, <span class="text-highlight">Machine Learning</span>, and <span
+                class="text-highlight">Full-Stack Engineering</span>.</p>
+            <p class="mb-5">Motivated by <span style="color: #ff4848">Star Wars</span>, aiming to create the next C3PO
+              <img src="Robot Emoji Icon.png" style="height: 24px; width: 24px;" alt="Robot">.
+            </p>
+
+            <div class="d-flex justify-content-center gap-3 flex-wrap mb-5">
+              <a href="mailto:anshumaanvsingh@gmail.com" class="btn btn-outline-custom" target="_blank"><img
+                  src="gmail.png" class="icon-sm"> Email</a>
+              <a href="https://github.com/KrossKinetic" class="btn btn-outline-custom" target="_blank"><img
+                  src="github-mark.png" class="icon-sm"> GitHub</a>
+              <a href="https://www.linkedin.com/in/anshumaan-singh-4a9750286/" class="btn btn-outline-custom"
+                target="_blank"><img src="LI-In-Bug.png" class="icon-sm"> LinkedIn</a>
+              <a href="Anshumaan Singh Resume.pdf" class="btn btn-primary" target="_blank">Download Resume</a>
             </div>
-          </div>
-          <div class="card card-bio">
-            <div class="card-body">
-              <h4><b><img src="0f323612ce814629c56059bb73d7a908.png" style="height: 50px; width: 50px; transform: translateY(-3px);" alt="Skills Logo"> | Skills</b></h4>
-              <hr>
-              <p class="p_size">• Programming Languages: MIPS, Python, Java, C, Kotlin (for Android Jetpack Compose), OCaml, JavaScript, HTML/CSS.</p>
-              <p class="p_size">• Frameworks & Libraries: TensorFlow, LangChain, HuggingFace, OpenCV, Pandas, NumPy, Flask, Bootstrap</p>
-              <p class="p_size">• Developer Tools & Platforms: Docker, AWS, Git, GitHub, Linux/Unix, HPC Clusters (Slurm), MySQL, SQLite3</p>
+
+            <div class="d-flex justify-content-center gap-3 flex-wrap social-mini">
+              <a href="https://scholar.google.com/citations?user=YYUAX-EAAAAJ&hl=en" target="_blank"
+                title="Google Scholar"><img src="Google_Scholar_logo.png" class="icon-xs"></a>
+              <a href="https://huggingface.co/KrossKinetic" target="_blank" title="HuggingFace"><img src="hf-logo.png"
+                  class="icon-xs"></a>
+              <a href="https://www.instagram.com/krosskinetic/" target="_blank" title="Instagram"><img
+                  src="Instagram_Glyph_Gradient.png" class="icon-xs"></a>
             </div>
-          </div>
-        </div>
-        <div class="col-lg">
-          <div class="card card-bio">
-            <div class="card-body">
-              <h4><b><img src="SBU vert_2clr_rgb_300ppi.png" style="height: 60px; width: 72px; transform: translateY(-3px);" alt="SBU Logo"> | Education</b></h4>
-              <hr>
-              <p class="p_size">• Degree: BSc Computer Science, Specializing in <span class="grad_p">AI</span> and <span class="grad_p">ML</span></p>
-              <p class="p_size">• University: Stony Brook University, New York, USA</p>
-              <p class="p_size">• CGPA: 3.931</p>
-              <p class="p_size">• Honors: SUNY SOAR Research Fellow, URECA Fellow, Computer Science Honors, University Scholars, Dean's List 2023 - 2025</p>
-              <p class="p_size">• Awards: Academic Achievement Award, YouAreWelcomeHere Award, Global Excellence Award</p>
-              <p class="p_size">• Relevant Coursework: Object-Oriented Programming, Data Structures, System Fundamentals, Linear Algebra, Probability and Statistics, Discrete Math, Calculus I & II </p>
-            </div>
-          </div>
-          <div class="card card-bio">
-            <div class="card-body">
-              <h4><b><img src="artist-palette-removebg-preview.png" style="height:55px; width:55px; transform: translateY(-3px);" alt="Hobbies Logo"> | Hobbies</b></h4>
-              <hr>
-              <p class="p_size">• Photography: I love taking photographs of landscape, nature and the nightsky. Check out some of the pictures I have taken on my Instagram!</p>
-              <p class="p_size">• Sailing: I recently started sailing with the Stony Brook University's Sailing Club and I am a huge fan now. I absolutely love sailing!</p>
-              <p class="p_size">• Sketching: I recently bought a new iPad Air and I have been learning how to sketch on it. So far... I'd say for someone who has never touched a sketch pen before, I am doing pretty decent.</p>
-              <p class="p_size">• Video Games: When I am not taking photographs and editing them, not sailing or sketching then I am probably playing video games. It is one of my favourite indoor passtimes.</p>
-            </div> 
           </div>
         </div>
       </div>
     </div>
+    <div class="hero-bg-animation"></div>
+  </div>
 
-    <!--WORK EXP PAGE-->
-    <div style="padding-left: 10%; padding-right: 10%; padding-top: 10%;" class="container-fluid container-timeline">
-      <h2><b>Work Experience</b></h2><hr>
-        <div class="wrapper">
-          <button type="button" class="btn btn-primary" onclick="showInternshipElements()">Show SWE Internships</button>
-          <button type="button" class="btn btn-primary" onclick="showResearchElements()">Show Research</button>
-          <button type="button" class="btn btn-primary" onclick="showJobElements()">Show Jobs</button>
-          <button type="button" class="btn btn-primary" onclick="showLeaderComElements()">Show Leadership / Community Service</button>
-          <button type="button" class="btn btn-primary" onclick="showAllElements()">Show All</button>
-          <ul class="sessions">
-            <li id="Research" class="show">
-              <h6><b> Artificial Intelligence Researcher | February 2025 - Present</b></h6>
-              <p>
-                Language Understanding and Reasoning (LUNR) Lab | Stony Brook University College of Engineering and Applied Sciences, NY <br>
-                <hr>
-                Timeline: I joined the lab in February, but my work towards improving LLM performance in RAG for Coding started in June. <br><br>
-
-                Overall Project Goal: Working under the supervision of Associate Professor Niranjan Balasubramanian of Stony Brook University's LUNR AI 
-                Lab to conduct research focused on enhancing Large Language Model (LLM) capabilities for Retrieval Augmented Generation (RAG) specifically 
-                in code-related problem domains. This ongoing research (started Feb 2025) is further supported by the SUNY SOAR Funding awarded by State 
-                University of New York (June 2025 - July 2025) for continued investigation and development during the summer.<br><br>
-
-                • Architected a unified knowledge-distillation pipeline, seamlessly querying commercial APIs (GPT-4o, Claude 3.5) and local open-source models via vLLM to create synthetic training data for fine-tuning smaller models like CodeLlama. <br>
-                • Fine-tuning open-source models like CodeLlama7b and Qwen-2.5-7B on a curated 160,000-sample dataset to enhance its reasoning and code generation capabilities for domain-specific tasks. <br>
-                • Adapted the REPLUG LSR framework for a code-based RAG baseline by implementing a Python driver script for execution and replacing its API dependency with a local vLLM server, reducing direct inference costs by over 99%. <br>
-              </p>
-            </li>
-            <li id="Research" class="show">
-              <h6><b>Volunteer AI Researcher & Data Engineer | November 2024 - February 2025</b></h6>
-              <p>
-                Humanity Unleashed (humun.org) | Remote <hr>
-                Volunteered at Humanity Unleashed, a self-funded volunteer-only research organization and contributed in the following ways:<br><br>
-                • Built pipelines processing 700k rows of economic data, publishing 5 datasets to HuggingFace with 1,400+ downloads.<br>
-                • Collaborated with 2 other peers to develop a policy generation and summarization pipeline utilizing LangChain to translate complex economic data into nuanced policy explanations.
-              </p>
-            </li>
-            <li id="LeadershipCommunityRoles" class="show">
-              <h6><b>Teaching Assistant | January 2024 - December 2024</b></h6>
-              <p>
-                University Scholars Fellowship | Stony Brook University, NY<br> <hr>
-                  • Demonstrated leadership & mentorship skills as a leader for incoming University Scholars students at Stony Brook University.<br>
-                  • Acquired valuable teaching experience as a Teaching Assistant as part of the SCH 275 pre-fellowship program.<br>
-                  • Assisted the University Scholars Director as a Teaching Assistant by bringing my own life experiences and teaching style into the class.<br>
-                  • Designed creative presentations, graphics & videos to make weekly student workshops engaging and fun. 
-              </p>
-            </li>
-            <li id="Research" class="show">
-              <h6><b>iGEM Researcher & Developer (Bioinformatics, AI/ML, Full-Stack Web) | January 2024 - November 2024</b></h6>
-              <p>
-                SBU iGEM 2024 Synthetic Biology Research | Stony Brook University, NY <hr>
-                • Engineered a Q&A chatbot using LangChain and HuggingFace that creates vector embeddings of custom research documents and ingests them to generate context-aware answers, ensuring specialized responses with high accuracy. <br>
-                • Led and mentored a 3-person wiki team within a 15-person research group, developing a project wiki (HTML, CSS, JavaScript, and Flask) & attracting 15 stakeholders and investors. <br>
-                • Performed computational biology to enhance miRNA-Detector Bacteria system for Human Non-Hodgkin's B-Cell Lymphoma using molecular dynamic simulations to assess AGO2 and miRNA-326 binding. <br>
-                • Awarded a Gold Medal for our research efforts at the iGEM Paris 2024 Jamboree. <br>
-              </p>
-            </li>
-            <li id="Job" class="show">
-              <h6><b>IT Assistant Intern | January 2024 - July 2024</b></h6>
-              <p>
-                Faculty Student Association at Stony Brook University | Stony Brook University, NY <hr>
-                • Developed and maintained databases using MySQL and Google Sheets, automated processes by building Google AppScript algorithms like Binary Sort and Search, improving automation and work efficiency. <br>
-                • Inventoried, performed maintenance and resolved issues in over 400 systems across the university campus. <br>
-                • Installed and configured computer hardware & software, including Windows and Linux operating systems, in 40+ systems. <br>
-              </p>
-            </li>
-            <li id="Internship" class="show">
-              <h6><b>Full Stack Web Developer Intern | April 2023 - June 2023</b></h6>
-              <p>
-                 Omniscience Corporation, Palo Alto, CA | Remote <hr>
-                • Created a life insurance flask WebApp with 3000+ lines of code using HTML, CSS, JavaScript, Jinja, MySQL and Bootstrap Library.
-                • Containerized the application using Docker and deployed it on Amazon Web Services to ensure a reliable & scalable environment.
-                • Improved accessibility using Bootstrap HTML Framework, prioritizing user experience and effective communication.
-              </p>
-            </li>
-          </ul>
+  <!--ABOUT ME PAGE-->
+  <div id="about" style="padding-left: 10%; padding-right: 10%; padding-top: 10%;" class="container-fluid">
+    <h2><b>About Me</b></h2>
+    <hr>
+    <div class="row">
+      <div class="col-lg">
+        <div class="card card-bio">
+          <div class="card-body">
+            <h4><b><img src="emoticon-2120024_960_720.webp"
+                  style="height: 60px; width: 60px; transform: translateY(-3px);" alt="PI Logo"> | Personal
+                Introduction</b></h4>
+            <hr>
+            <p class="p_size">I am a Computer Science Honors student at Stony Brook University with a deep passion for
+              <span class="grad_p">Artificial Intelligence</span> and <span class="grad_p">Machine Learning</span>. I am
+              fascinated by the potential of LLMs and have hands-on experience in this area through my research on
+              Retrieval Augmented Generation (RAG) for code-related problem domains. I am actively seeking Software
+              Engineering or Machine Learning internship opportunities where I can apply my skills in Python,
+              TensorFlow, and full-stack development to solve real-world problems. I'm always open to connecting with
+              fellow students, researchers, and industry professionals. Recently, I have also started learning Jetpack
+              Compose for Android to use some of my full-stack skills towards app development and providing meaningful,
+              cutting-edge apps in the hands of the millions of Android users. Let's connect!
+            </p>
+          </div>
         </div>
+        <div class="card card-bio">
+          <div class="card-body">
+            <h4><b><img src="0f323612ce814629c56059bb73d7a908.png"
+                  style="height: 50px; width: 50px; transform: translateY(-3px);" alt="Skills Logo"> | Skills</b></h4>
+            <hr>
+            <p class="p_size">• Programming Languages: MIPS, Python, Java, C, Kotlin (for Android Jetpack Compose),
+              OCaml, JavaScript, HTML/CSS.</p>
+            <p class="p_size">• Frameworks & Libraries: TensorFlow, LangChain, HuggingFace, OpenCV, Pandas, NumPy,
+              Flask, Bootstrap</p>
+            <p class="p_size">• Developer Tools & Platforms: Docker, AWS, Git, GitHub, Linux/Unix, HPC Clusters (Slurm),
+              MySQL, SQLite3</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg">
+        <div class="card card-bio">
+          <div class="card-body">
+            <h4><b><img src="SBU vert_2clr_rgb_300ppi.png"
+                  style="height: 60px; width: 72px; transform: translateY(-3px);" alt="SBU Logo"> | Education</b></h4>
+            <hr>
+            <p class="p_size">• Degree: BSc Computer Science, Specializing in <span class="grad_p">AI</span> and <span
+                class="grad_p">ML</span></p>
+            <p class="p_size">• University: Stony Brook University, New York, USA</p>
+            <p class="p_size">• CGPA: 3.931</p>
+            <p class="p_size">• Honors: SUNY SOAR Research Fellow, URECA Fellow, Computer Science Honors, University
+              Scholars, Dean's List 2023 - 2025</p>
+            <p class="p_size">• Awards: Academic Achievement Award, YouAreWelcomeHere Award, Global Excellence Award</p>
+            <p class="p_size">• Relevant Coursework: Object-Oriented Programming, Data Structures, System Fundamentals,
+              Linear Algebra, Probability and Statistics, Discrete Math, Calculus I & II </p>
+          </div>
+        </div>
+        <div class="card card-bio">
+          <div class="card-body">
+            <h4><b><img src="artist-palette-removebg-preview.png"
+                  style="height:55px; width:55px; transform: translateY(-3px);" alt="Hobbies Logo"> | Hobbies</b></h4>
+            <hr>
+            <p class="p_size">• Photography: I love taking photographs of landscape, nature and the nightsky. Check out
+              some of the pictures I have taken on my Instagram!</p>
+            <p class="p_size">• Sailing: I recently started sailing with the Stony Brook University's Sailing Club and I
+              am a huge fan now. I absolutely love sailing!</p>
+            <p class="p_size">• Sketching: I recently bought a new iPad Air and I have been learning how to sketch on
+              it. So far... I'd say for someone who has never touched a sketch pen before, I am doing pretty decent.</p>
+            <p class="p_size">• Video Games: When I am not taking photographs and editing them, not sailing or sketching
+              then I am probably playing video games. It is one of my favourite indoor passtimes.</p>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <!--PROJECTS-->
-    <div style="padding-left: 10%; padding-right: 10%; padding-top: 10%;" class="container-fluid container-timeline">
-      <h2><b>Projects</b></h2><hr>
-      <div class="row">
+  <!--WORK EXP PAGE-->
+  <div id="experience" style="padding-left: 10%; padding-right: 10%; padding-top: 10%;"
+    class="container-fluid container-timeline">
+    <h2><b>Work Experience</b></h2>
+    <hr>
+    <div class="wrapper">
+      <button type="button" class="btn btn-primary" onclick="showInternshipElements()">Show SWE Internships</button>
+      <button type="button" class="btn btn-primary" onclick="showResearchElements()">Show Research</button>
+      <button type="button" class="btn btn-primary" onclick="showJobElements()">Show Jobs</button>
+      <button type="button" class="btn btn-primary" onclick="showLeaderComElements()">Show Leadership / Community
+        Service</button>
+      <button type="button" class="btn btn-primary" onclick="showAllElements()">Show All</button>
+      <ul class="sessions">
+        <li id="Research" class="show">
+          <h6><b> Artificial Intelligence Researcher | February 2025 - Present</b></h6>
+          <p>
+            Language Understanding and Reasoning (LUNR) Lab | Stony Brook University College of Engineering and Applied
+            Sciences, NY <br>
+            <hr>
+            Timeline: I joined the lab in February, but my work towards improving LLM performance in RAG for Coding
+            started in June. <br><br>
+
+            Overall Project Goal: Working under the supervision of Associate Professor Niranjan Balasubramanian of Stony
+            Brook University's LUNR AI
+            Lab to conduct research focused on enhancing Large Language Model (LLM) capabilities for Retrieval Augmented
+            Generation (RAG) specifically
+            in code-related problem domains. This ongoing research (started Feb 2025) is further supported by the SUNY
+            SOAR Funding awarded by State
+            University of New York (June 2025 - July 2025) for continued investigation and development during the
+            summer.<br><br>
+
+            • Architected a unified knowledge-distillation pipeline, seamlessly querying commercial APIs (GPT-4o, Claude
+            3.5) and local open-source models via vLLM to create synthetic training data for fine-tuning smaller models
+            like CodeLlama. <br>
+            • Fine-tuning open-source models like CodeLlama7b and Qwen-2.5-7B on a curated 160,000-sample dataset to
+            enhance its reasoning and code generation capabilities for domain-specific tasks. <br>
+            • Adapted the REPLUG LSR framework for a code-based RAG baseline by implementing a Python driver script for
+            execution and replacing its API dependency with a local vLLM server, reducing direct inference costs by over
+            99%. <br>
+          </p>
+        </li>
+        <li id="Research" class="show">
+          <h6><b>Volunteer AI Researcher & Data Engineer | November 2024 - February 2025</b></h6>
+          <p>
+            Humanity Unleashed (humun.org) | Remote
+            <hr>
+            Volunteered at Humanity Unleashed, a self-funded volunteer-only research organization and contributed in the
+            following ways:<br><br>
+            • Built pipelines processing 700k rows of economic data, publishing 5 datasets to HuggingFace with 1,400+
+            downloads.<br>
+            • Collaborated with 2 other peers to develop a policy generation and summarization pipeline utilizing
+            LangChain to translate complex economic data into nuanced policy explanations.
+          </p>
+        </li>
+        <li id="LeadershipCommunityRoles" class="show">
+          <h6><b>Teaching Assistant | January 2024 - December 2024</b></h6>
+          <p>
+            University Scholars Fellowship | Stony Brook University, NY<br>
+            <hr>
+            • Demonstrated leadership & mentorship skills as a leader for incoming University Scholars students at Stony
+            Brook University.<br>
+            • Acquired valuable teaching experience as a Teaching Assistant as part of the SCH 275 pre-fellowship
+            program.<br>
+            • Assisted the University Scholars Director as a Teaching Assistant by bringing my own life experiences and
+            teaching style into the class.<br>
+            • Designed creative presentations, graphics & videos to make weekly student workshops engaging and fun.
+          </p>
+        </li>
+        <li id="Research" class="show">
+          <h6><b>iGEM Researcher & Developer (Bioinformatics, AI/ML, Full-Stack Web) | January 2024 - November 2024</b>
+          </h6>
+          <p>
+            SBU iGEM 2024 Synthetic Biology Research | Stony Brook University, NY
+            <hr>
+            • Engineered a Q&A chatbot using LangChain and HuggingFace that creates vector embeddings of custom research
+            documents and ingests them to generate context-aware answers, ensuring specialized responses with high
+            accuracy. <br>
+            • Led and mentored a 3-person wiki team within a 15-person research group, developing a project wiki (HTML,
+            CSS, JavaScript, and Flask) & attracting 15 stakeholders and investors. <br>
+            • Performed computational biology to enhance miRNA-Detector Bacteria system for Human Non-Hodgkin's B-Cell
+            Lymphoma using molecular dynamic simulations to assess AGO2 and miRNA-326 binding. <br>
+            • Awarded a Gold Medal for our research efforts at the iGEM Paris 2024 Jamboree. <br>
+          </p>
+        </li>
+        <li id="Job" class="show">
+          <h6><b>IT Assistant Intern | January 2024 - July 2024</b></h6>
+          <p>
+            Faculty Student Association at Stony Brook University | Stony Brook University, NY
+            <hr>
+            • Developed and maintained databases using MySQL and Google Sheets, automated processes by building Google
+            AppScript algorithms like Binary Sort and Search, improving automation and work efficiency. <br>
+            • Inventoried, performed maintenance and resolved issues in over 400 systems across the university campus.
+            <br>
+            • Installed and configured computer hardware & software, including Windows and Linux operating systems, in
+            40+ systems. <br>
+          </p>
+        </li>
+        <li id="Internship" class="show">
+          <h6><b>Full Stack Web Developer Intern | April 2023 - June 2023</b></h6>
+          <p>
+            Omniscience Corporation, Palo Alto, CA | Remote
+            <hr>
+            • Created a life insurance flask WebApp with 3000+ lines of code using HTML, CSS, JavaScript, Jinja, MySQL
+            and Bootstrap Library.
+            • Containerized the application using Docker and deployed it on Amazon Web Services to ensure a reliable &
+            scalable environment.
+            • Improved accessibility using Bootstrap HTML Framework, prioritizing user experience and effective
+            communication.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!--PROJECTS-->
+  <div id="projects" style="padding-left: 10%; padding-right: 10%; padding-top: 10%;"
+    class="container-fluid container-timeline">
+    <h2><b>Projects</b></h2>
+    <hr>
+    <div class="row">
       <div class="col-md">
-          <div class="card card-bio">
-            <div class="card-body">
-              <h5><b>NotiSentry: A smarter DND for Android</b></h5><hr>
-              <p>An Android app built with Kotlin and Jetpack Compose that uses on-device Gemini Nano model to power summarization and notification categorization for a powerful and versatile DND experience.</p>
-              <a type="button" href="https://github.com/KrossKinetic/NotiSentry-Smart-DND" target="_blank" class="btn-primary">GitHub Project (WIP)</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md">
-          <div class="card card-bio">
-            <div class="card-body">
-              <h5><b>Multi-Client Texas-Hold-em-Poker Server</b></h5><hr>
-              <p>TextSimilarityCheck is a simple program written in Java for comparing text files and checking if they were written by the same author (by using cosine similarity).</p>
-              <a type="button" href="https://github.com/KrossKinetic/Multi-Client-Texas-Hold-em-Poker-Server" target="_blank" class="btn-primary">GitHub Project</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md">
-          <div class="card card-bio">
-            <div class="card-body">
-              <h5><b>Red-Black Tree in MIPS Assembly</b></h5><hr>
-              <p>This project is an implementation of core functions for a Red-Black Tree data structure, written entirely in MIPS assembly language. The assignment focuses on low-level memory operations, register conventions, and the implementation of a complex, balanced data structure in assembly.</p>
-              <a type="button" href="https://github.com/KrossKinetic/Red-Black-Tree-in-MIPS-Assembly" target="_blank" class="btn-primary">GitHub Project</a>
-            </div>
+        <div class="card card-bio">
+          <div class="card-body">
+            <h5><b>NotiSentry: A smarter DND for Android</b></h5>
+            <hr>
+            <p>An Android app built with Kotlin and Jetpack Compose that uses on-device Gemini Nano model to power
+              summarization and notification categorization for a powerful and versatile DND experience.</p>
+            <a type="button" href="https://github.com/KrossKinetic/NotiSentry-Smart-DND" target="_blank"
+              class="btn-primary">GitHub Project (WIP)</a>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md">
-          <div class="card card-bio">
-            <div class="card-body">
-              <h5><b>C Based Linux Filesystem Emulator</b></h5><hr>
-              <p>This project is an in-memory emulation of a Linux-like filesystem written entirely in C. It involves managing core filesystem structures like i-nodes and data blocks, handling memory allocation, and implementing a hierarchical file and directory system from the ground up.</p>
-              <a type="button" href="https://github.com/KrossKinetic/C-Based-Linux-Filesystem-Emulator" target="_blank" class="btn-primary">GitHub Project</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md">
-          <div class="card card-bio">
-            <div class="card-body">
-              <h5><b>Skyscrapers Puzzle Game</b></h5><hr>
-              <p>This project is an implementation of the single-player puzzle game "Skyscrapers." The implementation is done in C and includes both an interactive version of the game and an automatic solver based on logical heuristics.</p>
-              <a type="button" href="https://github.com/KrossKinetic/Skyscrapers-Puzzle-Game" target="_blank" class="btn-primary">GitHub Project</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md">
-          <div class="card card-bio">
-            <div class="card-body">
-              <h5><b>AFLENT Protocol and Custom Encryption</b></h5><hr>
-              <p>This project focuses on low-level data manipulation in C. It involves implementing a custom network protocol, named AFLENT, and a block cipher for data encryption and decryption. The core of the project is performing byte and bit-level computations to pack, unpack, and transform data.</p>
-              <a type="button" href="https://github.com/KrossKinetic/AFLENT-Protocol-and-Custom-Encryption" target="_blank" class="btn-primary">GitHub Project</a>
-            </div>
+      <div class="col-md">
+        <div class="card card-bio">
+          <div class="card-body">
+            <h5><b>Multi-Client Texas-Hold-em-Poker Server</b></h5>
+            <hr>
+            <p>TextSimilarityCheck is a simple program written in Java for comparing text files and checking if they
+              were written by the same author (by using cosine similarity).</p>
+            <a type="button" href="https://github.com/KrossKinetic/Multi-Client-Texas-Hold-em-Poker-Server"
+              target="_blank" class="btn-primary">GitHub Project</a>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md">
-          <div class="card card-bio">
-            <div class="card-body">
-              <h5><b>Text Similarity Check</b></h5><hr>
-              <p>TextSimilarityCheck is a simple program written in Java for comparing text files and checking if they were written by the same author (by using cosine similarity).</p>
-              <a type="button" href="https://github.com/KrossKinetic/TextSimilarityCheck" target="_blank" class="btn-primary">GitHub Project</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md">
-          <div class="card card-bio">
-            <div class="card-body">
-              <h5><b>Social Media Graph</b></h5><hr>
-              <p>SocialMediaGraph is a simple program written in Java for simulating a social media network between people (with followers and followings) using graphs.</p>
-              <a type="button" href="https://github.com/KrossKinetic/SocialMediaGraph" target="_blank" class="btn-primary">GitHub Project</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md">
-          <div class="card card-bio">
-            <div class="card-body">
-              <h5><b>Food Pyramid</b></h5><hr>
-              <p>FoodPyramid is a simple program written in Java for simulating a Food Pyramid / Food Chain.</p>
-              <a type="button" href="https://github.com/KrossKinetic/FoodPyramid" target="_blank" class="btn-primary">GitHub Project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md">
-          <div class="card card-bio">
-            <div class="card-body">
-              <h5><b>Playfair Encryption</b></h5><hr>
-              <p>PlayfairEncryption is a simple program written in Java for encrypting and decrypting any text using playfair encryption.</p>
-              <a type="button" href="https://github.com/KrossKinetic/PlayfairEncryption" target="_blank" class="btn-primary">GitHub Project</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md">
-          <div class="card card-bio">
-            <div class="card-body">
-              <h5><b>C Program Tracer</b></h5><hr>
-              <p>CProgramTracer is a simple program written in Java for keeping tracks of different C blocks (A block is {...}) and the variables initialized / updated inside them.</p>
-              <a type="button" href="https://github.com/KrossKinetic/CProgramTracer" target="_blank" class="btn-primary">GitHub Project</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md">
-          <div class="card card-bio">
-            <div class="card-body">
-              <h5><b>Hiring System Simulator</b></h5><hr>
-              <p>HiringSystemSimulator is a simple program written in Java for simulating a complete hiring system manager for job applicants.</p>
-              <a type="button" href="https://github.com/KrossKinetic/HiringSystemSimulator" target="_blank" class="btn-primary">GitHub Project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md">
-          <div class="card card-bio">
-            <div class="card-body">
-              <h5><b>Windows CenterStage</b></h5><hr>
-              <p>A simple python program using TensorFlow image recognition pipeline and a custom trained model to emulate iPad's CenterStage on windows.</p>
-              <a type="button" href="https://github.com/KrossKinetic/WindowsCenterStage" target="_blank" class="btn-primary">GitHub Project</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md">
-          <div class="card card-bio">
-            <div class="card-body">
-              <h5><b>ReLinked-Open-Source</b></h5><hr>
-              <p>ReLinked is a simple flask based application which allows the user to save important webpages.</p>
-              <a type="button" href="https://github.com/KrossKinetic/ReLinked-Open-Source" target="_blank" class="btn-primary">GitHub Project</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md">
-          <div class="card card-bio">
-            <div class="card-body">
-              <h5><b>Readability</b></h5><hr>
-              <p>A simple program that finds out the grade of a person from his/her english sentence formation capabilities.</p>
-              <a type="button" href="https://github.com/KrossKinetic/Readability" target="_blank" class="btn-primary">GitHub Project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md">
-          <div class="card card-bio">
-            <div class="card-body">
-              <h5><b>Minecraft AFK Fisher</b></h5><hr>
-              <p>Here is a program I built that can be used together a particular Minecraft Fishing build to automate the whole process and afk fish with ease.</p>
-              <a type="button" href="https://github.com/KrossKinetic/Minecraft_AFK_Fishing" target="_blank" class="btn-primary">GitHub Project</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md">
-          <div class="card card-bio">
-            <div class="card-body">
-              <h5><b>Modify Volume Wav</b></h5><hr>
-              <p>A simple C program that allows users to increase or decrease the audio of .wav format.</p>
-              <a type="button" href="https://github.com/KrossKinetic/modify-volume-wav" target="_blank" class="btn-primary">GitHub Project</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md">
-          <div class="card card-bio">
-            <div class="card-body">
-              <h5><b>Credit Card Verifier</b></h5><hr>
-              <p>A simple C program that checks the validity of a card.</p>
-              <a type="button" href="https://github.com/KrossKinetic/Credit-card-verifier" target="_blank" class="btn-primary">GitHub Project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md">
-          <div class="card card-bio">
-            <div class="card-body">
-              <h5><b>Box Blur Image</b></h5><hr>
-              <p>This program simply applies box blur to an image. Works best with images of size less than 800x800 pixels.</p>
-              <a type="button" href="https://github.com/KrossKinetic/Box-blur-image" target="_blank" class="btn-primary">GitHub Project</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md">
-          <div class="card card-bio">
-            <div class="card-body">
-              <h5><b>Black White Filter</b></h5><hr>
-              <p>This program simply applies a black and white filter to any image by averaging out RGB values of each pixel.</p>
-              <a type="button" href="https://github.com/KrossKinetic/Black-white-filter" target="_blank" class="btn-primary">GitHub Project</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md">
-          <div class="card card-bio">
-            <div class="card-body">
-              <h5><b>Sobel Operator Eedge Detection</b></h5><hr>
-              <p>This simple program performs sobel operator edge detection (Algorithm to find edges of objects in an image) on an image.</p>
-              <a type="button" href="https://github.com/KrossKinetic/Sobel-Operator-edge-detection" target="_blank" class="btn-primary">GitHub Project</a>
-            </div>
+      <div class="col-md">
+        <div class="card card-bio">
+          <div class="card-body">
+            <h5><b>Red-Black Tree in MIPS Assembly</b></h5>
+            <hr>
+            <p>This project is an implementation of core functions for a Red-Black Tree data structure, written entirely
+              in MIPS assembly language. The assignment focuses on low-level memory operations, register conventions,
+              and the implementation of a complex, balanced data structure in assembly.</p>
+            <a type="button" href="https://github.com/KrossKinetic/Red-Black-Tree-in-MIPS-Assembly" target="_blank"
+              class="btn-primary">GitHub Project</a>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- Recent Updates -->
-    <div style="padding-left: 10%; padding-right: 10%; padding-top: 10%;" class="container-fluid container-timeline">
-      <h2><b>Recent Updates</b></h2><i>(Last Updated: 5:15 PM July 14th, 2025)</i><hr>
-      <!--Updates Here-->
-      <div class="card updates">
-        <div class="card-body">
-          <h5> <span class="solid_blue">July 14th, 2025</span>: Updated the information on the website. A refined resume has been added. Updated format for the work experience to improve readability.</h5>
+    <div class="row">
+      <div class="col-md">
+        <div class="card card-bio">
+          <div class="card-body">
+            <h5><b>C Based Linux Filesystem Emulator</b></h5>
+            <hr>
+            <p>This project is an in-memory emulation of a Linux-like filesystem written entirely in C. It involves
+              managing core filesystem structures like i-nodes and data blocks, handling memory allocation, and
+              implementing a hierarchical file and directory system from the ground up.</p>
+            <a type="button" href="https://github.com/KrossKinetic/C-Based-Linux-Filesystem-Emulator" target="_blank"
+              class="btn-primary">GitHub Project</a>
+          </div>
         </div>
-      </div><br>
-      <div class="card updates">
-        <div class="card-body">
-          <h5> <span class="solid_blue">May 29th, 2025</span>: Updated the information on the website. A refined resume will be added at a later date, for now please refer to the LinkedIn profile if the website does not suffice. Feel free to email me for further questions.</h5>
+      </div>
+      <div class="col-md">
+        <div class="card card-bio">
+          <div class="card-body">
+            <h5><b>Skyscrapers Puzzle Game</b></h5>
+            <hr>
+            <p>This project is an implementation of the single-player puzzle game "Skyscrapers." The implementation is
+              done in C and includes both an interactive version of the game and an automatic solver based on logical
+              heuristics.</p>
+            <a type="button" href="https://github.com/KrossKinetic/Skyscrapers-Puzzle-Game" target="_blank"
+              class="btn-primary">GitHub Project</a>
+          </div>
         </div>
-      </div><br>
-      <div class="card updates">
-        <div class="card-body">
-          <h5> <span class="solid_blue">January 18th, 2025</span>: Fixed bugs.</h5>
-        </div>
-      </div><br>
-      <div class="card updates">
-        <div class="card-body">
-          <h5> <span class="solid_blue">January 17th, 2025</span>: Updated Resume, Added  Machine Learning Experience, Polished up Work Experience Page, Added Leadership Position to Work Experience, Added Computer Science Honors.</h5>
-        </div>
-      </div><br>
-      <div class="card updates">
-        <div class="card-body">
-          <h5> <span class="solid_blue">December 12th, 2024</span>: Overhauled my portfolio website and added a lot of new projects and work experiences.</h5>
+      </div>
+      <div class="col-md">
+        <div class="card card-bio">
+          <div class="card-body">
+            <h5><b>AFLENT Protocol and Custom Encryption</b></h5>
+            <hr>
+            <p>This project focuses on low-level data manipulation in C. It involves implementing a custom network
+              protocol, named AFLENT, and a block cipher for data encryption and decryption. The core of the project is
+              performing byte and bit-level computations to pack, unpack, and transform data.</p>
+            <a type="button" href="https://github.com/KrossKinetic/AFLENT-Protocol-and-Custom-Encryption"
+              target="_blank" class="btn-primary">GitHub Project</a>
+          </div>
         </div>
       </div>
     </div>
+    <div class="row">
+      <div class="col-md">
+        <div class="card card-bio">
+          <div class="card-body">
+            <h5><b>Text Similarity Check</b></h5>
+            <hr>
+            <p>TextSimilarityCheck is a simple program written in Java for comparing text files and checking if they
+              were written by the same author (by using cosine similarity).</p>
+            <a type="button" href="https://github.com/KrossKinetic/TextSimilarityCheck" target="_blank"
+              class="btn-primary">GitHub Project</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card card-bio">
+          <div class="card-body">
+            <h5><b>Social Media Graph</b></h5>
+            <hr>
+            <p>SocialMediaGraph is a simple program written in Java for simulating a social media network between people
+              (with followers and followings) using graphs.</p>
+            <a type="button" href="https://github.com/KrossKinetic/SocialMediaGraph" target="_blank"
+              class="btn-primary">GitHub Project</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card card-bio">
+          <div class="card-body">
+            <h5><b>Food Pyramid</b></h5>
+            <hr>
+            <p>FoodPyramid is a simple program written in Java for simulating a Food Pyramid / Food Chain.</p>
+            <a type="button" href="https://github.com/KrossKinetic/FoodPyramid" target="_blank"
+              class="btn-primary">GitHub Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md">
+        <div class="card card-bio">
+          <div class="card-body">
+            <h5><b>Playfair Encryption</b></h5>
+            <hr>
+            <p>PlayfairEncryption is a simple program written in Java for encrypting and decrypting any text using
+              playfair encryption.</p>
+            <a type="button" href="https://github.com/KrossKinetic/PlayfairEncryption" target="_blank"
+              class="btn-primary">GitHub Project</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card card-bio">
+          <div class="card-body">
+            <h5><b>C Program Tracer</b></h5>
+            <hr>
+            <p>CProgramTracer is a simple program written in Java for keeping tracks of different C blocks (A block is
+              {...}) and the variables initialized / updated inside them.</p>
+            <a type="button" href="https://github.com/KrossKinetic/CProgramTracer" target="_blank"
+              class="btn-primary">GitHub Project</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card card-bio">
+          <div class="card-body">
+            <h5><b>Hiring System Simulator</b></h5>
+            <hr>
+            <p>HiringSystemSimulator is a simple program written in Java for simulating a complete hiring system manager
+              for job applicants.</p>
+            <a type="button" href="https://github.com/KrossKinetic/HiringSystemSimulator" target="_blank"
+              class="btn-primary">GitHub Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md">
+        <div class="card card-bio">
+          <div class="card-body">
+            <h5><b>Windows CenterStage</b></h5>
+            <hr>
+            <p>A simple python program using TensorFlow image recognition pipeline and a custom trained model to emulate
+              iPad's CenterStage on windows.</p>
+            <a type="button" href="https://github.com/KrossKinetic/WindowsCenterStage" target="_blank"
+              class="btn-primary">GitHub Project</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card card-bio">
+          <div class="card-body">
+            <h5><b>ReLinked-Open-Source</b></h5>
+            <hr>
+            <p>ReLinked is a simple flask based application which allows the user to save important webpages.</p>
+            <a type="button" href="https://github.com/KrossKinetic/ReLinked-Open-Source" target="_blank"
+              class="btn-primary">GitHub Project</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card card-bio">
+          <div class="card-body">
+            <h5><b>Readability</b></h5>
+            <hr>
+            <p>A simple program that finds out the grade of a person from his/her english sentence formation
+              capabilities.</p>
+            <a type="button" href="https://github.com/KrossKinetic/Readability" target="_blank"
+              class="btn-primary">GitHub Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md">
+        <div class="card card-bio">
+          <div class="card-body">
+            <h5><b>Minecraft AFK Fisher</b></h5>
+            <hr>
+            <p>Here is a program I built that can be used together a particular Minecraft Fishing build to automate the
+              whole process and afk fish with ease.</p>
+            <a type="button" href="https://github.com/KrossKinetic/Minecraft_AFK_Fishing" target="_blank"
+              class="btn-primary">GitHub Project</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card card-bio">
+          <div class="card-body">
+            <h5><b>Modify Volume Wav</b></h5>
+            <hr>
+            <p>A simple C program that allows users to increase or decrease the audio of .wav format.</p>
+            <a type="button" href="https://github.com/KrossKinetic/modify-volume-wav" target="_blank"
+              class="btn-primary">GitHub Project</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card card-bio">
+          <div class="card-body">
+            <h5><b>Credit Card Verifier</b></h5>
+            <hr>
+            <p>A simple C program that checks the validity of a card.</p>
+            <a type="button" href="https://github.com/KrossKinetic/Credit-card-verifier" target="_blank"
+              class="btn-primary">GitHub Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md">
+        <div class="card card-bio">
+          <div class="card-body">
+            <h5><b>Box Blur Image</b></h5>
+            <hr>
+            <p>This program simply applies box blur to an image. Works best with images of size less than 800x800
+              pixels.</p>
+            <a type="button" href="https://github.com/KrossKinetic/Box-blur-image" target="_blank"
+              class="btn-primary">GitHub Project</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card card-bio">
+          <div class="card-body">
+            <h5><b>Black White Filter</b></h5>
+            <hr>
+            <p>This program simply applies a black and white filter to any image by averaging out RGB values of each
+              pixel.</p>
+            <a type="button" href="https://github.com/KrossKinetic/Black-white-filter" target="_blank"
+              class="btn-primary">GitHub Project</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card card-bio">
+          <div class="card-body">
+            <h5><b>Sobel Operator Eedge Detection</b></h5>
+            <hr>
+            <p>This simple program performs sobel operator edge detection (Algorithm to find edges of objects in an
+              image) on an image.</p>
+            <a type="button" href="https://github.com/KrossKinetic/Sobel-Operator-edge-detection" target="_blank"
+              class="btn-primary">GitHub Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </body>
-  <footer class="text-center">
-    <p>Made with &#10084; by Manas</p>
-  </footer>
+  <!-- Recent Updates -->
+  <div style="padding-left: 10%; padding-right: 10%; padding-top: 10%;" class="container-fluid container-timeline">
+    <h2><b>Recent Updates</b></h2><i>(Last Updated: 5:15 PM July 14th, 2025)</i>
+    <hr>
+    <!--Updates Here-->
+    <div class="card updates mb-3">
+      <div class="card-body">
+        <h5> <span class="solid_blue">July 14th, 2025</span>: Updated the information on the website. A refined resume
+          has been added. Updated format for the work experience to improve readability.</h5>
+      </div>
+    </div>
+    <div class="card updates mb-3">
+      <div class="card-body">
+        <h5> <span class="solid_blue">May 29th, 2025</span>: Updated the information on the website. A refined resume
+          will be added at a later date, for now please refer to the LinkedIn profile if the website does not suffice.
+          Feel free to email me for further questions.</h5>
+      </div>
+    </div>
+    <div class="card updates mb-3">
+      <div class="card-body">
+        <h5> <span class="solid_blue">January 18th, 2025</span>: Fixed bugs.</h5>
+      </div>
+    </div>
+    <div class="card updates mb-3">
+      <div class="card-body">
+        <h5> <span class="solid_blue">January 17th, 2025</span>: Updated Resume, Added Machine Learning Experience,
+          Polished up Work Experience Page, Added Leadership Position to Work Experience, Added Computer Science Honors.
+        </h5>
+      </div>
+    </div>
+    <div class="card updates mb-3">
+      <div class="card-body">
+        <h5> <span class="solid_blue">December 12th, 2024</span>: Overhauled my portfolio website and added a lot of new
+          projects and work experiences.</h5>
+      </div>
+    </div>
+  </div>
 
-  <!-- JavaScript Below -->
-  <script>
-    function showResearchElements() {
-      const researchElements = document.querySelectorAll('#Research');
-      const internshipElements = document.querySelectorAll('#Internship');
-      const jobElements = document.querySelectorAll('#Job');
-      const LeadershipCommunityRoles = document.querySelectorAll('#LeadershipCommunityRoles');
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+<footer class="text-center">
+  <p>Made with &#10084; by Manas</p>
+</footer>
 
-      researchElements.forEach(element => {
-        element.classList.replace('hide', 'show');
-      });
+<!-- JavaScript Below -->
+<script>
+  // Theme Toggle Logic
+  function toggleTheme() {
+    const body = document.body;
+    const currentTheme = body.getAttribute('data-theme');
+    const toggleBtn = document.getElementById('theme-toggle');
 
-      internshipElements.forEach(element => {
-        element.classList.replace('show', 'hide');
-      });
-
-      LeadershipCommunityRoles.forEach(element => {
-        element.classList.replace('show', 'hide');
-      });
-
-      jobElements.forEach(element => {
-        element.classList.replace('show', 'hide');
-      });
+    if (currentTheme === 'light') {
+      body.setAttribute('data-theme', 'dark');
+      toggleBtn.textContent = '🌙';
+      localStorage.setItem('theme', 'dark');
+    } else {
+      body.setAttribute('data-theme', 'light');
+      toggleBtn.textContent = '☀️';
+      localStorage.setItem('theme', 'light');
     }
+  }
 
-    function showJobElements() {
-      const researchElements = document.querySelectorAll('#Research');
-      const internshipElements = document.querySelectorAll('#Internship');
-      const jobElements = document.querySelectorAll('#Job');
-      const LeadershipCommunityRoles = document.querySelectorAll('#LeadershipCommunityRoles');
+  // Initialize Theme
+  const savedTheme = localStorage.getItem('theme') || 'dark'; // Default to dark
+  document.body.setAttribute('data-theme', savedTheme);
+  document.getElementById('theme-toggle').textContent = savedTheme === 'light' ? '☀️' : '🌙';
 
-      researchElements.forEach(element => {
-        element.classList.replace('show', 'hide');
-      });
+  function showResearchElements() {
+    const researchElements = document.querySelectorAll('#Research');
+    const internshipElements = document.querySelectorAll('#Internship');
+    const jobElements = document.querySelectorAll('#Job');
+    const LeadershipCommunityRoles = document.querySelectorAll('#LeadershipCommunityRoles');
 
-      internshipElements.forEach(element => {
-        element.classList.replace('show', 'hide');
-      });
+    researchElements.forEach(element => {
+      element.classList.replace('hide', 'show');
+    });
 
-      LeadershipCommunityRoles.forEach(element => {
-        element.classList.replace('show', 'hide');
-      });
+    internshipElements.forEach(element => {
+      element.classList.replace('show', 'hide');
+    });
 
-      jobElements.forEach(element => {
-        element.classList.replace('hide', 'show');
-      });
-    }
+    LeadershipCommunityRoles.forEach(element => {
+      element.classList.replace('show', 'hide');
+    });
 
-    function showInternshipElements() {
-      const researchElements = document.querySelectorAll('#Research');
-      const internshipElements = document.querySelectorAll('#Internship');
-      const jobElements = document.querySelectorAll('#Job');
-      const LeadershipCommunityRoles = document.querySelectorAll('#LeadershipCommunityRoles');
+    jobElements.forEach(element => {
+      element.classList.replace('show', 'hide');
+    });
+  }
 
-      researchElements.forEach(element => {
-        element.classList.replace('show', 'hide');
-      });
+  function showJobElements() {
+    const researchElements = document.querySelectorAll('#Research');
+    const internshipElements = document.querySelectorAll('#Internship');
+    const jobElements = document.querySelectorAll('#Job');
+    const LeadershipCommunityRoles = document.querySelectorAll('#LeadershipCommunityRoles');
 
-      internshipElements.forEach(element => {
-        element.classList.replace('hide', 'show');
-      });
+    researchElements.forEach(element => {
+      element.classList.replace('show', 'hide');
+    });
 
-      LeadershipCommunityRoles.forEach(element => {
-        element.classList.replace('show', 'hide');
-      });
+    internshipElements.forEach(element => {
+      element.classList.replace('show', 'hide');
+    });
 
-      jobElements.forEach(element => {
-        element.classList.replace('show', 'hide');
-      });
-    }
-    
-    function showAllElements() {
-      const researchElements = document.querySelectorAll('#Research');
-      const internshipElements = document.querySelectorAll('#Internship');
-      const jobElements = document.querySelectorAll('#Job');
-      const LeadershipCommunityRoles = document.querySelectorAll('#LeadershipCommunityRoles');
+    LeadershipCommunityRoles.forEach(element => {
+      element.classList.replace('show', 'hide');
+    });
 
-      researchElements.forEach(element => {
-        element.classList.replace('hide', 'show');
-      });
+    jobElements.forEach(element => {
+      element.classList.replace('hide', 'show');
+    });
+  }
 
-      internshipElements.forEach(element => {
-        element.classList.replace('hide', 'show');
-      });
+  function showInternshipElements() {
+    const researchElements = document.querySelectorAll('#Research');
+    const internshipElements = document.querySelectorAll('#Internship');
+    const jobElements = document.querySelectorAll('#Job');
+    const LeadershipCommunityRoles = document.querySelectorAll('#LeadershipCommunityRoles');
 
-      LeadershipCommunityRoles.forEach(element => {
-        element.classList.replace('hide', 'show');
-      });
+    researchElements.forEach(element => {
+      element.classList.replace('show', 'hide');
+    });
 
-      jobElements.forEach(element => {
-        element.classList.replace('hide', 'show');
-      });
-    }
+    internshipElements.forEach(element => {
+      element.classList.replace('hide', 'show');
+    });
 
-    function showLeaderComElements() {
-      const researchElements = document.querySelectorAll('#Research');
-      const internshipElements = document.querySelectorAll('#Internship');
-      const jobElements = document.querySelectorAll('#Job');
-      const LeadershipCommunityRoles = document.querySelectorAll('#LeadershipCommunityRoles');
+    LeadershipCommunityRoles.forEach(element => {
+      element.classList.replace('show', 'hide');
+    });
 
-      researchElements.forEach(element => {
-        element.classList.replace('show', 'hide');
-      });
+    jobElements.forEach(element => {
+      element.classList.replace('show', 'hide');
+    });
+  }
 
-      internshipElements.forEach(element => {
-        element.classList.replace('show', 'hide');
-      });
+  function showAllElements() {
+    const researchElements = document.querySelectorAll('#Research');
+    const internshipElements = document.querySelectorAll('#Internship');
+    const jobElements = document.querySelectorAll('#Job');
+    const LeadershipCommunityRoles = document.querySelectorAll('#LeadershipCommunityRoles');
 
-      jobElements.forEach(element => {
-        element.classList.replace('show', 'hide');
-      });
+    researchElements.forEach(element => {
+      element.classList.replace('hide', 'show');
+    });
 
-      LeadershipCommunityRoles.forEach(element => {
-        element.classList.replace('hide', 'show');
-      });
-    }
-  </script>
+    internshipElements.forEach(element => {
+      element.classList.replace('hide', 'show');
+    });
+
+    LeadershipCommunityRoles.forEach(element => {
+      element.classList.replace('hide', 'show');
+    });
+
+    jobElements.forEach(element => {
+      element.classList.replace('hide', 'show');
+    });
+  }
+
+  function showLeaderComElements() {
+    const researchElements = document.querySelectorAll('#Research');
+    const internshipElements = document.querySelectorAll('#Internship');
+    const jobElements = document.querySelectorAll('#Job');
+    const LeadershipCommunityRoles = document.querySelectorAll('#LeadershipCommunityRoles');
+
+    researchElements.forEach(element => {
+      element.classList.replace('show', 'hide');
+    });
+
+    internshipElements.forEach(element => {
+      element.classList.replace('show', 'hide');
+    });
+
+    jobElements.forEach(element => {
+      element.classList.replace('show', 'hide');
+    });
+
+    LeadershipCommunityRoles.forEach(element => {
+      element.classList.replace('hide', 'show');
+    });
+  }
+</script>
+
 </html>

@@ -14,12 +14,13 @@ li {
 }
 
 .wrapper {
-  background: #f3fcff;
+  background: var(--card-bg);
+  backdrop-filter: blur(var(--card-blur));
+  -webkit-backdrop-filter: blur(var(--card-blur));
   padding: 2rem;
-  border-radius: 7px;
-  border: solid;
-  border-color: rgb(183, 183, 183);
-  border-width: 1px;
+  border-radius: 24px;
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
 }
 
 .sessions {
@@ -28,28 +29,30 @@ li {
   position: relative;
 }
 
-li {
+.sessions li {
   padding-bottom: 1.5rem;
-  border-left: 1px solid #abaaed;
+  border-left: 1px solid var(--primary-color);
   position: relative;
   padding-left: 20px;
   margin-left: 10px;
 }
-li:last-child {
+
+.sessions li:last-child {
   border: 0px;
   padding-bottom: 0;
 }
-li:before {
+
+.sessions li:before {
   content: "";
   width: 15px;
   height: 15px;
-  background: white;
-  border: 1px solid #4e5ed3;
-  box-shadow: 3px 3px 0px #bab5f8;
-  box-shadow: 3px 3px 0px #bab5f8;
+  background: var(--bg-color);
+  border: 2px solid var(--secondary-color);
+  box-shadow: 0 0 10px var(--secondary-color);
   border-radius: 50%;
   position: absolute;
-  left: -10px;
+  left: -8px;
+  /* Adjusted for border width */
   top: 0px;
 }
 
@@ -58,6 +61,7 @@ li:before {
     font-size: 0.9rem;
   }
 }
+
 @media screen and (max-width: 600px) {
   .time {
     margin-bottom: 0.3rem;
