@@ -160,32 +160,30 @@
         Service</button>
       <button type="button" class="btn btn-primary" onclick="showAllElements()">Show All</button>
       <ul class="sessions">
-        <li id="Research" class="show">
-          <h6><b> Artificial Intelligence Researcher | February 2025 - Present</b></h6>
+        <li id="Internship" class="show">
+          <h6><b>Software Engineer (Generative AI & Backend) | September 2025 - Present</b></h6>
           <p>
-            Language Understanding and Reasoning (LUNR) Lab | Stony Brook University College of Engineering and Applied
-            Sciences, NY <br>
+            Mailgator | Palo Alto, CA (Hybrid) <br>
             <hr>
-            Timeline: I joined the lab in February, but my work towards improving LLM performance in RAG for Coding
-            started in June. <br><br>
-
-            Overall Project Goal: Working under the supervision of Associate Professor Niranjan Balasubramanian of Stony
-            Brook University's LUNR AI
-            Lab to conduct research focused on enhancing Large Language Model (LLM) capabilities for Retrieval Augmented
-            Generation (RAG) specifically
-            in code-related problem domains. This ongoing research (started Feb 2025) is further supported by the SUNY
-            SOAR Funding awarded by State
-            University of New York (June 2025 - July 2025) for continued investigation and development during the
-            summer.<br><br>
-
-            • Architected a unified knowledge-distillation pipeline, seamlessly querying commercial APIs (GPT-4o, Claude
-            3.5) and local open-source models via vLLM to create synthetic training data for fine-tuning smaller models
-            like CodeLlama. <br>
-            • Fine-tuning open-source models like CodeLlama7b and Qwen-2.5-7B on a curated 160,000-sample dataset to
-            enhance its reasoning and code generation capabilities for domain-specific tasks. <br>
-            • Adapted the REPLUG LSR framework for a code-based RAG baseline by implementing a Python driver script for
-            execution and replacing its API dependency with a local vLLM server, reducing direct inference costs by over
-            99%. <br>
+            • Accelerating QA runtimes by 26×, enabling controlled testing across 700+ cases, by engineering and
+            deploying a RESTful mock server (FastAPI) with full CRUD support on AWS EC2. <br>
+            • Increasing data accuracy and system reliability by resolving critical parsing bugs, enhancing OpenAI
+            prompts for data extraction and ensuring comprehensive handling of sender-recipient edge cases. <br>
+            • Developing LLM systems for email analysis with a 5-person agile team, building prompt QA and UX test
+            infrastructure for ML backend (FastAPI, Node.js, React, PostgreSQL). <br>
+          </p>
+        </li>
+        <li id="Research" class="show">
+          <h6><b>Undergraduate AI Research Assistant (Generative AI) | June 2025 - Present</b></h6>
+          <p>
+            LUNR AI Lab | Stony Brook University, NY <br>
+            <hr>
+            • Improving Coding RAG accuracy by +5.4% (MBPP Eval) and +1.6% (ODEX Eval) by fine-tuning CodeLlama-7B on a
+            custom 460K+ sample dataset in a 4-person team, targeting two ACL 2026 publication. <br>
+            • Achieving 73.5% faster benchmark runtimes against existing baselines by designing a parallelized RAG
+            benchmark system using vLLM and multiple commercial APIs. <br>
+            • Reduced LLM inference costs by up to 100% by integrating SQLite3 caching system into the model
+            distillation pipeline. <br>
           </p>
         </li>
         <li id="Research" class="show">
@@ -216,19 +214,14 @@
           </p>
         </li>
         <li id="Research" class="show">
-          <h6><b>iGEM Researcher & Developer (Bioinformatics, AI/ML, Full-Stack Web) | January 2024 - November 2024</b>
-          </h6>
+          <h6><b>Software Engineer (Generative AI & Full Stack) | February 2024 - October 2024</b></h6>
           <p>
-            SBU iGEM 2024 Synthetic Biology Research | Stony Brook University, NY
+            iGEM, Stony Brook University | Stony Brook, NY
             <hr>
-            • Engineered a Q&A chatbot using LangChain and HuggingFace that creates vector embeddings of custom research
-            documents and ingests them to generate context-aware answers, ensuring specialized responses with high
-            accuracy. <br>
-            • Led and mentored a 3-person wiki team within a 15-person research group, developing a project wiki (HTML,
-            CSS, JavaScript, and Flask) & attracting 15 stakeholders and investors. <br>
-            • Performed computational biology to enhance miRNA-Detector Bacteria system for Human Non-Hodgkin's B-Cell
-            Lymphoma using molecular dynamic simulations to assess AGO2 and miRNA-326 binding. <br>
-            • Awarded a Gold Medal for our research efforts at the iGEM Paris 2024 Jamboree. <br>
+            • Achieved 90% retrieval accuracy on embedded research documents by building a RAG Q&A chatbot using
+            Transformers and LangChain, improving research wiki UX. <br>
+            • Helped secure over $50K in funding by leading a 3-person team to develop a research wiki (Flask) that
+            attracted 15+ stakeholders. <br>
           </p>
         </li>
         <li id="Job" class="show">
@@ -268,17 +261,43 @@
     <hr>
     <div class="row">
       <div class="col-md">
-        <div class="card card-bio">
+        <div class="card h-100">
           <div class="card-body">
-            <h5><b>NotiSentry: A smarter DND for Android</b></h5>
+            <h5><b>CMDFlow at HackPrinceton</b></h5>
             <hr>
-            <p>An Android app built with Kotlin and Jetpack Compose that uses on-device Gemini Nano model to power
-              summarization and notification categorization for a powerful and versatile DND experience.</p>
-            <a type="button" href="https://github.com/KrossKinetic/NotiSentry-Smart-DND" target="_blank"
-              class="btn-primary">GitHub Project (WIP)</a>
+            <p>Built a local-first, AI-powered command-tracking system (FastAPI, ReactJS, MongoDB) that streams shell
+              activity (<1s latency), performs PII scrubbing, and semantically indexes commands for natural language
+                search and automatic project-based organization.</p>
+                <a type="button" href="#" target="_blank" class="btn-primary">GitHub Project (Coming Soon)</a>
           </div>
         </div>
       </div>
+      <div class="col-md">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5><b>NotiSentry: A Smart DND with LLMs</b></h5>
+            <hr>
+            <p>Optimizing system performance to <1% battery drain over 5 hours and achieving 1.3s worst-case latency for
+                an intelligent notification filtering and summarization app to minimize user distractions and improve
+                focus using Firebase Gemini API and Jetpack Compose.</p>
+                <a type="button" href="https://github.com/KrossKinetic/NotiSentry-Smart-DND" target="_blank"
+                  class="btn-primary">GitHub Project (WIP)</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5><b>REPLUG LSR with vLLM</b></h5>
+            <hr>
+            <p>Refactored research implementation of REPLUG to enable LM-Supervised Retrieval (LSR) fine-tuning for code
+              generation tasks by architecting a high-performance training pipeline with a local vLLM server.</p>
+            <a type="button" href="#" target="_blank" class="btn-primary">GitHub Project (Coming Soon)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
       <div class="col-md">
         <div class="card card-bio">
           <div class="card-body">
