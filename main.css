@@ -51,6 +51,10 @@
 /* Global Resets & Typography */
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@300;400;600&family=Outfit:wght@500;700&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--bg-color);
     background-image: var(--bg-gradient);
@@ -101,6 +105,47 @@ h6 {
 .nav-link:active {
     outline: none;
     box-shadow: none;
+}
+
+/* Seeking Banner */
+.seeking-banner {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 12px 0;
+    font-size: 0.95rem;
+    position: sticky;
+    top: 56px;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.seeking-banner strong {
+    font-weight: 700;
+}
+
+/* Social Links */
+.social-link {
+    display: inline-block;
+    transition: transform 0.2s ease;
+    opacity: 0.8;
+}
+
+.social-link:hover {
+    transform: scale(1.15);
+    opacity: 1;
 }
 
 /* Hero Section */
