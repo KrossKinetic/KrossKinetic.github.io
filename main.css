@@ -217,8 +217,10 @@ h6 {
 
 /* Buttons */
 .btn {
-    border-radius: 50px;
+    border-radius: 12px;
+    /* Squircle shape */
     padding: 0.6rem 1.5rem;
+    display: inline-block;
     font-weight: 600;
     transition: all 0.3s ease;
     text-transform: uppercase;
