@@ -31,29 +31,77 @@ li {
 
 .sessions li {
   padding-bottom: 1.5rem;
-  border-left: 1px solid var(--primary-color);
   position: relative;
-  padding-left: 20px;
+  padding-left: 30px;
+  /* Increased padding to hold the line inside */
   margin-left: 10px;
+  /* Transition properties */
+  transition: all 0.5s ease;
+  opacity: 1;
+  max-height: 1000px;
+  /* Arbitrary large height */
+  transform: scale(1);
+  overflow: hidden;
+  /* Necessary for height animation */
+}
+
+/* The Line */
+.sessions li:after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  /* Positioned inside the padding box */
+  top: 0;
+  bottom: 0;
+  /* Stretches full height */
+  width: 1px;
+  background: var(--primary-color);
+  z-index: 0;
+}
+
+.sessions li.hide {
+  opacity: 0;
+  max-height: 0;
+  padding-bottom: 0;
+  margin: 0;
+  transform: scale(0.9);
+}
+
+.sessions li.show {
+  opacity: 1;
+  max-height: 1000px;
+  transform: scale(1);
+}
+
+/* Remove line for last child */
+.sessions li:last-child:after {
+  display: none;
 }
 
 .sessions li:last-child {
-  border: 0px;
   padding-bottom: 0;
 }
 
+/* The Dot */
 .sessions li:before {
   content: "";
   width: 15px;
   height: 15px;
   background: var(--bg-color);
   border: 2px solid var(--secondary-color);
-  box-shadow: 0 0 10px var(--secondary-color);
+  /* box-shadow: 0 0 10px var(--secondary-color); Removed gradient/glow */
   border-radius: 50%;
   position: absolute;
-  left: -8px;
-  /* Adjusted for border width */
+  left: 3px;
+  /* Centered on the line (10px - 7.5px + adjustment) */
   top: 0px;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.sessions li.hide:before {
+  opacity: 0;
+  transform: scale(0);
 }
 
 @media screen and (min-width: 601px) {

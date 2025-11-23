@@ -59,13 +59,15 @@
               <a href="Anshumaan_Singh_Resume_v2_1.pdf" class="btn btn-primary" target="_blank">Download Resume</a>
             </div>
 
-            <div class="d-flex justify-content-center gap-3 flex-wrap social-mini">
-              <a href="https://scholar.google.com/citations?user=YYUAX-EAAAAJ&hl=en" target="_blank"
-                title="Google Scholar"><img src="Google_Scholar_logo.png" class="icon-xs"></a>
-              <a href="https://huggingface.co/KrossKinetic" target="_blank" title="HuggingFace"><img src="hf-logo.png"
-                  class="icon-xs"></a>
-              <a href="https://www.instagram.com/krosskinetic/" target="_blank" title="Instagram"><img
-                  src="Instagram_Glyph_Gradient.png" class="icon-xs"></a>
+            <div class="d-flex justify-content-center gap-3 flex-wrap mb-4">
+              <a href="https://scholar.google.com/citations?user=YYUAX-EAAAAJ&hl=en" class="btn btn-outline-custom"
+                target="_blank"><img src="Google_Scholar_logo.png" class="icon-sm"> Scholar</a>
+              <a href="https://huggingface.co/KrossKinetic" class="btn btn-outline-custom" target="_blank"><img
+                  src="hf-logo.png" class="icon-sm"> HuggingFace</a>
+              <a href="https://www.instagram.com/krosskinetic/" class="btn btn-outline-custom" target="_blank"><img
+                  src="Instagram_Glyph_Gradient.png" class="icon-sm"> Instagram</a>
+              <a href="https://devpost.com/KrossKinetic" class="btn btn-outline-custom" target="_blank"><img
+                  src="devpost.svg" class="icon-sm"> Devpost</a>
             </div>
           </div>
         </div>
@@ -154,14 +156,15 @@
     <h2><b>Work Experience</b></h2>
     <hr>
     <div class="wrapper">
-      <button type="button" class="btn btn-primary" onclick="showInternshipElements()">Show SWE Internships</button>
-      <button type="button" class="btn btn-primary" onclick="showResearchElements()">Show Research</button>
-      <button type="button" class="btn btn-primary" onclick="showJobElements()">Show Jobs</button>
-      <button type="button" class="btn btn-primary" onclick="showLeaderComElements()">Show Leadership / Community
+      <button type="button" class="btn btn-primary" onclick="filterSelection('Internship')">Show SWE
+        Internships</button>
+      <button type="button" class="btn btn-primary" onclick="filterSelection('Research')">Show Research</button>
+      <button type="button" class="btn btn-primary" onclick="filterSelection('Job')">Show Jobs</button>
+      <button type="button" class="btn btn-primary" onclick="filterSelection('Leadership')">Show Leadership / Community
         Service</button>
-      <button type="button" class="btn btn-primary" onclick="showAllElements()">Show All</button>
+      <button type="button" class="btn btn-primary" onclick="filterSelection('all')">Show All</button>
       <ul class="sessions">
-        <li id="Internship" class="show">
+        <li class="timeline-item show" data-category="Internship">
           <h6><b>Software Engineer (Generative AI & Backend) | September 2025 - Present</b></h6>
           <p>
             Mailgator | Palo Alto, CA (Hybrid) <br>
@@ -174,7 +177,7 @@
             infrastructure for ML backend (FastAPI, Node.js, React, PostgreSQL). <br>
           </p>
         </li>
-        <li id="Research" class="show">
+        <li class="timeline-item show" data-category="Research">
           <h6><b>Undergraduate AI Research Assistant (Generative AI) | June 2025 - Present</b></h6>
           <p>
             LUNR AI Lab | Stony Brook University, NY <br>
@@ -187,7 +190,7 @@
             distillation pipeline. <br>
           </p>
         </li>
-        <li id="Research" class="show">
+        <li class="timeline-item show" data-category="Research">
           <h6><b>Volunteer AI Researcher & Data Engineer | November 2024 - February 2025</b></h6>
           <p>
             Humanity Unleashed (humun.org) | Remote
@@ -200,7 +203,7 @@
             LangChain to translate complex economic data into nuanced policy explanations.
           </p>
         </li>
-        <li id="LeadershipCommunityRoles" class="show">
+        <li class="timeline-item show" data-category="Leadership">
           <h6><b>Teaching Assistant | January 2024 - December 2024</b></h6>
           <p>
             University Scholars Fellowship | Stony Brook University, NY<br>
@@ -214,7 +217,7 @@
             • Designed creative presentations, graphics & videos to make weekly student workshops engaging and fun.
           </p>
         </li>
-        <li id="Research" class="show">
+        <li class="timeline-item show" data-category="Internship">
           <h6><b>Software Engineer (Generative AI & Full Stack) | February 2024 - October 2024</b></h6>
           <p>
             iGEM, Stony Brook University | Stony Brook, NY
@@ -225,7 +228,7 @@
             attracted 15+ stakeholders. <br>
           </p>
         </li>
-        <li id="Job" class="show">
+        <li class="timeline-item show" data-category="Job">
           <h6><b>IT Assistant Intern | January 2024 - July 2024</b></h6>
           <p>
             Faculty Student Association at Stony Brook University | Stony Brook University, NY
@@ -238,7 +241,7 @@
             40+ systems. <br>
           </p>
         </li>
-        <li id="Internship" class="show">
+        <li class="timeline-item show" data-category="Internship">
           <h6><b>Full Stack Web Developer Intern | April 2023 - June 2023</b></h6>
           <p>
             Omniscience Corporation, Palo Alto, CA | Remote
@@ -269,7 +272,10 @@
             <p>Built a local-first, AI-powered command-tracking system (FastAPI, ReactJS, MongoDB) that streams shell
               activity (<1s latency), performs PII scrubbing, and semantically indexes commands for natural language
                 search and automatic project-based organization.</p>
-                <a type="button" href="#" target="_blank" class="btn btn-primary">GitHub Project (Coming Soon)</a>
+                <a type="button" href="https://github.com/KrossKinetic/CMDFlow-HackPrinceton" target="_blank"
+                  class="btn btn-primary">GitHub Project</a>
+                <a type="button" href="https://devpost.com/software/cmdflow" target="_blank"
+                  class="btn btn-primary">Devpost</a>
           </div>
         </div>
       </div>
@@ -566,120 +572,20 @@
   document.body.setAttribute('data-theme', savedTheme);
   document.getElementById('theme-toggle').textContent = savedTheme === 'light' ? '☀️' : '🌙';
 
-  function showResearchElements() {
-    const researchElements = document.querySelectorAll('#Research');
-    const internshipElements = document.querySelectorAll('#Internship');
-    const jobElements = document.querySelectorAll('#Job');
-    const LeadershipCommunityRoles = document.querySelectorAll('#LeadershipCommunityRoles');
-
-    researchElements.forEach(element => {
-      element.classList.replace('hide', 'show');
-    });
-
-    internshipElements.forEach(element => {
-      element.classList.replace('show', 'hide');
-    });
-
-    LeadershipCommunityRoles.forEach(element => {
-      element.classList.replace('show', 'hide');
-    });
-
-    jobElements.forEach(element => {
-      element.classList.replace('show', 'hide');
+  function filterSelection(category) {
+    const items = document.querySelectorAll('.timeline-item');
+    items.forEach(item => {
+      if (category === 'all' || item.getAttribute('data-category') === category) {
+        item.classList.remove('hide');
+        item.classList.add('show');
+      } else {
+        item.classList.remove('show');
+        item.classList.add('hide');
+      }
     });
   }
 
-  function showJobElements() {
-    const researchElements = document.querySelectorAll('#Research');
-    const internshipElements = document.querySelectorAll('#Internship');
-    const jobElements = document.querySelectorAll('#Job');
-    const LeadershipCommunityRoles = document.querySelectorAll('#LeadershipCommunityRoles');
 
-    researchElements.forEach(element => {
-      element.classList.replace('show', 'hide');
-    });
-
-    internshipElements.forEach(element => {
-      element.classList.replace('show', 'hide');
-    });
-
-    LeadershipCommunityRoles.forEach(element => {
-      element.classList.replace('show', 'hide');
-    });
-
-    jobElements.forEach(element => {
-      element.classList.replace('hide', 'show');
-    });
-  }
-
-  function showInternshipElements() {
-    const researchElements = document.querySelectorAll('#Research');
-    const internshipElements = document.querySelectorAll('#Internship');
-    const jobElements = document.querySelectorAll('#Job');
-    const LeadershipCommunityRoles = document.querySelectorAll('#LeadershipCommunityRoles');
-
-    researchElements.forEach(element => {
-      element.classList.replace('show', 'hide');
-    });
-
-    internshipElements.forEach(element => {
-      element.classList.replace('hide', 'show');
-    });
-
-    LeadershipCommunityRoles.forEach(element => {
-      element.classList.replace('show', 'hide');
-    });
-
-    jobElements.forEach(element => {
-      element.classList.replace('show', 'hide');
-    });
-  }
-
-  function showAllElements() {
-    const researchElements = document.querySelectorAll('#Research');
-    const internshipElements = document.querySelectorAll('#Internship');
-    const jobElements = document.querySelectorAll('#Job');
-    const LeadershipCommunityRoles = document.querySelectorAll('#LeadershipCommunityRoles');
-
-    researchElements.forEach(element => {
-      element.classList.replace('hide', 'show');
-    });
-
-    internshipElements.forEach(element => {
-      element.classList.replace('hide', 'show');
-    });
-
-    LeadershipCommunityRoles.forEach(element => {
-      element.classList.replace('hide', 'show');
-    });
-
-    jobElements.forEach(element => {
-      element.classList.replace('hide', 'show');
-    });
-  }
-
-  function showLeaderComElements() {
-    const researchElements = document.querySelectorAll('#Research');
-    const internshipElements = document.querySelectorAll('#Internship');
-    const jobElements = document.querySelectorAll('#Job');
-    const LeadershipCommunityRoles = document.querySelectorAll('#LeadershipCommunityRoles');
-
-    researchElements.forEach(element => {
-      element.classList.replace('show', 'hide');
-    });
-
-    internshipElements.forEach(element => {
-      element.classList.replace('show', 'hide');
-    });
-
-    jobElements.forEach(element => {
-      element.classList.replace('show', 'hide');
-    });
-
-    LeadershipCommunityRoles.forEach(element => {
-      element.classList.replace('hide', 'show');
-    });
-  }
 </script>
 
 </html>
