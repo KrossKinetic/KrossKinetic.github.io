@@ -11,8 +11,9 @@
   <link href="timeline.css" rel="stylesheet">
 </head>
 
-<body>
+<body data-theme="dark">
   <button id="theme-toggle" onclick="toggleTheme()">🌙</button>
+  <div class="global-bg-animation"></div>
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container-fluid">
@@ -259,8 +260,8 @@
     class="container-fluid container-timeline">
     <h2><b>Projects</b></h2>
     <hr>
-    <div class="row">
-      <div class="col-md">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
         <div class="card h-100">
           <div class="card-body">
             <h5><b>CMDFlow at HackPrinceton</b></h5>
@@ -272,7 +273,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md">
+      <div class="col">
         <div class="card h-100">
           <div class="card-body">
             <h5><b>NotiSentry: A Smart DND with LLMs</b></h5>
@@ -285,7 +286,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md">
+      <div class="col">
         <div class="card h-100">
           <div class="card-body">
             <h5><b>REPLUG LSR with vLLM</b></h5>
@@ -296,10 +297,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md">
-        <div class="card card-bio">
+      <div class="col">
+        <div class="card h-100">
           <div class="card-body">
             <h5><b>Multi-Client Texas-Hold-em-Poker Server</b></h5>
             <hr>
@@ -310,8 +309,8 @@
           </div>
         </div>
       </div>
-      <div class="col-md">
-        <div class="card card-bio">
+      <div class="col">
+        <div class="card h-100">
           <div class="card-body">
             <h5><b>Red-Black Tree in MIPS Assembly</b></h5>
             <hr>
@@ -323,10 +322,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md">
-        <div class="card card-bio">
+      <div class="col">
+        <div class="card h-100">
           <div class="card-body">
             <h5><b>C Based Linux Filesystem Emulator</b></h5>
             <hr>
@@ -338,8 +335,8 @@
           </div>
         </div>
       </div>
-      <div class="col-md">
-        <div class="card card-bio">
+      <div class="col">
+        <div class="card h-100">
           <div class="card-body">
             <h5><b>Skyscrapers Puzzle Game</b></h5>
             <hr>
@@ -351,8 +348,8 @@
           </div>
         </div>
       </div>
-      <div class="col-md">
-        <div class="card card-bio">
+      <div class="col">
+        <div class="card h-100">
           <div class="card-body">
             <h5><b>AFLENT Protocol and Custom Encryption</b></h5>
             <hr>
@@ -364,10 +361,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md">
-        <div class="card card-bio">
+      <div class="col">
+        <div class="card h-100">
           <div class="card-body">
             <h5><b>Text Similarity Check</b></h5>
             <hr>
@@ -378,8 +373,8 @@
           </div>
         </div>
       </div>
-      <div class="col-md">
-        <div class="card card-bio">
+      <div class="col">
+        <div class="card h-100">
           <div class="card-body">
             <h5><b>Social Media Graph</b></h5>
             <hr>
@@ -390,8 +385,8 @@
           </div>
         </div>
       </div>
-      <div class="col-md">
-        <div class="card card-bio">
+      <div class="col">
+        <div class="card h-100">
           <div class="card-body">
             <h5><b>Food Pyramid</b></h5>
             <hr>
@@ -401,10 +396,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md">
-        <div class="card card-bio">
+      <div class="col">
+        <div class="card h-100">
           <div class="card-body">
             <h5><b>Playfair Encryption</b></h5>
             <hr>
@@ -415,8 +408,8 @@
           </div>
         </div>
       </div>
-      <div class="col-md">
-        <div class="card card-bio">
+      <div class="col">
+        <div class="card h-100">
           <div class="card-body">
             <h5><b>C Program Tracer</b></h5>
             <hr>
@@ -427,8 +420,8 @@
           </div>
         </div>
       </div>
-      <div class="col-md">
-        <div class="card card-bio">
+      <div class="col">
+        <div class="card h-100">
           <div class="card-body">
             <h5><b>Hiring System Simulator</b></h5>
             <hr>
@@ -439,70 +432,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md">
-        <div class="card card-bio">
-          <div class="card-body">
-            <h5><b>Windows CenterStage</b></h5>
-            <hr>
-            <p>A simple python program using TensorFlow image recognition pipeline and a custom trained model to emulate
-              iPad's CenterStage on windows.</p>
-            <a type="button" href="https://github.com/KrossKinetic/WindowsCenterStage" target="_blank"
-              class="btn-primary">GitHub Project</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md">
-        <div class="card card-bio">
-          <div class="card-body">
-            <h5><b>ReLinked-Open-Source</b></h5>
-            <hr>
-            <p>ReLinked is a simple flask based application which allows the user to save important webpages.</p>
-            <a type="button" href="https://github.com/KrossKinetic/ReLinked-Open-Source" target="_blank"
-              class="btn-primary">GitHub Project</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md">
-        <div class="card card-bio">
-          <div class="card-body">
-            <h5><b>Readability</b></h5>
-            <hr>
-            <p>A simple program that finds out the grade of a person from his/her english sentence formation
-              capabilities.</p>
-            <a type="button" href="https://github.com/KrossKinetic/Readability" target="_blank"
-              class="btn-primary">GitHub Project</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md">
-        <div class="card card-bio">
-          <div class="card-body">
-            <h5><b>Minecraft AFK Fisher</b></h5>
-            <hr>
-            <p>Here is a program I built that can be used together a particular Minecraft Fishing build to automate the
-              whole process and afk fish with ease.</p>
-            <a type="button" href="https://github.com/KrossKinetic/Minecraft_AFK_Fishing" target="_blank"
-              class="btn-primary">GitHub Project</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md">
-        <div class="card card-bio">
-          <div class="card-body">
-            <h5><b>Modify Volume Wav</b></h5>
-            <hr>
-            <p>A simple C program that allows users to increase or decrease the audio of .wav format.</p>
-            <a type="button" href="https://github.com/KrossKinetic/modify-volume-wav" target="_blank"
-              class="btn-primary">GitHub Project</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md">
-        <div class="card card-bio">
+      <div class="col">
+        <div class="card h-100">
           <div class="card-body">
             <h5><b>Credit Card Verifier</b></h5>
             <hr>
@@ -512,10 +443,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md">
-        <div class="card card-bio">
+      <div class="col">
+        <div class="card h-100">
           <div class="card-body">
             <h5><b>Box Blur Image</b></h5>
             <hr>
@@ -526,8 +455,8 @@
           </div>
         </div>
       </div>
-      <div class="col-md">
-        <div class="card card-bio">
+      <div class="col">
+        <div class="card h-100">
           <div class="card-body">
             <h5><b>Black White Filter</b></h5>
             <hr>
@@ -538,10 +467,10 @@
           </div>
         </div>
       </div>
-      <div class="col-md">
-        <div class="card card-bio">
+      <div class="col">
+        <div class="card h-100">
           <div class="card-body">
-            <h5><b>Sobel Operator Eedge Detection</b></h5>
+            <h5><b>Sobel Operator Edge Detection</b></h5>
             <hr>
             <p>This simple program performs sobel operator edge detection (Algorithm to find edges of objects in an
               image) on an image.</p>
@@ -579,13 +508,15 @@
     <div class="card updates mb-3">
       <div class="card-body">
         <h5> <span class="solid_blue">January 17th, 2025</span>: Updated Resume, Added Machine Learning Experience,
-          Polished up Work Experience Page, Added Leadership Position to Work Experience, Added Computer Science Honors.
+          Polished up Work Experience Page, Added Leadership Position to Work Experience, Added Computer Science
+          Honors.
         </h5>
       </div>
     </div>
     <div class="card updates mb-3">
       <div class="card-body">
-        <h5> <span class="solid_blue">December 12th, 2024</span>: Overhauled my portfolio website and added a lot of new
+        <h5> <span class="solid_blue">December 12th, 2024</span>: Overhauled my portfolio website and added a lot of
+          new
           projects and work experiences.</h5>
       </div>
     </div>
