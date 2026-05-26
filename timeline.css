@@ -1,7 +1,6 @@
-/* Timeline designed by https://codepen.io/TajShireen/pen/JjGvVzg?editors=1100 */
+/* Timeline */
 
-ul,
-li {
+ul, li {
   list-style: none;
   padding: 0;
 }
@@ -9,53 +8,43 @@ li {
 .container-timeline {
   justify-content: center;
   align-items: center;
-  padding: 0 1rem;
   padding: 3rem 0;
 }
 
 .wrapper {
   background: var(--card-bg);
-  backdrop-filter: blur(var(--card-blur));
-  -webkit-backdrop-filter: blur(var(--card-blur));
   padding: 2rem;
-  border-radius: 24px;
+  border-radius: var(--radius-lg);
   border: 1px solid var(--card-border);
   box-shadow: var(--card-shadow);
 }
 
 .sessions {
-  margin-top: 2rem;
-  border-radius: 12px;
+  margin-top: 1.75rem;
+  border-radius: var(--radius-sm);
   position: relative;
 }
 
 .sessions li {
-  padding-bottom: 1.5rem;
+  padding-bottom: 1.75rem;
   position: relative;
-  padding-left: 30px;
-  /* Increased padding to hold the line inside */
-  margin-left: 10px;
-  /* Transition properties */
-  transition: all 0.5s ease;
+  padding-left: 28px;
+  margin-left: 8px;
+  transition: opacity 0.3s ease, max-height 0.4s ease;
   opacity: 1;
   max-height: 1000px;
-  /* Arbitrary large height */
-  transform: scale(1);
   overflow: hidden;
-  /* Necessary for height animation */
 }
 
-/* The Line */
+/* Vertical line */
 .sessions li:after {
   content: "";
   position: absolute;
-  left: 10px;
-  /* Positioned inside the padding box */
+  left: 8px;
   top: 0;
   bottom: 0;
-  /* Stretches full height */
   width: 1px;
-  background: var(--primary-color);
+  background: var(--card-border);
   z-index: 0;
 }
 
@@ -64,13 +53,11 @@ li {
   max-height: 0;
   padding-bottom: 0;
   margin: 0;
-  transform: scale(0.9);
 }
 
 .sessions li.show {
   opacity: 1;
   max-height: 1000px;
-  transform: scale(1);
 }
 
 /* Remove line for last child */
@@ -82,32 +69,22 @@ li {
   padding-bottom: 0;
 }
 
-/* The Dot */
+/* Dot */
 .sessions li:before {
   content: "";
-  width: 15px;
-  height: 15px;
-  background: var(--bg-color);
-  border: 2px solid var(--secondary-color);
-  /* box-shadow: 0 0 10px var(--secondary-color); Removed gradient/glow */
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
   border-radius: 50%;
   position: absolute;
-  left: 3px;
-  /* Centered on the line (10px - 7.5px + adjustment) */
-  top: 0px;
-  transition: all 0.5s ease;
+  left: 5px;
+  top: 6px;
   z-index: 1;
+  transition: opacity 0.3s ease;
 }
 
 .sessions li.hide:before {
   opacity: 0;
-  transform: scale(0);
-}
-
-@media screen and (min-width: 601px) {
-  .time {
-    font-size: 0.9rem;
-  }
 }
 
 @media screen and (max-width: 600px) {
@@ -115,9 +92,7 @@ li {
     margin-bottom: 0.3rem;
     font-size: 0.85rem;
   }
-}
 
-@media screen and (max-width: 600px) {
   p {
     font-size: 0.9rem;
   }
