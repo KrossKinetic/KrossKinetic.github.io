@@ -199,9 +199,12 @@ h2::before {
     font-weight: 600;
 }
 
-.btn-primary:hover {
-    background: var(--accent-hover);
-    color: #111;
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
+    background: var(--accent-hover) !important;
+    color: #111 !important;
+    border-color: var(--accent-hover) !important;
+    box-shadow: none !important;
+    outline: none !important;
 }
 
 .btn-outline-custom {
