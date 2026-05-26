@@ -11,28 +11,38 @@ ul, li {
   padding: 3rem 0;
 }
 
+/* Timeline Wrapper acts as a single terminal window */
 .wrapper {
   background: var(--card-bg);
-  padding: 2rem;
   border-radius: var(--radius-lg);
   border: 1px solid var(--card-border);
   box-shadow: var(--card-shadow);
+  overflow: hidden;
+}
+
+.wrapper .card-content {
+  padding: 1.5rem;
+}
+
+.wrapper .filters {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed var(--card-border);
 }
 
 .sessions {
-  margin-top: 1.75rem;
-  border-radius: var(--radius-sm);
+  margin-top: 0.5rem;
   position: relative;
 }
 
 .sessions li {
-  padding-bottom: 1.75rem;
+  padding-bottom: 2rem;
   position: relative;
   padding-left: 28px;
   margin-left: 8px;
   transition: opacity 0.3s ease, max-height 0.4s ease;
   opacity: 1;
-  max-height: 1000px;
+  max-height: 2000px; /* high enough for content */
   overflow: hidden;
 }
 
@@ -40,7 +50,7 @@ ul, li {
 .sessions li:after {
   content: "";
   position: absolute;
-  left: 8px;
+  left: 3px;
   top: 0;
   bottom: 0;
   width: 1px;
@@ -57,7 +67,7 @@ ul, li {
 
 .sessions li.show {
   opacity: 1;
-  max-height: 1000px;
+  max-height: 2000px;
 }
 
 /* Remove line for last child */
@@ -69,31 +79,41 @@ ul, li {
   padding-bottom: 0;
 }
 
-/* Dot */
+/* Dot -> Square Node */
 .sessions li:before {
   content: "";
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   background: var(--accent);
-  border-radius: 50%;
   position: absolute;
-  left: 5px;
+  left: 0px; /* Centered on line left:3px. 3 - (7/2) = -0.5 ~ 0px */
   top: 6px;
   z-index: 1;
-  transition: opacity 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 .sessions li.hide:before {
-  opacity: 0;
+  background: transparent;
+}
+
+.sessions li h6 {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--text-color);
+  margin-bottom: 0.25rem;
+}
+
+.sessions li p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.sessions li p strong {
+  color: var(--text-color);
 }
 
 @media screen and (max-width: 600px) {
-  .time {
-    margin-bottom: 0.3rem;
-    font-size: 0.85rem;
-  }
-
-  p {
-    font-size: 0.9rem;
+  .sessions li {
+    padding-bottom: 1.5rem;
   }
 }

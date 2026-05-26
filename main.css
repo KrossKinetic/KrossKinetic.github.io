@@ -1,27 +1,36 @@
 /* Design System & Variables */
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@500;600;700&display=swap');
 
 :root {
-    --bg-color: #111111;
-    --bg-secondary: #1a1a1a;
-    --text-color: #e8e8e8;
-    --text-muted: #888888;
-    --text-subtle: #444444;
-    --accent: #4a9eff;
+    /* macOS Dark Mode Surface */
+    --bg-color: #1c1c1e; 
+    --bg-secondary: #2c2c2e;
+    
+    /* Terminal & Cards */
+    --card-bg: #000000;
+    --card-header-bg: #2c2c2e;
+    --card-border: #38383a;
+    --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 
-    --card-bg: #191919;
-    --card-border: #2a2a2a;
-    --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    /* Text */
+    --text-color: #e5e5ea;
+    --text-muted: #98989d;
+    --text-subtle: #636366;
+    
+    /* Amber Accent */
+    --accent: #d4921e;
+    --accent-hover: #b87a12;
 
-    --font-heading: 'Outfit', 'Inter', sans-serif;
+    /* Typography */
+    --font-heading: 'Fira Code', monospace;
     --font-body: 'Inter', sans-serif;
     --font-mono: 'Fira Code', monospace;
 
-    --nav-bg: rgba(17, 17, 17, 0.92);
-
-    --radius-sm: 8px;
-    --radius-md: 12px;
-    --radius-lg: 16px;
+    /* Layout */
+    --nav-bg: rgba(28, 28, 30, 0.85);
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 12px;
 }
 
 /* Global Resets & Typography */
@@ -31,6 +40,10 @@ html {
 
 body {
     background-color: var(--bg-color);
+    /* Faint dot matrix background */
+    background-image: radial-gradient(var(--card-border) 1px, transparent 1px);
+    background-size: 24px 24px;
+    
     color: var(--text-color);
     font-family: var(--font-body);
     min-height: 100vh;
@@ -40,9 +53,20 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading);
-    font-weight: 700;
+    font-weight: 600;
+}
+
+h2 {
+    font-family: var(--font-mono);
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
     letter-spacing: -0.02em;
+}
+
+h2::before {
+    content: "// ";
+    color: var(--text-subtle);
 }
 
 /* Navbar */
@@ -57,7 +81,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-mono);
     color: var(--accent) !important;
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
 }
 
 .nav-link {
@@ -69,12 +93,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-link:hover {
     color: var(--text-color) !important;
-}
-
-.nav-link:focus,
-.nav-link:active {
-    outline: none;
-    box-shadow: none;
 }
 
 /* Social Links */
@@ -90,9 +108,9 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hero Section */
 .hero-section {
-    min-height: 88vh;
+    min-height: 85vh;
     position: relative;
-    padding: 3rem 0 2rem;
+    padding: 4rem 0 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -104,12 +122,7 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 2;
 }
 
-.global-bg-animation,
-.hero-bg-animation {
-    display: none;
-}
-
-/* Text accent */
+/* Text Highlights */
 .text-highlight {
     color: var(--accent);
     font-weight: 500;
@@ -119,12 +132,19 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-muted);
 }
 
-/* Gradient text — used only on the subtitle */
 .grad_p {
     color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.mono-metric {
+    font-family: var(--font-mono);
+    color: var(--accent);
     font-weight: 600;
-    background: none;
-    -webkit-text-fill-color: unset;
+    padding: 0 0.1em;
 }
 
 /* Icons */
@@ -144,41 +164,39 @@ h1, h2, h3, h4, h5, h6 {
 /* Buttons */
 .btn {
     border-radius: var(--radius-sm);
-    padding: 0.55rem 1.25rem;
+    padding: 0.5rem 1.1rem;
     font-weight: 500;
     font-size: 0.875rem;
     transition: opacity 0.15s ease, background-color 0.15s ease;
-    text-transform: none;
-    letter-spacing: 0;
     border: none;
     display: inline-flex;
     align-items: center;
+    font-family: var(--font-body);
 }
 
 .btn-primary {
     background: var(--accent);
-    color: #fff;
+    color: #111;
+    font-weight: 600;
 }
 
 .btn-primary:hover {
-    opacity: 0.88;
-    color: #fff;
-    box-shadow: none;
+    background: var(--accent-hover);
+    color: #111;
 }
 
 .btn-outline-custom {
     border: 1px solid var(--card-border);
     color: var(--text-color);
-    background: transparent;
+    background: var(--card-bg);
 }
 
 .btn-outline-custom:hover {
     background: var(--bg-secondary);
-    border-color: var(--text-subtle);
     color: var(--text-color);
 }
 
-/* Cards */
+/* Cards (Terminal Windows) */
 .card {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
@@ -186,30 +204,64 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: var(--radius-lg);
     color: var(--text-color);
     margin-bottom: 1.5rem;
-    transition: border-color 0.15s ease;
+    overflow: hidden; /* For header rounding */
 }
 
-.card:hover {
-    border-color: #3a3a3a;
+.card-header {
+    background: var(--card-header-bg);
+    border-bottom: 1px solid var(--card-border);
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    border-top-left-radius: var(--radius-lg);
+    border-top-right-radius: var(--radius-lg);
+}
+
+.mac-buttons {
+    display: flex;
+    gap: 6px;
+    margin-right: 15px;
+}
+
+.mac-btn {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--text-subtle);
+    opacity: 0.6;
+}
+
+.terminal-title {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.card-content {
+    padding: 1.5rem;
 }
 
 .card-body {
-    padding: 1.75rem;
+    padding: 0; /* Reset bootstrap */
 }
 
+.card h4 b, .card h5 b {
+    font-family: var(--font-mono);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+/* Bio card specific */
 .card-bio {
     background: var(--card-bg);
 }
 
 /* Headshot */
 .rounded-img {
-    border-radius: 50%;
+    border-radius: var(--radius-sm); /* Squarer shape for system feel */
     border: 2px solid var(--card-border);
-    transition: border-color 0.2s ease;
-}
-
-.rounded-img:hover {
-    border-color: var(--accent);
+    padding: 4px; /* Image frame effect */
+    background: var(--bg-secondary);
 }
 
 /* Timeline filter buttons */
@@ -223,6 +275,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
     padding: 0.4rem 1rem;
     transition: background 0.15s, color 0.15s, border-color 0.15s;
+    font-family: var(--font-mono); /* Filters as commands */
 }
 
 .wrapper button:hover,
@@ -242,19 +295,13 @@ a {
 a:hover {
     opacity: 0.75;
     color: var(--accent);
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 hr {
     border-color: var(--card-border);
     opacity: 1;
-}
-
-/* Section headings */
-h2 {
-    font-size: 1.5rem;
-    color: var(--text-color);
-    margin-bottom: 0.25rem;
+    margin: 1rem 0;
 }
 
 /* Paragraph sizing */
@@ -262,9 +309,4 @@ h2 {
     font-size: 0.95rem;
     color: var(--text-muted);
     margin-bottom: 0.5rem;
-}
-
-/* Utility */
-.solid_blue {
-    color: var(--accent);
 }
