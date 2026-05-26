@@ -18,10 +18,7 @@ ul, li {
   border: 1px solid var(--card-border);
   box-shadow: var(--card-shadow);
   overflow: hidden;
-}
-
-.wrapper .card-content {
-  padding: 1.5rem;
+  padding: 1.75rem;
 }
 
 .wrapper .filters {
