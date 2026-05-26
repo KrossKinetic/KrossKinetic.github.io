@@ -84,6 +84,25 @@ h2::before {
     font-size: 0.95rem;
 }
 
+.navbar-toggler {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none !important;
+}
+
+.navbar-toggler-custom {
+    color: var(--text-color);
+    font-family: var(--font-mono);
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
 .nav-link {
     color: var(--text-muted) !important;
     font-weight: 500;
