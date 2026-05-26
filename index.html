@@ -216,11 +216,11 @@
     <hr>
     
     <div class="filters mb-4">
-      <button type="button" class="btn btn-primary" onclick="filterSelection('Internship')">Show SWE Internships</button>
-      <button type="button" class="btn btn-primary" onclick="filterSelection('Research')">Show Research</button>
-      <button type="button" class="btn btn-primary" onclick="filterSelection('Job')">Show Jobs</button>
-      <button type="button" class="btn btn-primary" onclick="filterSelection('Leadership')">Show Leadership / Community Service</button>
-      <button type="button" class="btn btn-primary" onclick="filterSelection('all')">Show All</button>
+      <button type="button" class="btn btn-terminal-filter" onclick="filterSelection('Internship', this)">Show SWE Internships</button>
+      <button type="button" class="btn btn-terminal-filter" onclick="filterSelection('Research', this)">Show Research</button>
+      <button type="button" class="btn btn-terminal-filter" onclick="filterSelection('Job', this)">Show Jobs</button>
+      <button type="button" class="btn btn-terminal-filter" onclick="filterSelection('Leadership', this)">Show Leadership / Community Service</button>
+      <button type="button" class="btn btn-terminal-filter active" onclick="filterSelection('all', this)">Show All</button>
     </div>
     
     <div class="row row-cols-1 g-4 sessions">
@@ -887,7 +887,7 @@
 
 <!-- JavaScript Below -->
 <script>
-  function filterSelection(category) {
+  function filterSelection(category, element) {
     const items = document.querySelectorAll('.timeline-item');
     items.forEach(item => {
       if (category === 'all' || item.getAttribute('data-category') === category) {
@@ -898,6 +898,13 @@
         item.classList.add('hide');
       }
     });
+    
+    // Toggle active state on buttons
+    if (element) {
+      const buttons = document.querySelectorAll('.btn-terminal-filter');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      element.classList.add('active');
+    }
   }
 </script>
 

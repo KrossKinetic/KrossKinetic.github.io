@@ -332,3 +332,32 @@ hr {
     color: var(--text-muted);
     margin-bottom: 0.5rem;
 }
+/* Terminal Filter Buttons */
+.btn-terminal-filter {
+    background: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--accent);
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+    margin: 0.2rem;
+    transition: all 0.3s ease;
+}
+
+.btn-terminal-filter:hover {
+    background: rgba(212, 146, 30, 0.1);
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+.btn-terminal-filter:focus,
+.btn-terminal-filter:active {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.btn-terminal-filter.active {
+    background: var(--accent) !important;
+    color: #111 !important;
+    font-weight: 600;
+    border-color: var(--accent) !important;
+}
