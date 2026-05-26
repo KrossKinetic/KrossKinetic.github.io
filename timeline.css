@@ -11,28 +11,16 @@ ul, li {
   padding: 3rem 0;
 }
 
-/* Timeline Wrapper acts as a single terminal window */
-.wrapper {
-  background: var(--card-bg);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--card-border);
-  box-shadow: var(--card-shadow);
-  overflow: hidden;
-  padding: 1.75rem;
-}
 
-.wrapper .filters {
-  margin-bottom: 1.5rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px dashed var(--card-border);
-}
+
+
 
 .sessions {
   margin-top: 0.5rem;
   position: relative;
 }
 
-.sessions li {
+.sessions .timeline-item {
   padding-bottom: 2rem;
   position: relative;
   padding-left: 28px;
@@ -44,73 +32,52 @@ ul, li {
 }
 
 /* Vertical line */
-.sessions li:after {
-  content: "";
-  position: absolute;
-  left: 3px;
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  background: var(--card-border);
-  z-index: 0;
-}
 
-.sessions li.hide {
+
+.sessions .timeline-item.hide {
   opacity: 0;
   max-height: 0;
   padding-bottom: 0;
   margin: 0;
 }
 
-.sessions li.show {
+.sessions .timeline-item.show {
   opacity: 1;
   max-height: 2000px;
 }
 
 /* Remove line for last child */
-.sessions li:last-child:after {
+.sessions .timeline-item:last-child:after {
   display: none;
 }
 
-.sessions li:last-child {
+.sessions .timeline-item:last-child {
   padding-bottom: 0;
 }
 
 /* Dot -> Square Node */
-.sessions li:before {
-  content: "";
-  width: 7px;
-  height: 7px;
-  background: var(--accent);
-  position: absolute;
-  left: 0px; /* Centered on line left:3px. 3 - (7/2) = -0.5 ~ 0px */
-  top: 6px;
-  z-index: 1;
-  transition: background 0.3s ease;
-}
 
-.sessions li.hide:before {
-  background: transparent;
-}
 
-.sessions li h6 {
+
+
+.sessions .timeline-item h6 {
   font-family: var(--font-mono);
   font-size: 0.95rem;
   color: var(--text-color);
   margin-bottom: 0.25rem;
 }
 
-.sessions li p {
+.sessions .timeline-item p {
   color: var(--text-muted);
   font-size: 0.9rem;
 }
 
-.sessions li p strong {
+.sessions .timeline-item p strong {
   color: var(--text-color);
 }
 
 @media screen and (max-width: 600px) {
-  .sessions li {
+  .sessions .timeline-item {
     padding-bottom: 1.5rem;
   }
 }

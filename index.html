@@ -214,125 +214,215 @@
     class="container-fluid container-timeline">
     <h2><b>Work Experience</b></h2>
     <hr>
-    <div class="wrapper">
-      <button type="button" class="btn btn-primary" onclick="filterSelection('Internship')">Show SWE
-        Internships</button>
+    
+    <div class="filters mb-4">
+      <button type="button" class="btn btn-primary" onclick="filterSelection('Internship')">Show SWE Internships</button>
       <button type="button" class="btn btn-primary" onclick="filterSelection('Research')">Show Research</button>
       <button type="button" class="btn btn-primary" onclick="filterSelection('Job')">Show Jobs</button>
-      <button type="button" class="btn btn-primary" onclick="filterSelection('Leadership')">Show Leadership / Community
-        Service</button>
+      <button type="button" class="btn btn-primary" onclick="filterSelection('Leadership')">Show Leadership / Community Service</button>
       <button type="button" class="btn btn-primary" onclick="filterSelection('all')">Show All</button>
-      <ul class="sessions">
-        <li class="timeline-item show" data-category="Internship">
-          <h6><b>Incoming AI & ML Engineering Intern | June 2026 – August 2026</b></h6>
-          <p>
-            Bank of Montreal (BMO) | Berkeley Heights, NJ <br>
-            <hr>
-            • Incoming software engineering internship focused on AI infrastructure and machine learning systems. <br>
-          </p>
-        </li>
-        <li class="timeline-item show" data-category="Research">
-          <h6><b>Undergraduate Research Assistant | January 2026 – Present</b></h6>
-          <p>
-            Reliable Systems Lab | Stony Brook University, NY <br>
-            <hr>
-            • Engineering a lightweight encoder-only attention architecture for multi-agent systems, leveraging permutation equivariance to process jagged input arrays and eliminate data sorting overhead. <br>
-            • Improving UAV Agent target seeking efficiency by <span class="mono-metric">34.6%</span> by architecting a Curriculum Weight Tuning API using CMA-ES through a grouped parameter strategy. <br>
-            • Enabling <span class="mono-metric">100%</span> collision-free horizontal scaling on the SeaWulf HPC cluster by building a distributed isolation framework using dynamic sandboxing to eliminate MATLAB/MEX race conditions. <br>
-          </p>
-        </li>
-        <li class="timeline-item show" data-category="Internship">
-          <h6><b>Software Engineer (Generative AI & Backend) | September 2025 - January 2026</b></h6>
-          <p>
-            Mailgator | Palo Alto, CA (Hybrid) <br>
-            <hr>
-            • Accelerating QA runtimes by <span class="mono-metric">26×</span>, enabling controlled testing across 700+ cases, by engineering and
-            deploying a RESTful mock server (FastAPI) with full CRUD support on AWS EC2. <br>
-            • Increasing data accuracy and system reliability by resolving critical parsing bugs, enhancing OpenAI
-            prompts for data extraction and ensuring comprehensive handling of sender-recipient edge cases. <br>
-            • Developing LLM systems for email analysis with a 5-person agile team, building prompt QA and UX test
-            infrastructure for ML backend (FastAPI, Node.js, React, PostgreSQL). <br>
-          </p>
-        </li>
-        <li class="timeline-item show" data-category="Research">
-          <h6><b>Undergraduate AI Research Assistant (Generative AI) | February 2025 – March 2026</b></h6>
-          <p>
-            LUNR AI Lab | Stony Brook University, NY <br>
-            <hr>
-            • Improving Coding RAG accuracy by +5.4% (MBPP Eval) and +1.6% (ODEX Eval) by fine-tuning CodeLlama-7B on a
-            custom 460K+ sample dataset in a 4-person team, targeting two ACL 2026 publication. <br>
-            • Achieving <span class="mono-metric">73.5%</span> faster benchmark runtimes against existing baselines by designing a parallelized RAG
-            benchmark system using vLLM and multiple commercial APIs. <br>
-            • Reduced LLM inference costs by up to <span class="mono-metric">100%</span> by integrating SQLite3 caching system into the model
-            distillation pipeline. <br>
-          </p>
-        </li>
-        <li class="timeline-item show" data-category="Research">
-          <h6><b>Volunteer AI Researcher & Data Engineer | November 2024 - February 2025</b></h6>
-          <p>
-            Humanity Unleashed (humun.org) | Remote
-            <hr>
-            Volunteered at Humanity Unleashed, a self-funded volunteer-only research organization and contributed in the
-            following ways:<br><br>
-            • Built pipelines processing 700k rows of economic data, publishing 5 datasets to HuggingFace with 1,400+
-            downloads.<br>
-            • Collaborated with 2 other peers to develop a policy generation and summarization pipeline utilizing
-            LangChain to translate complex economic data into nuanced policy explanations.
-          </p>
-        </li>
-        <li class="timeline-item show" data-category="Leadership">
-          <h6><b>Teaching Assistant | January 2024 - December 2024</b></h6>
-          <p>
-            University Scholars Fellowship | Stony Brook University, NY<br>
-            <hr>
-            • Demonstrated leadership & mentorship skills as a leader for incoming University Scholars students at Stony
-            Brook University.<br>
-            • Acquired valuable teaching experience as a Teaching Assistant as part of the SCH 275 pre-fellowship
-            program.<br>
-            • Assisted the University Scholars Director as a Teaching Assistant by bringing my own life experiences and
-            teaching style into the class.<br>
-            • Designed creative presentations, graphics & videos to make weekly student workshops engaging and fun.
-          </p>
-        </li>
-        <li class="timeline-item show" data-category="Internship">
-          <h6><b>Software Engineer (Generative AI & Full Stack) | February 2024 - October 2024</b></h6>
-          <p>
-            iGEM, Stony Brook University | Stony Brook, NY
-            <hr>
-            • Achieved 90% retrieval accuracy on embedded research documents by building a RAG Q&A chatbot using
-            Transformers and LangChain, improving research wiki UX. <br>
-            • Helped secure over $50K in funding by leading a 3-person team to develop a research wiki (Flask) that
-            attracted 15+ stakeholders. <br>
-          </p>
-        </li>
-        <li class="timeline-item show" data-category="Job">
-          <h6><b>IT Assistant Intern | January 2024 - July 2024</b></h6>
-          <p>
-            Faculty Student Association at Stony Brook University | Stony Brook University, NY
-            <hr>
-            • Developed and maintained databases using MySQL and Google Sheets, automated processes by building Google
-            AppScript algorithms like Binary Sort and Search, improving automation and work efficiency. <br>
-            • Inventoried, performed maintenance and resolved issues in over 400 systems across the university campus.
-            <br>
-            • Installed and configured computer hardware & software, including Windows and Linux operating systems, in
-            40+ systems. <br>
-          </p>
-        </li>
-        <li class="timeline-item show" data-category="Internship">
-          <h6><b>Full Stack Web Developer Intern | April 2023 - June 2023</b></h6>
-          <p>
-            Omniscience Corporation, Palo Alto, CA | Remote
-            <hr>
-            • Created a life insurance flask WebApp with 3000+ lines of code using HTML, CSS, JavaScript, Jinja, MySQL
-            and Bootstrap Library.
-            • Containerized the application using Docker and deployed it on Amazon Web Services to ensure a reliable &
-            scalable environment.
-            • Improved accessibility using Bootstrap HTML Framework, prioritizing user experience and effective
-            communication.
-          </p>
-        </li>
-      </ul>
     </div>
+    
+    <div class="row row-cols-1 g-4 sessions">
+      
+      <!-- BMO Intern -->
+      <div class="col timeline-item show" data-category="Internship">
+        <div class="card h-100">
+          <div class="card-header">
+            <div class="mac-buttons">
+              <span class="mac-btn"></span>
+              <span class="mac-btn"></span>
+              <span class="mac-btn"></span>
+            </div>
+            <span class="terminal-title">~/work/bmo</span>
+          </div>
+          <div class="card-content"><div class="card-body">
+            <h5 class="mb-3"><strong>Incoming AI & ML Engineering Intern</strong> <span class="text-muted-custom small">| June 2026 – August 2026</span></h5>
+            <p class="mb-2 text-muted-custom">Bank of Montreal (BMO) | Berkeley Heights, NJ</p>
+            <hr>
+            <p class="mb-0">• Incoming software engineering internship focused on AI infrastructure and machine learning systems.</p>
+          </div></div>
+        </div>
+      </div>
+
+      <!-- Reliable Systems Lab -->
+      <div class="col timeline-item show" data-category="Research">
+        <div class="card h-100">
+          <div class="card-header">
+            <div class="mac-buttons">
+              <span class="mac-btn"></span>
+              <span class="mac-btn"></span>
+              <span class="mac-btn"></span>
+            </div>
+            <span class="terminal-title">~/research/reliable-systems-lab</span>
+          </div>
+          <div class="card-content"><div class="card-body">
+            <h5 class="mb-3"><strong>Undergraduate Research Assistant</strong> <span class="text-muted-custom small">| January 2026 – Present</span></h5>
+            <p class="mb-2 text-muted-custom">Reliable Systems Lab | Stony Brook University, NY</p>
+            <hr>
+            <p class="mb-2">• Engineering a lightweight encoder-only attention architecture for multi-agent systems, leveraging permutation equivariance to process jagged input arrays and eliminate data sorting overhead.</p>
+            <p class="mb-2">• Improving UAV Agent target seeking efficiency by <span class="mono-metric">34.6%</span> by architecting a Curriculum Weight Tuning API using CMA-ES through a grouped parameter strategy.</p>
+            <p class="mb-0">• Enabling <span class="mono-metric">100%</span> collision-free horizontal scaling on the SeaWulf HPC cluster by building a distributed isolation framework using dynamic sandboxing to eliminate MATLAB/MEX race conditions.</p>
+          </div></div>
+        </div>
+      </div>
+
+      <!-- Mailgator -->
+      <div class="col timeline-item show" data-category="Internship">
+        <div class="card h-100">
+          <div class="card-header">
+            <div class="mac-buttons">
+              <span class="mac-btn"></span>
+              <span class="mac-btn"></span>
+              <span class="mac-btn"></span>
+            </div>
+            <span class="terminal-title">~/work/mailgator</span>
+          </div>
+          <div class="card-content"><div class="card-body">
+            <h5 class="mb-3"><strong>Software Engineer (Generative AI & Backend)</strong> <span class="text-muted-custom small">| September 2025 - January 2026</span></h5>
+            <p class="mb-2 text-muted-custom">Mailgator | Palo Alto, CA (Hybrid)</p>
+            <hr>
+            <p class="mb-2">• Accelerating QA runtimes by <span class="mono-metric">26×</span>, enabling controlled testing across 700+ cases, by engineering and deploying a RESTful mock server (FastAPI) with full CRUD support on AWS EC2.</p>
+            <p class="mb-2">• Increasing data accuracy and system reliability by resolving critical parsing bugs, enhancing OpenAI prompts for data extraction and ensuring comprehensive handling of sender-recipient edge cases.</p>
+            <p class="mb-0">• Developing LLM systems for email analysis with a 5-person agile team, building prompt QA and UX test infrastructure for ML backend (FastAPI, Node.js, React, PostgreSQL).</p>
+          </div></div>
+        </div>
+      </div>
+
+      <!-- LUNR Lab -->
+      <div class="col timeline-item show" data-category="Research">
+        <div class="card h-100">
+          <div class="card-header">
+            <div class="mac-buttons">
+              <span class="mac-btn"></span>
+              <span class="mac-btn"></span>
+              <span class="mac-btn"></span>
+            </div>
+            <span class="terminal-title">~/research/lunr-ai-lab</span>
+          </div>
+          <div class="card-content"><div class="card-body">
+            <h5 class="mb-3"><strong>Undergraduate AI Research Assistant (Generative AI)</strong> <span class="text-muted-custom small">| February 2025 – March 2026</span></h5>
+            <p class="mb-2 text-muted-custom">LUNR AI Lab | Stony Brook University, NY</p>
+            <hr>
+            <p class="mb-2">• Improving Coding RAG accuracy by +5.4% (MBPP Eval) and +1.6% (ODEX Eval) by fine-tuning CodeLlama-7B on a custom 460K+ sample dataset in a 4-person team, targeting two ACL 2026 publication.</p>
+            <p class="mb-2">• Achieving <span class="mono-metric">73.5%</span> faster benchmark runtimes against existing baselines by designing a parallelized RAG benchmark system using vLLM and multiple commercial APIs.</p>
+            <p class="mb-0">• Reduced LLM inference costs by up to <span class="mono-metric">100%</span> by integrating SQLite3 caching system into the model distillation pipeline.</p>
+          </div></div>
+        </div>
+      </div>
+
+      <!-- Humanity Unleashed -->
+      <div class="col timeline-item show" data-category="Research">
+        <div class="card h-100">
+          <div class="card-header">
+            <div class="mac-buttons">
+              <span class="mac-btn"></span>
+              <span class="mac-btn"></span>
+              <span class="mac-btn"></span>
+            </div>
+            <span class="terminal-title">~/volunteer/humanity-unleashed</span>
+          </div>
+          <div class="card-content"><div class="card-body">
+            <h5 class="mb-3"><strong>Volunteer AI Researcher & Data Engineer</strong> <span class="text-muted-custom small">| November 2024 - February 2025</span></h5>
+            <p class="mb-2 text-muted-custom">Humanity Unleashed (humun.org) | Remote</p>
+            <hr>
+            <p class="mb-2">Volunteered at Humanity Unleashed, a self-funded volunteer-only research organization and contributed in the following ways:</p>
+            <p class="mb-2">• Built pipelines processing 700k rows of economic data, publishing 5 datasets to HuggingFace with 1,400+ downloads.</p>
+            <p class="mb-0">• Collaborated with 2 other peers to develop a policy generation and summarization pipeline utilizing LangChain to translate complex economic data into nuanced policy explanations.</p>
+          </div></div>
+        </div>
+      </div>
+
+      <!-- Teaching Assistant -->
+      <div class="col timeline-item show" data-category="Leadership">
+        <div class="card h-100">
+          <div class="card-header">
+            <div class="mac-buttons">
+              <span class="mac-btn"></span>
+              <span class="mac-btn"></span>
+              <span class="mac-btn"></span>
+            </div>
+            <span class="terminal-title">~/academic/teaching-assistant</span>
+          </div>
+          <div class="card-content"><div class="card-body">
+            <h5 class="mb-3"><strong>Teaching Assistant</strong> <span class="text-muted-custom small">| January 2024 - December 2024</span></h5>
+            <p class="mb-2 text-muted-custom">University Scholars Fellowship | Stony Brook University, NY</p>
+            <hr>
+            <p class="mb-2">• Demonstrated leadership & mentorship skills as a leader for incoming University Scholars students at Stony Brook University.</p>
+            <p class="mb-2">• Acquired valuable teaching experience as a Teaching Assistant as part of the SCH 275 pre-fellowship program.</p>
+            <p class="mb-2">• Assisted the University Scholars Director as a Teaching Assistant by bringing my own life experiences and teaching style into the class.</p>
+            <p class="mb-0">• Designed creative presentations, graphics & videos to make weekly student workshops engaging and fun.</p>
+          </div></div>
+        </div>
+      </div>
+
+      <!-- iGEM -->
+      <div class="col timeline-item show" data-category="Internship">
+        <div class="card h-100">
+          <div class="card-header">
+            <div class="mac-buttons">
+              <span class="mac-btn"></span>
+              <span class="mac-btn"></span>
+              <span class="mac-btn"></span>
+            </div>
+            <span class="terminal-title">~/research/igem</span>
+          </div>
+          <div class="card-content"><div class="card-body">
+            <h5 class="mb-3"><strong>Software Engineer (Generative AI & Full Stack)</strong> <span class="text-muted-custom small">| February 2024 - October 2024</span></h5>
+            <p class="mb-2 text-muted-custom">iGEM, Stony Brook University | Stony Brook, NY</p>
+            <hr>
+            <p class="mb-2">• Achieved 90% retrieval accuracy on embedded research documents by building a RAG Q&A chatbot using Transformers and LangChain, improving research wiki UX.</p>
+            <p class="mb-0">• Helped secure over $50K in funding by leading a 3-person team to develop a research wiki (Flask) that attracted 15+ stakeholders.</p>
+          </div></div>
+        </div>
+      </div>
+
+      <!-- IT Assistant Intern -->
+      <div class="col timeline-item show" data-category="Job">
+        <div class="card h-100">
+          <div class="card-header">
+            <div class="mac-buttons">
+              <span class="mac-btn"></span>
+              <span class="mac-btn"></span>
+              <span class="mac-btn"></span>
+            </div>
+            <span class="terminal-title">~/work/it-assistant</span>
+          </div>
+          <div class="card-content"><div class="card-body">
+            <h5 class="mb-3"><strong>IT Assistant Intern</strong> <span class="text-muted-custom small">| January 2024 - July 2024</span></h5>
+            <p class="mb-2 text-muted-custom">Faculty Student Association at Stony Brook University | Stony Brook University, NY</p>
+            <hr>
+            <p class="mb-2">• Developed and maintained databases using MySQL and Google Sheets, automated processes by building Google AppScript algorithms like Binary Sort and Search, improving automation and work efficiency.</p>
+            <p class="mb-2">• Inventoried, performed maintenance and resolved issues in over 400 systems across the university campus.</p>
+            <p class="mb-0">• Installed and configured computer hardware & software, including Windows and Linux operating systems, in 40+ systems.</p>
+          </div></div>
+        </div>
+      </div>
+
+      <!-- Omniscience Corporation -->
+      <div class="col timeline-item show" data-category="Internship">
+        <div class="card h-100">
+          <div class="card-header">
+            <div class="mac-buttons">
+              <span class="mac-btn"></span>
+              <span class="mac-btn"></span>
+              <span class="mac-btn"></span>
+            </div>
+            <span class="terminal-title">~/work/omniscience</span>
+          </div>
+          <div class="card-content"><div class="card-body">
+            <h5 class="mb-3"><strong>Full Stack Web Developer Intern</strong> <span class="text-muted-custom small">| April 2023 - June 2023</span></h5>
+            <p class="mb-2 text-muted-custom">Omniscience Corporation, Palo Alto, CA | Remote</p>
+            <hr>
+            <p class="mb-2">• Created a life insurance flask WebApp with 3000+ lines of code using HTML, CSS, JavaScript, Jinja, MySQL and Bootstrap Library.</p>
+            <p class="mb-2">• Containerized the application using Docker and deployed it on Amazon Web Services to ensure a reliable & scalable environment.</p>
+            <p class="mb-0">• Improved accessibility using Bootstrap HTML Framework, prioritizing user experience and effective communication.</p>
+          </div></div>
+        </div>
+      </div>
+
+    </div>
+
   </div>
 
   <!--PROJECTS-->
