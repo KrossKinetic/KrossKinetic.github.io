@@ -35,7 +35,7 @@
 </head>
 
 <body data-theme="dark">
-  <button id="theme-toggle" onclick="toggleTheme()">🌙</button>
+  <button id="theme-toggle" onclick="toggleTheme()" title="Toggle theme">◐</button>
 
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg fixed-top">
@@ -78,7 +78,7 @@
             <div class="d-flex justify-content-center gap-3 flex-wrap mb-4">
               <a href="mailto:anshumaanvsingh@gmail.com" class="btn btn-primary"><img src="gmail.png" class="icon-sm">
                 Email Me</a>
-              <a href="Anshumaan_Singh_Resume_v2_1.pdf" class="btn btn-primary" target="_blank">📄 Download Resume</a>
+              <a href="Anshumaan_Singh_Resume_v2_1.pdf" class="btn btn-primary" target="_blank">Download Resume</a>
               <a href="https://www.linkedin.com/in/anshumaanvsingh/" target="_blank" class="btn btn-outline-custom"><img
                   src="LI-In-Bug.png" class="icon-sm"> LinkedIn</a>
               <a href="https://github.com/KrossKinetic" target="_blank" class="btn btn-outline-custom"><img
@@ -384,7 +384,7 @@
     <div class="text-center mb-3">
       <button class="btn btn-outline-custom" type="button" data-bs-toggle="collapse" data-bs-target="#moreProjects"
         aria-expanded="false" aria-controls="moreProjects">
-        🔽 View More Projects (12 additional)
+        View More Projects (12 additional)
       </button>
     </div>
 
@@ -545,7 +545,7 @@
       <div class="col">
         <div class="card h-100">
           <div class="card-body">
-            <h5 class="mb-3">🏆 <strong>Research Publications</strong></h5>
+            <h5 class="mb-3"><strong>Research Publications</strong></h5>
             <p class="mb-2">Targeting <strong>2 ACL 2026 publications</strong> on RAG for code generation with
               CodeLlama-7B fine-tuning</p>
             <p class="text-muted small">LUNR AI Lab, Stony Brook University</p>
@@ -555,7 +555,7 @@
       <div class="col">
         <div class="card h-100">
           <div class="card-body">
-            <h5 class="mb-3">📚 <strong>Academic Honors</strong></h5>
+            <h5 class="mb-3"><strong>Academic Honors</strong></h5>
             <p class="mb-2"><strong>CGPA: 3.9</strong> | Computer Science Honors</p>
             <p class="mb-0">SUNY SOAR Research Fellow, URECA Fellow, University Scholars, Dean's List 2023-2026</p>
           </div>
@@ -564,7 +564,7 @@
       <div class="col">
         <div class="card h-100">
           <div class="card-body">
-            <h5 class="mb-3">🚀 <strong>Performance Impact</strong></h5>
+            <h5 class="mb-3"><strong>Performance Impact</strong></h5>
             <p class="mb-2">Accelerated QA runtimes by <strong>26×</strong> at Mailgator.AI</p>
             <p class="mb-0">Achieved <strong>73.5% faster</strong> benchmark runtimes vs. existing RAG baselines</p>
           </div>
@@ -573,7 +573,7 @@
       <div class="col">
         <div class="card h-100">
           <div class="card-body">
-            <h5 class="mb-3">🎓 <strong>Open Source Contributions</strong></h5>
+            <h5 class="mb-3"><strong>Open Source Contributions</strong></h5>
             <p class="mb-2">Published <strong>5 datasets</strong> to HuggingFace with <strong>1,400+ downloads</strong>
             </p>
             <p class="mb-0">Active contributor to AI/ML research community</p>
@@ -600,7 +600,7 @@
     crossorigin="anonymous"></script>
 </body>
 <footer class="text-center">
-  <p>Made with &#10084; by Anshumaan Singh</p>
+  <p>Made by Anshumaan Singh</p>
 </footer>
 
 <!-- JavaScript Below -->
@@ -613,11 +613,11 @@
 
     if (currentTheme === 'light') {
       body.setAttribute('data-theme', 'dark');
-      toggleBtn.textContent = '🌙';
+      toggleBtn.textContent = '◐';
       localStorage.setItem('theme', 'dark');
     } else {
       body.setAttribute('data-theme', 'light');
-      toggleBtn.textContent = '☀️';
+      toggleBtn.textContent = '◐';
       localStorage.setItem('theme', 'light');
     }
   }
@@ -625,7 +625,7 @@
   // Initialize Theme
   const savedTheme = localStorage.getItem('theme') || 'dark'; // Default to dark
   document.body.setAttribute('data-theme', savedTheme);
-  document.getElementById('theme-toggle').textContent = savedTheme === 'light' ? '☀️' : '🌙';
+  document.getElementById('theme-toggle').textContent = '◐';
 
   function filterSelection(category) {
     const items = document.querySelectorAll('.timeline-item');
