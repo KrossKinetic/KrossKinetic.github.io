@@ -273,6 +273,26 @@ h2::before {
     font-size: 1.1rem;
 }
 
+/* Keep project actions aligned at the bottom of equal-height grid cards. */
+.project-grid .card,
+.project-grid .card-content,
+.project-grid .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-grid .card-content,
+.project-grid .card-body {
+    flex: 1;
+}
+
+.project-grid .project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: auto;
+}
+
 /* Bio card specific */
 .card-bio {
     background: var(--card-bg);
@@ -360,4 +380,169 @@ hr {
     color: #111 !important;
     font-weight: 600;
     border-color: var(--accent) !important;
+}
+
+/* npm download cards */
+.npm-downloads {
+    margin: 2.25rem 0 3rem;
+}
+
+.npm-downloads-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.npm-downloads h3 {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0 0 0.15rem;
+}
+
+.npm-refresh-label,
+.npm-live-dot {
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+}
+
+.npm-refresh-label::before,
+.npm-live-dot::before {
+    content: "";
+    display: inline-block;
+    width: 0.45rem;
+    height: 0.45rem;
+    margin-right: 0.4rem;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 8px rgba(212, 146, 30, 0.55);
+}
+
+.npm-card-topline {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.npm-package-name {
+    color: var(--text-color);
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0 0 0.25rem;
+    overflow-wrap: anywhere;
+}
+
+.npm-description {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin: 0;
+    max-width: 31rem;
+}
+
+.npm-total {
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: clamp(1.7rem, 4vw, 2.35rem);
+    font-weight: 600;
+    letter-spacing: -0.05em;
+    line-height: 1.1;
+    margin: 1.35rem 0 0.15rem;
+}
+
+.npm-total-label {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    margin: 0;
+}
+
+.npm-chart {
+    min-height: 10rem;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.npm-chart svg {
+    display: block;
+    height: 10rem;
+    overflow: visible;
+    width: 100%;
+}
+
+.npm-chart-empty,
+.npm-chart-error {
+    align-items: center;
+    background: rgba(44, 44, 46, 0.4);
+    border: 1px dashed var(--card-border);
+    color: var(--text-muted);
+    display: flex;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    justify-content: center;
+    min-height: 10rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.npm-chart-error {
+    color: #dc8b8b;
+}
+
+.npm-tooltip {
+    background: #161618;
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--card-shadow);
+    color: var(--text-color);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    line-height: 1.5;
+    padding: 0.4rem 0.55rem;
+    pointer-events: none;
+    position: absolute;
+    transform: translate(-50%, calc(-100% - 8px));
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.npm-tooltip strong {
+    color: var(--accent);
+    display: block;
+    font-weight: 500;
+}
+
+.npm-status {
+    font-size: 0.72rem;
+    margin: 0.35rem 0 1rem;
+    min-height: 1.2rem;
+}
+
+.npm-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.npm-links a {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+}
+
+@media (max-width: 575.98px) {
+    .npm-downloads-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .npm-card-topline {
+        gap: 0.5rem;
+    }
+
+    .npm-live-dot {
+        flex: 0 0 auto;
+    }
 }

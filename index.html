@@ -443,8 +443,70 @@
       full-stack development</p>
     <hr>
 
+    <section class="npm-downloads" aria-labelledby="npm-downloads-title">
+      <div class="npm-downloads-heading">
+        <div>
+          <h3 id="npm-downloads-title">npm downloads</h3>
+          <p class="text-muted-custom mb-0">Cumulative download activity for published Pi packages since launch.</p>
+        </div>
+        <span class="npm-refresh-label">Updated daily from the npm registry</span>
+      </div>
+      <div class="row row-cols-1 row-cols-lg-2 g-4">
+        <div class="col">
+          <article class="card npm-download-card h-100" data-package="pi-mtplx">
+            <div class="card-header">
+              <div class="mac-buttons"><span class="mac-btn"></span><span class="mac-btn"></span><span class="mac-btn"></span></div>
+              <span class="terminal-title">~/npm/pi-mtplx</span>
+            </div>
+            <div class="card-content"><div class="card-body">
+              <div class="npm-card-topline">
+                <div>
+                  <h4 class="npm-package-name">pi-mtplx</h4>
+                  <p class="npm-description">Run local MLX models with Pi, with automatic discovery and live token-speed monitoring.</p>
+                </div>
+                <span class="npm-live-dot">Live</span>
+              </div>
+              <p class="npm-total" data-total aria-live="polite">Loading download data…</p>
+              <p class="npm-total-label">cumulative downloads since Aug 21, 2026</p>
+              <div class="npm-chart" data-chart aria-live="polite" aria-label="Loading pi-mtplx downloads chart"></div>
+              <p class="npm-status text-muted-custom" data-status>Fetching daily download history…</p>
+              <div class="npm-links">
+                <a href="https://www.npmjs.com/package/pi-mtplx" target="_blank" rel="noopener noreferrer">npm <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/KrossKinetic/pi-mtplx" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+              </div>
+            </div></div>
+          </article>
+        </div>
+        <div class="col">
+          <article class="card npm-download-card h-100" data-package="@krosskinetic/pi-zg">
+            <div class="card-header">
+              <div class="mac-buttons"><span class="mac-btn"></span><span class="mac-btn"></span><span class="mac-btn"></span></div>
+              <span class="terminal-title">~/npm/@krosskinetic/pi-zg</span>
+            </div>
+            <div class="card-content"><div class="card-body">
+              <div class="npm-card-topline">
+                <div>
+                  <h4 class="npm-package-name">@krosskinetic/pi-zg</h4>
+                  <p class="npm-description">Native zvec-grep semantic code search for Pi agents.</p>
+                </div>
+                <span class="npm-live-dot">Live</span>
+              </div>
+              <p class="npm-total" data-total aria-live="polite">Loading download data…</p>
+              <p class="npm-total-label">cumulative downloads since Sep 4, 2026</p>
+              <div class="npm-chart" data-chart aria-live="polite" aria-label="Loading @krosskinetic/pi-zg downloads chart"></div>
+              <p class="npm-status text-muted-custom" data-status>Fetching daily download history…</p>
+              <div class="npm-links">
+                <a href="https://www.npmjs.com/package/@krosskinetic/pi-zg" target="_blank" rel="noopener noreferrer">npm <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/KrossKinetic/pi-zg" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+              </div>
+            </div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- Featured Projects Grid -->
-    <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+    <div class="row row-cols-1 row-cols-md-3 g-4 mb-4 project-grid">
       <div class="col">
         <div class="card h-100">
           <div class="card-header">
@@ -457,13 +519,15 @@
           </div>
           <div class="card-content"><div class="card-body">
             <h5><b>pi-mtplx (Local LLM Runtime Integration)</b></h5>
-            <p>Published <span class="mono-metric">pi-mtplx</span>, a Pi extension for local MTPLX inference that reached <span class="mono-metric">1,600</span> downloads
-              in its first two weeks, with zero-configuration discovery of locally installed models that derive context-window, vision,
+            <p>Published <span class="mono-metric">pi-mtplx</span>, a Pi extension for local MTPLX inference with <span class="mono-metric" data-package-total="pi-mtplx">loading…</span> downloads
+              since Aug 21, 2026, with zero-configuration discovery of locally installed models that derive context-window, vision,
               reasoning, and token-limit capabilities from each installed artifact.</p>
             <p>Engineered a local model-server lifecycle with health checks and ownership-aware cleanup, persistent SSD session cache,
               thermal fan-mode controls, and live tokens-per-second monitoring in Pi's footer.</p>
             <a type="button" href="https://github.com/KrossKinetic/pi-mtplx" target="_blank"
               class="btn btn-primary">GitHub Project</a>
+            <a type="button" href="https://www.npmjs.com/package/pi-mtplx" target="_blank" rel="noopener noreferrer"
+              class="btn btn-primary">npm Package</a>
           </div></div></div>
       </div>
       <div class="col">
@@ -474,16 +538,18 @@
               <span class="mac-btn"></span>
               <span class="mac-btn"></span>
             </div>
-            <span class="terminal-title">~/projects/tools/pi-apply-job</span>
+            <span class="terminal-title">~/projects/tools/pi-zg</span>
           </div>
           <div class="card-content"><div class="card-body">
-            <h5><b>pi-apply-job (Evidence-Backed Resume Automation)</b></h5>
-            <p>Built a Pi extension that accepts individual or batched public job URLs, extracts job requirements, and creates isolated
-              per-application artifacts — without ever submitting applications.</p>
-            <p>Designed an evidence-linked resume-plan and verification workflow where every selected resume claim cites a stable ID
-              from a master resume, rendered deterministically to a validated one-page LaTeX PDF via Tectonic.</p>
-            <a type="button" href="https://github.com/KrossKinetic/pi-apply-job" target="_blank"
+            <h5><b>pi-zg (Semantic Code Search for Pi)</b></h5>
+            <p>Built a Pi extension that natively integrates <span class="mono-metric">zvec-grep</span> semantic code search,
+              giving agents always-fresh project context without a background server.</p>
+            <p>Added agent-callable semantic and exact-search tools, interactive indexing, and status controls so Pi can find
+              code by meaning or by precise identifiers while respecting project search rules.</p>
+            <a type="button" href="https://github.com/KrossKinetic/pi-zg" target="_blank" rel="noopener noreferrer"
               class="btn btn-primary">GitHub Project</a>
+            <a type="button" href="https://www.npmjs.com/package/@krosskinetic/pi-zg" target="_blank" rel="noopener noreferrer"
+              class="btn btn-primary">npm Package</a>
           </div></div></div>
       </div>
       <div class="col">
@@ -501,75 +567,78 @@
             <p>Engineered a high-performance C fuzzer utilizing Unix signals and syscalls (fork, waitpid) to stress-test executables via mutated input streams, achieving <span class="mono-metric">100%</span> process isolation and automated memory leak detection.</p>
           </div></div></div>
       </div>
-      <div class="col">
-        <div class="card h-100">
-          <div class="card-header">
-            <div class="mac-buttons">
-              <span class="mac-btn"></span>
-              <span class="mac-btn"></span>
-              <span class="mac-btn"></span>
-            </div>
-            <span class="terminal-title">~/projects/tools/cmdflow</span>
-          </div>
-          <div class="card-content"><div class="card-body">
-            <h5><b>CMDFlow at HackPrinceton</b></h5>
-            <p>Built a local-first, AI-powered command-tracking system (FastAPI, ReactJS, MongoDB) that streams shell
-              activity (<span class="mono-metric">&lt;1s</span> latency), performs PII scrubbing, and semantically indexes commands for natural language
-                search and automatic project-based organization.</p>
-                <a type="button" href="https://github.com/KrossKinetic/CMDFlow-HackPrinceton" target="_blank"
-                  class="btn btn-primary">GitHub Project</a>
-                <a type="button" href="https://devpost.com/software/cmdflow" target="_blank"
-                  class="btn btn-primary">Devpost</a>
-          </div></div></div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <div class="card-header">
-            <div class="mac-buttons">
-              <span class="mac-btn"></span>
-              <span class="mac-btn"></span>
-              <span class="mac-btn"></span>
-            </div>
-            <span class="terminal-title">~/projects/ml/notisentry</span>
-          </div>
-          <div class="card-content"><div class="card-body">
-            <h5><b>NotiSentry: A Smart DND with LLMs</b></h5>
-            <p>Optimizing system performance to <span class="mono-metric">&lt;1%</span> battery drain over 5 hours and achieving 1.3s worst-case latency for
-                an intelligent notification filtering and summarization app to minimize user distractions and improve
-                focus using Firebase Gemini API and Jetpack Compose.</p>
-          </div></div></div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <div class="card-header">
-            <div class="mac-buttons">
-              <span class="mac-btn"></span>
-              <span class="mac-btn"></span>
-              <span class="mac-btn"></span>
-            </div>
-            <span class="terminal-title">~/projects/ml/replug-lsr</span>
-          </div>
-          <div class="card-content"><div class="card-body">
-            <h5><b>REPLUG LSR with vLLM</b></h5>
-            <p>Refactored research implementation of REPLUG to enable LM-Supervised Retrieval (LSR) fine-tuning for code
-              generation tasks by architecting a high-performance training pipeline with a local vLLM server.</p>
-            <a type="button" href="#" target="_blank" class="btn btn-primary">GitHub Project (Coming Soon)</a>
-          </div></div></div>
-      </div>
     </div>
 
     <!-- Additional Projects Collapsible Section -->
     <div class="text-center mb-3">
       <button class="btn btn-outline-custom" type="button" data-bs-toggle="collapse" data-bs-target="#moreProjects"
         aria-expanded="false" aria-controls="moreProjects">
-        View More Projects (15 additional)
+        View More Projects (18 additional)
       </button>
     </div>
 
     <div class="collapse" id="moreProjects">
       <hr class="my-4">
       <h4 class="mb-4"><b>Additional Projects</b></h4>
-      <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="row row-cols-1 row-cols-md-3 g-4 project-grid">
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-header">
+              <div class="mac-buttons">
+                <span class="mac-btn"></span>
+                <span class="mac-btn"></span>
+                <span class="mac-btn"></span>
+              </div>
+              <span class="terminal-title">~/projects/tools/pi-apply-job</span>
+            </div>
+            <div class="card-content"><div class="card-body">
+              <h5><b>pi-apply-job (Evidence-Backed Resume Automation)</b></h5>
+              <p>Built a Pi extension that accepts individual or batched public job URLs, extracts job requirements, and creates isolated
+                per-application artifacts — without ever submitting applications.</p>
+              <p>Designed an evidence-linked resume-plan and verification workflow where every selected resume claim cites a stable ID
+                from a master resume, rendered deterministically to a validated one-page LaTeX PDF via Tectonic.</p>
+              <a type="button" href="https://github.com/KrossKinetic/pi-apply-job" target="_blank"
+                class="btn btn-primary">GitHub Project</a>
+            </div></div></div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-header">
+              <div class="mac-buttons">
+                <span class="mac-btn"></span>
+                <span class="mac-btn"></span>
+                <span class="mac-btn"></span>
+              </div>
+              <span class="terminal-title">~/projects/tools/cmdflow</span>
+            </div>
+            <div class="card-content"><div class="card-body">
+              <h5><b>CMDFlow at HackPrinceton</b></h5>
+              <p>Built a local-first, AI-powered command-tracking system (FastAPI, ReactJS, MongoDB) that streams shell
+                activity (<span class="mono-metric">&lt;1s</span> latency), performs PII scrubbing, and semantically indexes commands for natural language
+                search and automatic project-based organization.</p>
+              <a type="button" href="https://github.com/KrossKinetic/CMDFlow-HackPrinceton" target="_blank"
+                class="btn btn-primary">GitHub Project</a>
+              <a type="button" href="https://devpost.com/software/cmdflow" target="_blank"
+                class="btn btn-primary">Devpost</a>
+            </div></div></div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-header">
+              <div class="mac-buttons">
+                <span class="mac-btn"></span>
+                <span class="mac-btn"></span>
+                <span class="mac-btn"></span>
+              </div>
+              <span class="terminal-title">~/projects/ml/replug-lsr</span>
+            </div>
+            <div class="card-content"><div class="card-body">
+              <h5><b>REPLUG LSR with vLLM</b></h5>
+              <p>Refactored research implementation of REPLUG to enable LM-Supervised Retrieval (LSR) fine-tuning for code
+                generation tasks by architecting a high-performance training pipeline with a local vLLM server.</p>
+              <a type="button" href="https://github.com/KrossKinetic/REPLUG_LSR_with_vLLM" target="_blank" rel="noopener noreferrer" class="btn btn-primary">GitHub Project</a>
+            </div></div></div>
+        </div>
         <div class="col">
           <div class="card h-100">
           <div class="card-header">
@@ -877,7 +946,7 @@
           </div>
           <div class="card-content"><div class="card-body">
             <h5 class="mb-3"><strong>pi-mtplx Launch</strong></h5>
-            <p class="mb-2">Published a zero-configuration local LLM runtime for Pi, reaching <strong><span class="mono-metric">1,600</span></strong> downloads in its first <strong><span class="mono-metric">2 weeks</span></strong>.</p>
+            <p class="mb-2">Published a zero-configuration local LLM runtime for Pi, reaching <strong><span class="mono-metric" data-package-total="pi-mtplx">loading…</span></strong> downloads since Aug 21, 2026.</p>
             <p class="text-muted-custom small">Personal Project (pi-mtplx)</p>
           </div></div></div>
       </div>
@@ -958,6 +1027,152 @@
       element.classList.add('active');
     }
   }
+
+  document.querySelectorAll('.project-grid .card-body').forEach((cardBody) => {
+    const buttons = [...cardBody.children].filter((element) => element.matches('a.btn'));
+    if (!buttons.length) return;
+
+    const actions = document.createElement('div');
+    actions.className = 'project-actions';
+    buttons[0].before(actions);
+    buttons.forEach((button) => actions.append(button));
+  });
+
+  const packages = ["@krosskinetic/pi-zg", "pi-mtplx"];
+  const packageLaunchDates = {
+    "@krosskinetic/pi-zg": "2026-09-04",
+    "pi-mtplx": "2026-08-21"
+  };
+
+  async function getDownloads(packageName) {
+    const endpoint =
+      "https://api.npmjs.org/downloads/range/last-year/" +
+      encodeURIComponent(packageName);
+
+    const response = await fetch(endpoint);
+    if (!response.ok) throw new Error(`npm registry returned ${response.status}`);
+    return response.json();
+  }
+
+  const downloadNumber = new Intl.NumberFormat('en-US');
+  const downloadDate = new Intl.DateTimeFormat('en-US', {
+    month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC'
+  });
+
+  function formatDate(day) {
+    return downloadDate.format(new Date(`${day}T00:00:00Z`));
+  }
+
+  function updatePackageTotals(packageName, total) {
+    document.querySelectorAll(`[data-package-total="${packageName}"]`).forEach((element) => {
+      element.textContent = downloadNumber.format(total);
+    });
+  }
+
+  function setCardState(card, state, message) {
+    const total = card.querySelector('[data-total]');
+    const chart = card.querySelector('[data-chart]');
+    const status = card.querySelector('[data-status]');
+    total.textContent = state === 'error' ? 'Unavailable' : 'No data';
+    status.textContent = message;
+    chart.setAttribute('aria-label', message);
+    chart.innerHTML = `<div class="npm-chart-${state}">${message}</div>`;
+  }
+
+  function renderDownloadChart(card, downloads) {
+    const chart = card.querySelector('[data-chart]');
+    const width = 560;
+    const height = 160;
+    const padding = { top: 10, right: 4, bottom: 22, left: 4 };
+    const dailyValues = downloads.map(({ downloads: count }) => Number(count) || 0);
+    const values = dailyValues.reduce((cumulative, count) => {
+      cumulative.push((cumulative.at(-1) || 0) + count);
+      return cumulative;
+    }, []);
+    const max = Math.max(...values, 1);
+    const graphWidth = width - padding.left - padding.right;
+    const graphHeight = height - padding.top - padding.bottom;
+    const pointFor = (index) => ({
+      x: padding.left + (index / Math.max(downloads.length - 1, 1)) * graphWidth,
+      y: padding.top + graphHeight - (values[index] / max) * graphHeight
+    });
+    const points = downloads.map((_, index) => pointFor(index));
+    const line = points.map(({ x, y }, index) => `${index ? 'L' : 'M'}${x.toFixed(2)},${y.toFixed(2)}`).join(' ');
+    const area = `${line} L${points[points.length - 1].x.toFixed(2)},${(height - padding.bottom).toFixed(2)} L${points[0].x.toFixed(2)},${(height - padding.bottom).toFixed(2)} Z`;
+    const firstLabel = formatDate(downloads[0].day);
+    const lastLabel = formatDate(downloads[downloads.length - 1].day);
+    const gradientId = `download-gradient-${card.dataset.package.replace(/[^a-z0-9]/gi, '')}`;
+
+    chart.innerHTML = `
+      <div class="npm-tooltip" hidden></div>
+      <svg viewBox="0 0 ${width} ${height}" preserveAspectRatio="none" role="img" tabindex="0"
+        aria-label="Cumulative downloads from ${firstLabel} through ${lastLabel}. Hover or focus the chart for daily values.">
+        <defs><linearGradient id="${gradientId}" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#d4921e" stop-opacity="0.42" /><stop offset="100%" stop-color="#d4921e" stop-opacity="0" /></linearGradient></defs>
+        <line x1="${padding.left}" x2="${width - padding.right}" y1="${height - padding.bottom}" y2="${height - padding.bottom}" stroke="#38383a" stroke-width="1" />
+        <path d="${area}" fill="url(#${gradientId})" />
+        <path d="${line}" fill="none" stroke="#d4921e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" vector-effect="non-scaling-stroke" />
+        <line class="npm-chart-cursor" x1="0" x2="0" y1="${padding.top}" y2="${height - padding.bottom}" stroke="#98989d" stroke-width="1" stroke-dasharray="3 3" hidden />
+        <circle class="npm-chart-point" cx="0" cy="0" r="3.5" fill="#1c1c1e" stroke="#d4921e" stroke-width="2" hidden />
+        <text x="${padding.left}" y="${height - 4}" fill="#98989d" font-family="Fira Code, monospace" font-size="9">${firstLabel}</text>
+        <text x="${width - padding.right}" y="${height - 4}" fill="#98989d" font-family="Fira Code, monospace" font-size="9" text-anchor="end">${lastLabel}</text>
+      </svg>`;
+
+    const svg = chart.querySelector('svg');
+    const tooltip = chart.querySelector('.npm-tooltip');
+    const cursor = svg.querySelector('.npm-chart-cursor');
+    const point = svg.querySelector('.npm-chart-point');
+    const showValue = (clientX) => {
+      const bounds = svg.getBoundingClientRect();
+      const relativeX = Math.min(Math.max(clientX - bounds.left, 0), bounds.width);
+      const index = Math.round((relativeX / bounds.width) * (downloads.length - 1));
+      const selectedPoint = points[index];
+      cursor.setAttribute('x1', selectedPoint.x);
+      cursor.setAttribute('x2', selectedPoint.x);
+      cursor.removeAttribute('hidden');
+      point.setAttribute('cx', selectedPoint.x);
+      point.setAttribute('cy', selectedPoint.y);
+      point.removeAttribute('hidden');
+      tooltip.innerHTML = `<strong>${downloadNumber.format(values[index])} cumulative downloads</strong>${formatDate(downloads[index].day)} · ${downloadNumber.format(dailyValues[index])} that day`;
+      tooltip.style.left = `${(selectedPoint.x / width) * 100}%`;
+      tooltip.style.top = `${(selectedPoint.y / height) * 100}%`;
+      tooltip.hidden = false;
+    };
+    const hideValue = () => {
+      cursor.setAttribute('hidden', '');
+      point.setAttribute('hidden', '');
+      tooltip.hidden = true;
+    };
+
+    svg.addEventListener('pointermove', (event) => showValue(event.clientX));
+    svg.addEventListener('pointerleave', hideValue);
+    svg.addEventListener('focus', () => showValue(svg.getBoundingClientRect().right));
+    svg.addEventListener('blur', hideValue);
+  }
+
+  async function loadDownloads(packageName) {
+    const card = document.querySelector(`[data-package="${packageName}"]`);
+    const launchDate = packageLaunchDates[packageName];
+    try {
+      const data = await getDownloads(packageName);
+      const downloads = Array.isArray(data.downloads)
+        ? data.downloads.filter(({ day }) => typeof day === 'string' && day >= launchDate)
+        : [];
+      if (!downloads.length) {
+        setCardState(card, 'empty', 'No daily download data is available for this period.');
+        return;
+      }
+
+      const total = downloads.reduce((sum, { downloads: count }) => sum + (Number(count) || 0), 0);
+      card.querySelector('[data-total]').textContent = downloadNumber.format(total);
+      card.querySelector('[data-status]').textContent = `${formatDate(launchDate)} through ${formatDate(downloads[downloads.length - 1].day)} · updated daily from the npm registry`;
+      updatePackageTotals(packageName, total);
+      renderDownloadChart(card, downloads);
+    } catch (error) {
+      setCardState(card, 'error', 'Unable to load download data right now. Please try again later.');
+    }
+  }
+
+  packages.forEach(loadDownloads);
 </script>
 
 </html>
